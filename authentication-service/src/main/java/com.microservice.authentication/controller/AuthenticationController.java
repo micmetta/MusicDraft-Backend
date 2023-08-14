@@ -73,6 +73,7 @@ public class AuthenticationController {
         String out = str1 + "<br>" + str2; //<br> serve per far capire al broswer (che interpreta l'html) che deve andare a capo.
 
         System.out.println("Scritta solo per il commit");
+        System.out.println("Scritta solo per il commit e il push nel branch_Michele");
 
         System.out.println("Email utente: " + email_user);
         System.out.println("Nome utente: " + name_user);
