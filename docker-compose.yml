@@ -1,7 +1,8 @@
 version: "3.8"
 services:
   authentication-service:
-    image: authentication-service-server:latest
+#    image: authentication-service-server:latest
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
     restart: always
     ports:
       - 8081:8081
@@ -9,7 +10,8 @@ services:
       - mysqldb
 
   collectdata-service:
-    image: collectdata-service-server:latest
+#    image: collectdata-service-server:latest
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectdata-service
     restart: always
     ports:
       - 9090:9090
