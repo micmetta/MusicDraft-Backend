@@ -4,14 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="push branch Pietro">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/HELP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/src/main/java/com/example/spotify_spike2/SpotifySpike2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/SpotifySpike2Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/src/main/java/com/example/spotify_spike2/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/controller/ArtistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/src/main/java/com/example/spotify_spike2/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/controller/TrackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/src/main/java/com/example/spotify_spike2/model/Artista.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/model/Artista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/src/main/java/com/example/spotify_spike2/model/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/model/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/src/main/java/com/example/spotify_spike2/model/Brano.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/model/Brano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/src/main/java/com/example/spotify_spike2/repository/ArtistRep.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/repository/ArtistRep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/src/main/java/com/example/spotify_spike2/repository/BranoRep.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/repository/BranoRep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectData-service/src/test/java/com/example/spotify_spike2/SpotifySpike2ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/test/java/com/example/spotify_spike2/SpotifySpike2ApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -27,6 +56,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -43,7 +73,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend",
+    "last_opened_file_path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/collectdata-service",
     "onboarding.tips.debug.path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/authentication-service/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -53,18 +83,22 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectdata-service" />
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend" />
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service" />
+      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectData-service" />
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\test" />
-      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\main\resources" />
-      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\main\java\com.microservice.authentication" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
       </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
       <method v="2" />
     </configuration>
     <configuration name="authentication-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -75,11 +109,51 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="authentication-service/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="authentication-service/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="collectdata-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="collectdata-service/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.authentication-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="authentication-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.collectdata-service: Compose Deployment" />
         <item itemvalue="Docker.authentication-service: Compose Deployment" />
-        <item itemvalue="Docker.authentication-service: Compose Deployment" />
-        <item itemvalue="Docker.authentication-service: Compose Deployment" />
+        <item itemvalue="Docker.authentication-service/Dockerfile" />
+        <item itemvalue="Docker.docker-compose.yml.authentication-service: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -92,6 +166,14 @@
       <option name="presentableId" value="Default" />
       <updated>1692003331228</updated>
     </task>
+    <task id="LOCAL-00001" summary="push branch Pietro">
+      <created>1692180075999</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692180075999</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +198,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="push branch Pietro" />
+    <option name="LAST_COMMIT_MESSAGE" value="push branch Pietro" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
