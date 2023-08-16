@@ -1,8 +1,0 @@
-com\example\spotify_spike2\model\Brano.class
-com\example\spotify_spike2\repository\BranoRep.class
-com\example\spotify_spike2\controller\TrackController.class
-com\example\spotify_spike2\repository\ArtistRep.class
-com\example\spotify_spike2\controller\ArtistController.class
-com\example\spotify_spike2\SpotifySpike2Application.class
-com\example\spotify_spike2\model\Artista.class
-com\example\spotify_spike2\model\Auth.class
