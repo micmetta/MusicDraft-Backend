@@ -14,7 +14,7 @@ services:
     ports:
       - 3307:3306
     environment:
-      MYSQL_DATABASE: db_utenti
-      MYSQL_USER: michele
-      MYSQL_PASSWORD: michelem
-      MYSQL_ROOT_PASSWORD: michelem
+      MYSQL_DATABASE: db_musicdraft
+      MYSQL_USER: musicdraft
+      MYSQL_PASSWORD: musicdraft
+      MYSQL_ROOT_PASSWORD: musicdraft
