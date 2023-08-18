@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  authentication-service:
+#    image: authentication-service-server:latest
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
+    restart: always
+    ports:
+      - 8081:8081
+    depends_on:
+      - mysqldb
+
+  collectdata-service:
+#    image: collectdata-service-server:latest
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectdata-service
+    restart: always
+    ports:
+      - 9090:9090
+    depends_on:
+      - mysqldb
+
+
+  mysqldb:
+    image: "mysql:5.7"
+    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_DATABASE: db_musicdraft
+      MYSQL_USER: musicdraft
+      MYSQL_PASSWORD: musicdraft
+      MYSQL_ROOT_PASSWORD: musicdraft

@@ -5,7 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="commit per &quot;Scritta solo per il commit&quot;">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/SpotifySpike2Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/controller/ArtistController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/controller/TrackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/model/Artista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/model/Auth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/model/Brano.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/repository/ArtistRep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/repository/BranoRep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collectdata-service/src/test/java/com/example/spotify_spike2/SpotifySpike2ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +41,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -35,6 +56,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "18",
     "last_opened_file_path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend",
     "onboarding.tips.debug.path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/authentication-service/src/main/java/org/example/Main.java",
@@ -105,7 +127,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="branch_Michele" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
