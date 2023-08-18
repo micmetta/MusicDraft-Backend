@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="commit per &quot;Scritta solo per il commit&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/SpotifySpike2Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/controller/ArtistController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/controller/TrackController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/model/Artista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/model/Auth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/model/Brano.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/repository/ArtistRep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/spotify_spike2/repository/BranoRep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/collectdata-service/src/test/java/com/example/spotify_spike2/SpotifySpike2ApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="allineamento con &#10;branch_Pietro" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +53,7 @@
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\main\java\com.microservice.authentication" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -90,8 +68,17 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.authentication-service: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -119,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692008929896</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="allineamento con &#10;branch_Pietro">
+      <created>1692349459593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1692349459593</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,7 +141,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit per &quot;Scritta solo per il commit&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit per &quot;Scritta solo per il commit&quot;" />
+    <MESSAGE value="allineamento con &#10;branch_Pietro" />
+    <option name="LAST_COMMIT_MESSAGE" value="allineamento con &#10;branch_Pietro" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

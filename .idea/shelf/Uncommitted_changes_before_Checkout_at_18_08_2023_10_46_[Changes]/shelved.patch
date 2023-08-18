@@ -1,0 +1,91 @@
+Index: collectdata-service/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#spring.datasource.url=jdbc:mysql://mysqldb:3306/spotifydb\r\n#spring.datasource.username=piero\r\n#spring.datasource.password=piero1234+\r\n\r\nspring.datasource.url=jdbc:mysql://mysqldb:3306/db_musicdraft\r\nspring.datasource.username=musicdraft\r\nspring.datasource.password=musicdraft\r\n\r\n\r\n#non c'è bisogno di specificare il dialetto qui sotto (altrimenti mi dà errore)\r\n#( quello di default va bene -> Using dialect: org.hibernate.dialect.MySQLDialect )\r\n#spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect\r\n\r\n# questa riga qui sotto è importante perchè con essa possiamo specificare se ogni volta\r\n# vogliamo che i dati prenseti nel DB vengano resettati o semplicemente aggiornati.\r\n# i parametri possibili sono : (create, create-drop, validate, update)\r\nspring.jpa.hibernate.ddl-auto=update\r\nspring.jpa.show-sql=true\r\nserver.port=9090\r\nlogging.level.org.springframework.security=TRACE
+===================================================================
+diff --git a/collectdata-service/src/main/resources/application.properties b/collectdata-service/src/main/resources/application.properties
+--- a/collectdata-service/src/main/resources/application.properties	
++++ b/collectdata-service/src/main/resources/application.properties	
+@@ -2,6 +2,10 @@
+ #spring.datasource.username=piero
+ #spring.datasource.password=piero1234+
+ 
++#spring.datasource.url=jdbc:mysql://mysqldb:3306/db_utenti
++#spring.datasource.username=michele
++#spring.datasource.password=michelem
++
+ spring.datasource.url=jdbc:mysql://mysqldb:3306/db_musicdraft
+ spring.datasource.username=musicdraft
+ spring.datasource.password=musicdraft
+Index: docker-compose.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>version: \"3.8\"\r\nservices:\r\n  authentication-service:\r\n#    image: authentication-service-server:latest\r\n    build: C:\\Users\\pietr\\Desktop\\Uni\\TAAS\\Spike\\MusicDraft-Backend\\authentication-service\r\n    restart: always\r\n    ports:\r\n      - 8081:8081\r\n    depends_on:\r\n      - mysqldb\r\n\r\n  collectdata-service:\r\n#    image: collectdata-service-server:latest\r\n    build: C:\\Users\\pietr\\Desktop\\Uni\\TAAS\\Spike\\MusicDraft-Backend\\collectdata-service\r\n    restart: always\r\n    ports:\r\n      - 9090:9090\r\n    depends_on:\r\n      - mysqldb\r\n\r\n\r\n  mysqldb:\r\n    image: \"mysql:5.7\"\r\n    restart: always\r\n    ports:\r\n      - 3307:3306\r\n    environment:\r\n      MYSQL_DATABASE: db_musicdraft\r\n      MYSQL_USER: musicdraft\r\n      MYSQL_PASSWORD: musicdraft\r\n      MYSQL_ROOT_PASSWORD: musicdraft
+===================================================================
+diff --git a/docker-compose.yml b/docker-compose.yml
+--- a/docker-compose.yml	
++++ b/docker-compose.yml	
+@@ -2,7 +2,7 @@
+ services:
+   authentication-service:
+ #    image: authentication-service-server:latest
+-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraft-Backend\authentication-service
++    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
+     restart: always
+     ports:
+       - 8081:8081
+@@ -11,7 +11,7 @@
+ 
+   collectdata-service:
+ #    image: collectdata-service-server:latest
+-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraft-Backend\collectdata-service
++    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectdata-service
+     restart: always
+     ports:
+       - 9090:9090
+@@ -28,4 +28,15 @@
+       MYSQL_DATABASE: db_musicdraft
+       MYSQL_USER: musicdraft
+       MYSQL_PASSWORD: musicdraft
+-      MYSQL_ROOT_PASSWORD: musicdraft
+\ No newline at end of file
++      MYSQL_ROOT_PASSWORD: musicdraft
++
++#  mysqldb:
++#    image: "mysql:5.7"
++#    restart: always
++#    ports:
++#      - 3307:3306
++#    environment:
++#      MYSQL_DATABASE: db_utenti
++#      MYSQL_USER: michele
++#      MYSQL_PASSWORD: michelem
++#      MYSQL_ROOT_PASSWORD: michelem
+\ No newline at end of file
+Index: collectdata-service/docker-compose.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>version: \"3.8\"\r\nservices:\r\n  server:\r\n    build: .\r\n    restart: always\r\n    ports:\r\n      - 9090:9090\r\n    depends_on:\r\n      - mysqldb\r\n\r\n  mysqldb:\r\n    image: \"mysql:5.7\"\r\n    restart: always\r\n    ports:\r\n      - 3307:3306\r\n    environment:\r\n      MYSQL_DATABASE: db_musicdraft\r\n      MYSQL_USER: musicdraft\r\n      MYSQL_PASSWORD: musicdraft\r\n      MYSQL_ROOT_PASSWORD: musicdraft
+===================================================================
+diff --git a/collectdata-service/docker-compose.yml b/collectdata-service/docker-compose.yml
+--- a/collectdata-service/docker-compose.yml	
++++ b/collectdata-service/docker-compose.yml	
+@@ -17,4 +17,15 @@
+       MYSQL_DATABASE: db_musicdraft
+       MYSQL_USER: musicdraft
+       MYSQL_PASSWORD: musicdraft
+-      MYSQL_ROOT_PASSWORD: musicdraft
+\ No newline at end of file
++      MYSQL_ROOT_PASSWORD: musicdraft
++
++#  mysqldb:
++#    image: "mysql:5.7"
++#    restart: always
++#    ports:
++#      - 3307:3306
++#    environment:
++#      MYSQL_DATABASE: db_utenti
++#      MYSQL_USER: michele
++#      MYSQL_PASSWORD: michelem
++#      MYSQL_ROOT_PASSWORD: michelem
+\ No newline at end of file
