@@ -5,13 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="allineamento con &#10;branch_Pietro">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneAmici.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/repository/HomeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/AuthenticationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/AuthenticationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Dockerfile" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -21,11 +45,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -58,7 +82,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/authentication-service/src/main/java/org/example/Main.java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/home-service/src/main/java/org/example/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -75,6 +99,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+    <configuration name="GestioneAmiciApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.microservice.home.GestioneAmiciApplication" />
+      <module name="home-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.microservice.home.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -100,6 +137,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Application.GestioneAmiciApplication" />
         <item itemvalue="Docker.authentication-service: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -141,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692350023765</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="allineamento con &#10;branch_Pietro">
+      <created>1692350625004</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692350625004</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
