@@ -1,0 +1,264 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"31884575-f160-4fcc-b28c-b4d63ad32d48\" name=\"Changes\" comment=\"commit per &quot;Scritta solo per il commit&quot;\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Ty7BM8vXO8gZxzh82ygVy9YCA6\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"jdk.selected.JAVA_MODULE\": \"18\",\r\n    \"last_opened_file_path\": \"C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend\",\r\n    \"onboarding.tips.debug.path\": \"C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/authentication-service/src/main/java/org/example/Main.java\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.importing\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\miky9\\IdeaProjects\\spikes\\MusicDraftBackend\" />\r\n      <recent name=\"C:\\Users\\miky9\\IdeaProjects\\spikes\\MusicDraftBackend\\authentication-service\" />\r\n      <recent name=\"C:\\Users\\miky9\\IdeaProjects\\spikes\\MusicDraftBackend\\authentication-service\\src\\test\" />\r\n      <recent name=\"C:\\Users\\miky9\\IdeaProjects\\spikes\\MusicDraftBackend\\authentication-service\\src\\main\\resources\" />\r\n      <recent name=\"C:\\Users\\miky9\\IdeaProjects\\spikes\\MusicDraftBackend\\authentication-service\\src\\main\\java\\com.microservice.authentication\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"docker-deploy\" factoryName=\"docker-compose.yml\" temporary=\"true\">\r\n      <deployment type=\"docker-compose.yml\">\r\n        <settings />\r\n      </deployment>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"authentication-service: Compose Deployment\" type=\"docker-deploy\" factoryName=\"docker-compose.yml\" temporary=\"true\" server-name=\"Docker\">\r\n      <deployment type=\"docker-compose.yml\">\r\n        <settings>\r\n          <option name=\"sourceFilePath\" value=\"authentication-service/docker-compose.yml\" />\r\n        </settings>\r\n      </deployment>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Docker.authentication-service: Compose Deployment\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"31884575-f160-4fcc-b28c-b4d63ad32d48\" name=\"Changes\" comment=\"\" />\r\n      <created>1692003331228</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1692003331228</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"commit per &quot;Scritta solo per il commit&quot;\">\r\n      <created>1692008897937</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1692008897937</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"commit per &quot;Scritta solo per il commit&quot;\">\r\n      <created>1692008929896</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1692008929896</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"commit per &quot;Scritta solo per il commit&quot;\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"commit per &quot;Scritta solo per il commit&quot;\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/org/example/Main.java</url>\r\n          <line>15</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,15 +4,27 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="commit per &quot;Scritta solo per il commit&quot;">
++    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="push 2 branch Pietro">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Dockerfile" />
++      </list>
++    </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="branch_Pietro" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+@@ -21,6 +33,7 @@
+   <component name="MavenImportPreferences">
+     <option name="generalSettings">
+       <MavenGeneralSettings>
++        <option name="mavenHome" value="Use Maven wrapper" />
+         <option name="useMavenConfig" value="true" />
+       </MavenGeneralSettings>
+     </option>
+@@ -31,31 +44,57 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "jdk.selected.JAVA_MODULE": "18",
+-    "last_opened_file_path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend",
+-    "onboarding.tips.debug.path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/authentication-service/src/main/java/org/example/Main.java",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/collectdata-service&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/authentication-service/src/main/java/org/example/Main.java&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
++    &quot;spring.configuration.checksum&quot;: &quot;1e917e328d1cf152dfa8e5301fe22756&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectdata-service" />
+       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend" />
+       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service" />
++      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectData-service" />
+       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\test" />
+-      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\main\resources" />
+-      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\main\java\com.microservice.authentication" />
+     </key>
+   </component>
+-  <component name="RunManager">
++  <component name="RunManager" selected="Docker.authentication-service: Compose Deployment">
++    <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
++      <module name="authentication-service" />
++      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.authentication.AuthenticationApplication" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="SpotifySpike2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
++      <module name="collectdata-service" />
++      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.spotify_spike2.SpotifySpike2Application" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+       <deployment type="docker-compose.yml">
++        <settings />
++      </deployment>
++      <method v="2" />
++    </configuration>
++    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
++      <deployment type="dockerfile">
+         <settings />
+       </deployment>
+       <method v="2" />
+@@ -68,9 +107,51 @@
+       </deployment>
+       <method v="2" />
+     </configuration>
++    <configuration name="authentication-service/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
++      <deployment type="dockerfile">
++        <settings>
++          <option name="buildOnly" value="true" />
++          <option name="sourceFilePath" value="authentication-service/Dockerfile" />
++        </settings>
++      </deployment>
++      <method v="2" />
++    </configuration>
++    <configuration name="collectdata-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
++      <deployment type="docker-compose.yml">
++        <settings>
++          <option name="sourceFilePath" value="collectdata-service/docker-compose.yml" />
++        </settings>
++      </deployment>
++      <method v="2" />
++    </configuration>
++    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
++      <deployment type="docker-compose.yml">
++        <settings>
++          <option name="sourceFilePath" value="docker-compose.yml" />
++        </settings>
++      </deployment>
++      <method v="2" />
++    </configuration>
++    <configuration name="docker-compose.yml.authentication-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
++      <deployment type="docker-compose.yml">
++        <settings>
++          <option name="services">
++            <list>
++              <option value="authentication-service" />
++            </list>
++          </option>
++          <option name="sourceFilePath" value="docker-compose.yml" />
++        </settings>
++      </deployment>
++      <method v="2" />
++    </configuration>
+     <recent_temporary>
+       <list>
+         <item itemvalue="Docker.authentication-service: Compose Deployment" />
++        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
++        <item itemvalue="Docker.collectdata-service: Compose Deployment" />
++        <item itemvalue="Docker.authentication-service: Compose Deployment" />
++        <item itemvalue="Docker.authentication-service/Dockerfile" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -83,37 +164,53 @@
+       <option name="presentableId" value="Default" />
+       <updated>1692003331228</updated>
+     </task>
+-    <task id="LOCAL-00001" summary="commit per &quot;Scritta solo per il commit&quot;">
+-      <created>1692008897937</created>
++    <task id="LOCAL-00001" summary="push branch Pietro">
++      <created>1692180075999</created>
+       <option name="number" value="00001" />
+       <option name="presentableId" value="LOCAL-00001" />
+       <option name="project" value="LOCAL" />
+-      <updated>1692008897937</updated>
++      <updated>1692180075999</updated>
+     </task>
+-    <task id="LOCAL-00002" summary="commit per &quot;Scritta solo per il commit&quot;">
+-      <created>1692008929896</created>
++    <task id="LOCAL-00002" summary="push 2 branch Pietro">
++      <created>1692185905008</created>
+       <option name="number" value="00002" />
+       <option name="presentableId" value="LOCAL-00002" />
+       <option name="project" value="LOCAL" />
+-      <updated>1692008929896</updated>
++      <updated>1692185905008</updated>
+     </task>
+     <option name="localTasksCounter" value="3" />
+     <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+       <map>
+         <entry key="MAIN">
+           <value>
+-            <State />
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="master" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
+           </value>
+         </entry>
+       </map>
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="commit per &quot;Scritta solo per il commit&quot;" />
+-    <option name="LAST_COMMIT_MESSAGE" value="commit per &quot;Scritta solo per il commit&quot;" />
++    <MESSAGE value="push branch Pietro" />
++    <MESSAGE value="push 2 branch Pietro" />
++    <option name="LAST_COMMIT_MESSAGE" value="push 2 branch Pietro" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"authentication-service\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n    <bytecodeTargetLevel>\r\n      <module name=\"authentication-service (1)\" target=\"18\" />\r\n      <module name=\"authentication-service (2)\" target=\"18\" />\r\n    </bytecodeTargetLevel>\r\n  </component>\r\n  <component name=\"JavacSettings\">\r\n    <option name=\"ADDITIONAL_OPTIONS_OVERRIDE\">\r\n      <module name=\"MusicDraftBackend\" options=\"\" />\r\n      <module name=\"authentication-service\" options=\"-parameters\" />\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	
++++ b/.idea/compiler.xml	
+@@ -6,12 +6,18 @@
+         <sourceOutputDir name="target/generated-sources/annotations" />
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
++      </profile>
++      <profile name="Annotation profile for authentication" enabled="true">
++        <sourceOutputDir name="../target/generated-sources/annotations" />
++        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
+         <module name="authentication-service" />
+       </profile>
+     </annotationProcessing>
+     <bytecodeTargetLevel>
+       <module name="authentication-service (1)" target="18" />
+       <module name="authentication-service (2)" target="18" />
++      <module name="collectdata-service" target="17" />
+     </bytecodeTargetLevel>
+   </component>
+   <component name="JavacSettings">

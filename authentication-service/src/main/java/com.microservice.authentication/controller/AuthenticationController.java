@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-//@CrossOrigin(origins = "http://localhost:4200/") // aggiunto dopo per cercare di far funziona angular..
+//@CrossOrigin(origins = "http://localhost:8082") //
 public class AuthenticationController {
 
     @Autowired
@@ -120,5 +120,21 @@ public class AuthenticationController {
         //return _user != null;
         return type_login;
     }
+
+    @GetMapping("/findByNickname/{nickname}")
+    public String existNickname(@PathVariable String nickname){
+
+        System.out.println("Sono in nel metodo di AuthenticationController e sto per invocare repository.findByNickname(nickname).");
+        List<User> _user = repository.findByNickname(nickname);
+        System.out.println("Sono in nel metodo di AuthenticationController e sto per restituire la risposta al microservizio chiamante.");
+
+        if(!_user.isEmpty()) {
+            return "nickname esistente";
+        }
+        else {
+            return "nickname inesistente";
+        }
+    }
+
 
 }

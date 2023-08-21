@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="push 2 branch Pietro">
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="allineamento con &#10;branch_Pietro">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneAmici.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/repository/HomeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collectdata-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/AuthenticationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/AuthenticationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,17 +31,32 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Dockerfile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="branch_Pietro" />
+        <entry key="$PROJECT_DIR$" value="branch_Michele" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="793b9745-6b9b-46a9-a3bc-bf7a78552bd2" />
+        <option name="url" value="https://github.com/micmetta/MusicDraft-Backend.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -49,57 +75,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/collectdata-service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/authentication-service/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "spring.configuration.checksum": "1e917e328d1cf152dfa8e5301fe22756"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/home-service/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectdata-service" />
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend" />
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service" />
-      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectData-service" />
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\test" />
+      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\main\resources" />
+      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\main\java\com.microservice.authentication" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
-    <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="authentication-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.authentication.AuthenticationApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpotifySpike2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="collectdata-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.spotify_spike2.SpotifySpike2Application" />
+    <configuration name="GestioneAmiciApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.microservice.home.GestioneAmiciApplication" />
+      <module name="home-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.microservice.home.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
-        <settings />
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile">
         <settings />
       </deployment>
       <method v="2" />
@@ -112,23 +126,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="authentication-service/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="buildOnly" value="true" />
-          <option name="sourceFilePath" value="authentication-service/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="collectdata-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="collectdata-service/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -137,26 +134,11 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.authentication-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="authentication-service" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.collectdata-service: Compose Deployment" />
+        <item itemvalue="Application.GestioneAmiciApplication" />
         <item itemvalue="Docker.authentication-service: Compose Deployment" />
-        <item itemvalue="Docker.authentication-service/Dockerfile" />
-        <item itemvalue="Docker.docker-compose.yml.authentication-service: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -169,25 +151,43 @@
       <option name="presentableId" value="Default" />
       <updated>1692003331228</updated>
     </task>
-    <task id="LOCAL-00001" summary="push branch Pietro">
-      <created>1692180075999</created>
+    <task id="LOCAL-00001" summary="commit per &quot;Scritta solo per il commit&quot;">
+      <created>1692008897937</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1692180075999</updated>
+      <updated>1692008897937</updated>
     </task>
-    <task id="LOCAL-00002" summary="push 2 branch Pietro">
-      <created>1692185905008</created>
+    <task id="LOCAL-00002" summary="commit per &quot;Scritta solo per il commit&quot;">
+      <created>1692008929896</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1692185905008</updated>
+      <updated>1692008929896</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="allineamento con &#10;branch_Pietro">
+      <created>1692349459593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1692349459593</updated>
+    </task>
+    <task id="LOCAL-00004" summary="allineamento con &#10;branch_Pietro">
+      <created>1692350023765</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692350023765</updated>
+    </task>
+    <task id="LOCAL-00005" summary="allineamento con &#10;branch_Pietro">
+      <created>1692350625004</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692350625004</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -200,7 +200,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/branch_Michele" />
                       </list>
                     </value>
                   </entry>
@@ -213,9 +213,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="push branch Pietro" />
-    <MESSAGE value="push 2 branch Pietro" />
-    <option name="LAST_COMMIT_MESSAGE" value="push 2 branch Pietro" />
+    <MESSAGE value="commit per &quot;Scritta solo per il commit&quot;" />
+    <MESSAGE value="allineamento con &#10;branch_Pietro" />
+    <option name="LAST_COMMIT_MESSAGE" value="allineamento con &#10;branch_Pietro" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

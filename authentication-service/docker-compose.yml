@@ -8,6 +8,7 @@ services:
     depends_on:
       - mysqldb
 
+
   mysqldb:
     image: "mysql:5.7"
     restart: always
@@ -18,3 +19,14 @@ services:
       MYSQL_USER: musicdraft
       MYSQL_PASSWORD: musicdraft
       MYSQL_ROOT_PASSWORD: musicdraft
+
+#  mysqldb:
+#    image: "mysql:5.7"
+#    restart: always
+#    ports:
+#      - 3307:3306
+#    environment:
+#      MYSQL_DATABASE: db_utenti
+#      MYSQL_USER: michele
+#      MYSQL_PASSWORD: michelem
+#      MYSQL_ROOT_PASSWORD: michelem

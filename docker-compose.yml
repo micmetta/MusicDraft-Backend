@@ -2,22 +2,36 @@ version: "3.8"
 services:
   authentication-service:
 #    image: authentication-service-server:latest
-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraft-Backend\authentication-service
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
     restart: always
     ports:
       - 8081:8081
     depends_on:
       - mysqldb
+    networks:
+      - opnet
+
+  home-service:
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\home-service
+    restart: always
+    ports:
+      - 8082:8082
+    depends_on:
+      - mysqldb
+      - authentication-service
+    networks:
+      - opnet
 
   collectdata-service:
 #    image: collectdata-service-server:latest
-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraft-Backend\collectdata-service
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectdata-service
     restart: always
     ports:
       - 9090:9090
     depends_on:
       - mysqldb
-
+    networks:
+      - opnet
 
   mysqldb:
     image: "mysql:5.7"
@@ -29,3 +43,9 @@ services:
       MYSQL_USER: musicdraft
       MYSQL_PASSWORD: musicdraft
       MYSQL_ROOT_PASSWORD: musicdraft
+    networks:
+      - opnet
+
+networks:
+  opnet:
+    driver: bridge

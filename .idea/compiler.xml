@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/home-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="home-service" />
         <module name="authentication-service" />
         <module name="collectdata-service" />
       </profile>
@@ -20,6 +24,7 @@
       <module name="MusicDraftBackend" options="" />
       <module name="authentication-service" options="-parameters" />
       <module name="collectdata-service" options="-parameters" />
+      <module name="home-service" options="-parameters" />
     </option>
   </component>
 </project>
