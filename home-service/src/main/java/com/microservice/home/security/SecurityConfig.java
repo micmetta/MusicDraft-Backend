@@ -26,7 +26,9 @@ public class SecurityConfig {
                             .requestMatchers(HttpMethod.POST, "/api/addAmico/{nickameU1}/{nicknameU2}").permitAll() // Permette richieste POST a "/registration" senza autenticazione.
                             .requestMatchers(HttpMethod.GET, "/api/richiesteInAttesa/{nickname}").permitAll()
                             .requestMatchers(HttpMethod.GET, "/api/richiesteInAttesaUtenti/{nickname}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/getAllFriends/{nickname}").permitAll()
                             .requestMatchers(HttpMethod.PUT, "/api/richiestaAccettata/{nicknameU1}/{nicknameU2}").permitAll();
+
                     authorizationManagerRequestMatcherRegistry.anyRequest().authenticated(); // Richiede l'autenticazione per tutte le altre richieste (ci deve essere altrimenti se faccio la GET dopo che viene scelto l'account Google mi da errore 403).
                 })
                 .oauth2Login(Customizer.withDefaults()) // Abilita il login OAuth2 con impostazioni predefinite (andrà a vedere nell'application.proprieties il cliet-id e il client-secret per permettere l'autenticazione con GOOGLE)

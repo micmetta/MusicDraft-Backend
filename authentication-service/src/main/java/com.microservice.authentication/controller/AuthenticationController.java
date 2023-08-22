@@ -42,7 +42,10 @@ public class AuthenticationController {
         if(_user.isEmpty()){
             _user = repository.findByEmail(user.getEmail()); // ora controllo se l'email inserita è univoca.
             if(_user.isEmpty()){
-                repository.save(new User(user.getNickname(), user.getEmail(), user.getPassword()));
+                // a questo punto MEMORIZZO UN NUOVO UTENTE nella tabella utenti.
+                // inserisco direttamente qui nel backend lo stato isOnline=true.
+                // i points INIZIALI LI SETTO QUI NEL BACKEND
+                repository.save(new User(user.getNickname(), user.getEmail(), user.getPassword(), true, 1000));
                 out = "utente registrato";
             }
             else{
@@ -157,6 +160,7 @@ public class AuthenticationController {
     public String get_Nickname(@PathVariable String email){
         List<User> _user = repository.findByEmail(email);
         String nickname_user = "";
+
         if(!_user.isEmpty()){
             nickname_user = _user.get(0).getNickname();
 
@@ -164,6 +168,46 @@ public class AuthenticationController {
         }
         else{
             return "email inesistente.";
+        }
+    }
+
+
+    // endpoint per sapere se un certo utente è online o no:
+    @GetMapping("/getIsOnline/{nickname}")
+    public String get_isOnline(@PathVariable String nickname){
+        List<User> _user = repository.findByNickname(nickname);
+        boolean isOnline = false;
+
+        if(!_user.isEmpty()){
+            isOnline = _user.get(0).getisOnline();
+
+            if(isOnline) {
+                return "Online";
+            }
+            else {
+                return "Offline";
+            }
+        }
+        else{
+            return "Utente inserito inesistente.";
+        }
+    }
+
+
+    //questo endpoint per un utente il cui nickname viene dato in input prende il valore dei suoi points:
+    @GetMapping("/getPoints/{nickname}")
+    public int get_Points(@PathVariable String nickname){
+        List<User> _user = repository.findByNickname(nickname);
+        int points = 0;
+
+        if(!_user.isEmpty()){
+            points = _user.get(0).getPoints();
+
+            return points;
+        }
+        else{
+            return -1; // in questo caso il -1 indica che c'è stato un errore, ovvero indica che non esiste un utente nella tabella Utenti che ha
+            // quel nickname fornito in input.
         }
     }
 

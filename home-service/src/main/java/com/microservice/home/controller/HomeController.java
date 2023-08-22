@@ -153,4 +153,37 @@ public class HomeController {
         }
     }
 
+    // Questo endpoint mi permette di poter prendere tutti gli amici di un certo utente il cui nickname viene dato in input.
+    @GetMapping(value = "/getAllFriends/{nickname}")
+    public List<String> get_allAmici(@PathVariable String nickname){
+        List<GestioneAmici> lista_amici_lettura_coppie_da_sinistra_a_destra = repository.findByNicknameU1AndStato(nickname, "accettata");
+        List<GestioneAmici> lista_amici_lettura_coppie_da_destra_a_sinistra = repository.findByNicknameU2AndStato(nickname, "accettata");
+        List<String> risposta = new ArrayList<>();
+
+        if(lista_amici_lettura_coppie_da_sinistra_a_destra.isEmpty() && lista_amici_lettura_coppie_da_destra_a_sinistra.isEmpty()){
+            return risposta; // sarà null in questo caso perchè l'utente non ha amici
+        }
+        else{
+            // Allora inserisco in risposta tutti gli amici che ha questo utente:
+
+            if(!lista_amici_lettura_coppie_da_sinistra_a_destra.isEmpty()){
+                // qui considero nickname come utente di sinistra della coppia e quindi il suo amico si troverà a destra per questo prendo
+                // il getNicknameU2
+                for (GestioneAmici amico : lista_amici_lettura_coppie_da_sinistra_a_destra) {
+                    risposta.add(amico.getNicknameU2());
+                }
+            }
+            if(!lista_amici_lettura_coppie_da_destra_a_sinistra.isEmpty()) {
+                // qui invece considero nickname come utente di destra della coppia e quindi il suo amico si troverà a sinistra per questo prendo
+                // il getNicknameU1
+                for (GestioneAmici amico : lista_amici_lettura_coppie_da_destra_a_sinistra) {
+                    risposta.add(amico.getNicknameU1());
+                }
+            }
+
+            return risposta;
+
+        }
+    }
+
 }

@@ -10,13 +10,13 @@ public class GestioneAmici {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "nickameU1")//specifico che name sarà una colonna della tabella gestione_amici (utente che ha mandato la richiesta di amicizia).
+    @Column(name = "nicknameU1")//specifico che name sarà una colonna della tabella gestione_amici (utente che ha mandato la richiesta di amicizia).
     private String nicknameU1;
 
     @Column(name = "nicknameU2")//specifico che name sarà una colonna della tabella gestione_amici (utente che ha ricevuto la richiesta di amicizia).
     private String nicknameU2;
 
-    @Column(name = "stato")//specifico che name sarà una colonna della tabella customer.
+    @Column(name = "stato")
     private String stato; // "in attesa" oppure "accettato"
 
     public GestioneAmici(){}

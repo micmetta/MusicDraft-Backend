@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="add richiesta amicizia">
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="add: gestioneAmici + getNickname + getEmail">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneAmici.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneAmici.java" afterDir="false" />
@@ -183,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692442659420</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add: gestioneAmici + getNickname + getEmail">
+      <created>1692692548973</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1692692548973</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,7 +221,8 @@
     <MESSAGE value="commit per &quot;Scritta solo per il commit&quot;" />
     <MESSAGE value="allineamento con &#10;branch_Pietro" />
     <MESSAGE value="add richiesta amicizia" />
-    <option name="LAST_COMMIT_MESSAGE" value="add richiesta amicizia" />
+    <MESSAGE value="add: gestioneAmici + getNickname + getEmail" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: gestioneAmici + getNickname + getEmail" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
