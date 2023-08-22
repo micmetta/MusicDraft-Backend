@@ -56,6 +56,7 @@ public class AuthenticationController {
         return out;
     }
 
+
     @GetMapping("/loginGoogle") // invece, chi si collegherà a questo servizio, prima farà il login con google e dopo che sarà loggato vedrà la scritta definita qui sotto.
     public String after_login(){
 
@@ -95,7 +96,7 @@ public class AuthenticationController {
     }
 
 
-    //aggiungi il servizio REST /login...
+    // aggiungi il servizio REST /login...
     // Questo microservizio permetterà agli utenti giè registrati di poter loggare nella web app
     @GetMapping("/loginRegistered/{nickname}/{password}")
     public String checkNicknameAndPassword(@PathVariable String nickname, @PathVariable String password){ //DEVI METTERE @RequestBody passandogli il Nickname e la Password... (DA FARE...)
@@ -136,5 +137,34 @@ public class AuthenticationController {
         }
     }
 
+    // questo endpoint mi permette dato un certo nickname in input di ottenere la sua email:
+    @GetMapping("/getEmail/{nickname}")
+    public String get_Email(@PathVariable String nickname){
+        List<User> _user = repository.findByNickname(nickname);
+        String email_user = "";
+        if(!_user.isEmpty()){
+            email_user = _user.get(0).getEmail();
+
+            return email_user;
+        }
+        else{
+            return "nickname inesistente.";
+        }
+    }
+
+    // questo endpoint per un utente mi permette dato una certa email in input di ottenere il suo nickname:
+    @GetMapping("/getNickname/{email}")
+    public String get_Nickname(@PathVariable String email){
+        List<User> _user = repository.findByEmail(email);
+        String nickname_user = "";
+        if(!_user.isEmpty()){
+            nickname_user = _user.get(0).getNickname();
+
+            return nickname_user;
+        }
+        else{
+            return "email inesistente.";
+        }
+    }
 
 }

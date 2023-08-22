@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="allineamento con &#10;branch_Pietro">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneAmici.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/repository/HomeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="add richiesta amicizia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/AuthenticationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/AuthenticationApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneAmici.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneAmici.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/repository/HomeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/repository/HomeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692350625004</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add richiesta amicizia">
+      <created>1692442659420</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1692442659420</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,7 +212,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit per &quot;Scritta solo per il commit&quot;" />
     <MESSAGE value="allineamento con &#10;branch_Pietro" />
-    <option name="LAST_COMMIT_MESSAGE" value="allineamento con &#10;branch_Pietro" />
+    <MESSAGE value="add richiesta amicizia" />
+    <option name="LAST_COMMIT_MESSAGE" value="add richiesta amicizia" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

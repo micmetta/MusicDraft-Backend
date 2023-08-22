@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface HomeRepository extends CrudRepository<GestioneAmici, Long> {
 
-    //List<GestioneAmici> findByNickameU1AndNickameU2(String nickameU1, String nickameU2);
+    GestioneAmici findByNicknameU1AndNicknameU2(String nicknameU1, String nicknameU2);
+    List<GestioneAmici> findByNicknameU2AndStato(String nicknameU2, String stato);
 }
