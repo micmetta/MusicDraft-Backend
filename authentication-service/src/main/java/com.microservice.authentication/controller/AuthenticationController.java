@@ -42,7 +42,10 @@ public class AuthenticationController {
         if(_user.isEmpty()){
             _user = repository.findByEmail(user.getEmail()); // ora controllo se l'email inserita è univoca.
             if(_user.isEmpty()){
-                repository.save(new User(user.getNickname(), user.getEmail(), user.getPassword()));
+                // a questo punto MEMORIZZO UN NUOVO UTENTE nella tabella utenti.
+                // inserisco direttamente qui nel backend lo stato isOnline=true.
+                // i points INIZIALI LI SETTO QUI NEL BACKEND
+                repository.save(new User(user.getNickname(), user.getEmail(), user.getPassword(), true, 1000));
                 out = "utente registrato";
             }
             else{
@@ -55,6 +58,7 @@ public class AuthenticationController {
 
         return out;
     }
+
 
     @GetMapping("/loginGoogle") // invece, chi si collegherà a questo servizio, prima farà il login con google e dopo che sarà loggato vedrà la scritta definita qui sotto.
     public String after_login(){
@@ -95,7 +99,7 @@ public class AuthenticationController {
     }
 
 
-    //aggiungi il servizio REST /login...
+    // aggiungi il servizio REST /login...
     // Questo microservizio permetterà agli utenti giè registrati di poter loggare nella web app
     @GetMapping("/loginRegistered/{nickname}/{password}")
     public String checkNicknameAndPassword(@PathVariable String nickname, @PathVariable String password){ //DEVI METTERE @RequestBody passandogli il Nickname e la Password... (DA FARE...)
@@ -136,5 +140,75 @@ public class AuthenticationController {
         }
     }
 
+    // questo endpoint mi permette dato un certo nickname in input di ottenere la sua email:
+    @GetMapping("/getEmail/{nickname}")
+    public String get_Email(@PathVariable String nickname){
+        List<User> _user = repository.findByNickname(nickname);
+        String email_user = "";
+        if(!_user.isEmpty()){
+            email_user = _user.get(0).getEmail();
+
+            return email_user;
+        }
+        else{
+            return "nickname inesistente.";
+        }
+    }
+
+    // questo endpoint per un utente mi permette dato una certa email in input di ottenere il suo nickname:
+    @GetMapping("/getNickname/{email}")
+    public String get_Nickname(@PathVariable String email){
+        List<User> _user = repository.findByEmail(email);
+        String nickname_user = "";
+
+        if(!_user.isEmpty()){
+            nickname_user = _user.get(0).getNickname();
+
+            return nickname_user;
+        }
+        else{
+            return "email inesistente.";
+        }
+    }
+
+
+    // endpoint per sapere se un certo utente è online o no:
+    @GetMapping("/getIsOnline/{nickname}")
+    public String get_isOnline(@PathVariable String nickname){
+        List<User> _user = repository.findByNickname(nickname);
+        boolean isOnline = false;
+
+        if(!_user.isEmpty()){
+            isOnline = _user.get(0).getisOnline();
+
+            if(isOnline) {
+                return "Online";
+            }
+            else {
+                return "Offline";
+            }
+        }
+        else{
+            return "Utente inserito inesistente.";
+        }
+    }
+
+
+    //questo endpoint per un utente il cui nickname viene dato in input prende il valore dei suoi points:
+    @GetMapping("/getPoints/{nickname}")
+    public int get_Points(@PathVariable String nickname){
+        List<User> _user = repository.findByNickname(nickname);
+        int points = 0;
+
+        if(!_user.isEmpty()){
+            points = _user.get(0).getPoints();
+
+            return points;
+        }
+        else{
+            return -1; // in questo caso il -1 indica che c'è stato un errore, ovvero indica che non esiste un utente nella tabella Utenti che ha
+            // quel nickname fornito in input.
+        }
+    }
 
 }
