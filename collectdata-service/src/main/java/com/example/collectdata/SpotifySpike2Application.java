@@ -1,4 +1,4 @@
-package com.example.spotify_spike2;
+package com.example.collectdata;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

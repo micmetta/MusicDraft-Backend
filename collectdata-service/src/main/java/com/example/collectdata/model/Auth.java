@@ -1,4 +1,4 @@
-package com.example.spotify_spike2.model;
+package com.example.collectdata.model;
 
 import se.michaelthelin.spotify.SpotifyApi;
 import se.michaelthelin.spotify.exceptions.SpotifyWebApiException;

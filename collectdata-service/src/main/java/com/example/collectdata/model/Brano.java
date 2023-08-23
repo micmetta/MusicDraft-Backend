@@ -1,5 +1,6 @@
-package com.example.spotify_spike2.model;
+package com.example.collectdata.model;
 
+//import com.example.marketplace.model.CarteInVenditaTrack;
 import jakarta.persistence.*;
 
 @Entity
@@ -24,6 +25,9 @@ public class Brano {
 
     @Column(name="immagine")
     private String immagine;
+
+   // @OneToOne(mappedBy = "Brano")
+    //private CarteInVenditaTrack card;
 
     public void setImmagine(String immagine) {
         this.immagine = immagine;
@@ -61,18 +65,18 @@ public class Brano {
         this.anno_pubblicazione = anno_pubblicazione;
     }
 
-    public int getPopolarità() {
+    public int getPopolarita() {
         return popolarita;
     }
 
-    public void setPopolarità(int popolarità) {
+    public void setPopolarita(int popolarita) {
         this.popolarita = popolarita;
     }
 
     public Brano() {
     }
 
-    public Brano(String nome_brano, String durata, String anno_pubblicazione, int popolarità, String immagine) {
+    public Brano(String nome_brano, String durata, String anno_pubblicazione, int popolarita, String immagine) {
         this.nome = nome_brano;
         this.durata = durata;
         this.anno_pubblicazione = anno_pubblicazione;

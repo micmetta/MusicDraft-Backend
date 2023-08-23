@@ -9,22 +9,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="home-service" />
+        <module name="carte_e_mazzi" />
+        <module name="marketplace-service" />
         <module name="authentication-service" />
         <module name="collectdata-service" />
+        <module name="home-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="authentication-service (1)" target="18" />
       <module name="authentication-service (2)" target="18" />
+      <module name="card-manage-service" target="17" />
+      <module name="marketplace" target="17" />
+      <module name="marketplace-sevice" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="MusicDraftBackend" options="" />
       <module name="authentication-service" options="-parameters" />
+      <module name="card-manage-service" options="-parameters" />
+      <module name="carte_e_mazzi" options="-parameters" />
       <module name="collectdata-service" options="-parameters" />
       <module name="home-service" options="-parameters" />
+      <module name="marketplace" options="-parameters" />
+      <module name="marketplace-service" options="-parameters" />
+      <module name="marketplace-sevice" options="-parameters" />
     </option>
   </component>
 </project>

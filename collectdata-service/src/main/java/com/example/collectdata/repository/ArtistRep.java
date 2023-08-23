@@ -1,6 +1,6 @@
-package com.example.spotify_spike2.repository;
+package com.example.collectdata.repository;
 
-import com.example.spotify_spike2.model.Artista;
+import com.example.collectdata.model.Artista;
 import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 

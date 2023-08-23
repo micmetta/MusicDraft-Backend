@@ -1,6 +1,7 @@
-package com.example.spotify_spike2.model;
+package com.example.collectdata.model;
 
 
+//import com.example.marketplace.model.CarteInVenditaArtista;
 import jakarta.persistence.*;
 
 @Entity
@@ -10,6 +11,7 @@ public class Artista {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id")
+
     private long id;
 
     @Column(name="nome")
@@ -23,6 +25,9 @@ public class Artista {
 
     @Column(name="immagine")
     private String immagine;
+
+ //   @OneToOne(mappedBy = "Artista")
+  //  private CarteInVenditaArtista card;
 
     public Artista() {
     }
@@ -54,11 +59,11 @@ public class Artista {
         this.nome = nome;
     }
 
-    public int getPopolarità() {
+    public int getPopolarita() {
         return popolarita;
     }
 
-    public void setPopolarità(int popolarità) {
+    public void setPopolarita(int popolarita) {
         this.popolarita = popolarita;
     }
 

@@ -8,7 +8,17 @@
         <option value="$PROJECT_DIR$/authentication-service/pom.xml" />
         <option value="$PROJECT_DIR$/collectdata-service/pom.xml" />
         <option value="$PROJECT_DIR$/home-service/pom.xml" />
+        <option value="$PROJECT_DIR$/card-manage-service/pom.xml" />
+        <option value="$PROJECT_DIR$/marketplace-sevice/pom.xml" />
+        <option value="$PROJECT_DIR$/marketplace-service/pom.xml" />
+        <option value="$PROJECT_DIR$/carte_e_mazzi/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/card-manage-service/pom.xml" />
+        <option value="$PROJECT_DIR$/marketplace-sevice/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">

@@ -1,8 +1,8 @@
-package com.example.spotify_spike2.controller;
+package com.example.collectdata.controller;
 
-import com.example.spotify_spike2.model.Auth;
-import com.example.spotify_spike2.model.Brano;
-import com.example.spotify_spike2.repository.BranoRep;
+import com.example.collectdata.repository.BranoRep;
+import com.example.collectdata.model.Auth;
+import com.example.collectdata.model.Brano;
 import org.apache.hc.core5.http.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

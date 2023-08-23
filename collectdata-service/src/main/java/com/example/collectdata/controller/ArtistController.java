@@ -1,8 +1,8 @@
-package com.example.spotify_spike2.controller;
+package com.example.collectdata.controller;
 
-import com.example.spotify_spike2.model.Artista;
-import com.example.spotify_spike2.repository.ArtistRep;
-import com.example.spotify_spike2.model.Auth;
+import com.example.collectdata.repository.ArtistRep;
+import com.example.collectdata.model.Artista;
+import com.example.collectdata.model.Auth;
 import org.apache.hc.core5.http.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -94,6 +94,9 @@ public class ArtistController {
         }
 
     }
+
+
+
 
 
 }
