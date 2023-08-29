@@ -21,8 +21,8 @@ public class GestioneAmici {
 
     public GestioneAmici(){}
 
-    public GestioneAmici(String nickameU1, String nicknameU2, String stato){
-        this.nicknameU1 = nickameU1;
+    public GestioneAmici(String nicknameU1, String nicknameU2, String stato){
+        this.nicknameU1 = nicknameU1;
         this.nicknameU2 = nicknameU2;
         this.stato = stato;
     }
@@ -39,7 +39,7 @@ public class GestioneAmici {
         return nicknameU1;
     }
 
-    public void setNicknameU1(String nickameU1) {
+    public void setNicknameU1(String nicknameU1) {
         this.nicknameU1 = nicknameU1;
     }
 

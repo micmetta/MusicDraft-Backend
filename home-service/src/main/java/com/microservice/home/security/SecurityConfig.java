@@ -23,16 +23,27 @@ public class SecurityConfig {
                 .authorizeHttpRequests( authorizationManagerRequestMatcherRegistry -> {
 
                     authorizationManagerRequestMatcherRegistry
-                            .requestMatchers(HttpMethod.POST, "/api/addAmico/{nickameU1}/{nicknameU2}").permitAll() // Permette richieste POST a "/registration" senza autenticazione.
-                            .requestMatchers(HttpMethod.GET, "/api/richiesteInAttesa/{nickname}").permitAll()
-                            .requestMatchers(HttpMethod.GET, "/api/richiesteInAttesaUtenti/{nickname}").permitAll()
-                            .requestMatchers(HttpMethod.GET, "/api/getAllFriends/{nickname}").permitAll()
-                            .requestMatchers(HttpMethod.PUT, "/api/richiestaAccettata/{nicknameU1}/{nicknameU2}").permitAll();
+                            // Endpoints di HomeController:
+                            .requestMatchers(HttpMethod.POST, "/api/v1/homeService/addAmico/{nickameU1}/{nicknameU2}").permitAll() // Permette richieste POST a "/registration" senza autenticazione.
+                            .requestMatchers(HttpMethod.GET, "/api/v1/homeService/richiesteInAttesa/{nickname}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/homeService/richiesteInAttesaUtenti/{nickname}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/homeService/getAllFriends/{nickname}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/homeService/getAllFriendsAreOnline/{nickname}").permitAll()
+                            .requestMatchers(HttpMethod.PUT, "/api/v1/homeService/richiestaAccettata/{nicknameU1}/{nicknameU2}").permitAll()
+
+                            // Endopoints di ScambiController:
+                            .requestMatchers(HttpMethod.POST, "/api/v1/homeService/scambiController/inviaOfferta").permitAll()
+                            .requestMatchers(HttpMethod.DELETE, "/api/v1/homeService/scambiController/cancellaOffertaTramiteId/{id}").permitAll()
+                            .requestMatchers(HttpMethod.DELETE, "/api/v1/homeService/scambiController/cancellaOffertaTramiteIdStart/{idStart}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/homeService/scambiController/getAllOfferte/{nickname}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/homeService/scambiController/getStorico/{id}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/homeService/scambiController/getUltimaControfferta/{id}").permitAll()
+                            .requestMatchers(HttpMethod.PUT, "/api/v1/homeService/scambiController/controfferta").permitAll()
+                            .requestMatchers(HttpMethod.PUT, "/api/v1/homeService/scambiController/accettaOfferta/{id}").permitAll();
 
                     authorizationManagerRequestMatcherRegistry.anyRequest().authenticated(); // Richiede l'autenticazione per tutte le altre richieste (ci deve essere altrimenti se faccio la GET dopo che viene scelto l'account Google mi da errore 403).
                 })
                 .oauth2Login(Customizer.withDefaults()) // Abilita il login OAuth2 con impostazioni predefinite (andrà a vedere nell'application.proprieties il cliet-id e il client-secret per permettere l'autenticazione con GOOGLE)
                 .build(); // La catena di filtri di sicurezza viene costruita utilizzando il metodo build().
-
     }
 }

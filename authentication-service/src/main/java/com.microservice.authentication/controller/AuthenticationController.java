@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1/authenticationService")
 //@CrossOrigin(origins = "http://localhost:8082") //
 public class AuthenticationController {
 
@@ -194,7 +194,7 @@ public class AuthenticationController {
     }
 
 
-    //questo endpoint per un utente il cui nickname viene dato in input prende il valore dei suoi points:
+    // Questo endpoint per un utente il cui nickname viene dato in input prende il valore dei suoi points:
     @GetMapping("/getPoints/{nickname}")
     public int get_Points(@PathVariable String nickname){
         List<User> _user = repository.findByNickname(nickname);
@@ -210,5 +210,23 @@ public class AuthenticationController {
             // quel nickname fornito in input.
         }
     }
+
+    // Questo endpoint serve per specificare che un utente è andato offline:
+    @PutMapping("/setIsOffline/{nickname}")
+    public String set_Offline(@PathVariable String nickname){
+        List<User> _user = repository.findByNickname(nickname);
+
+        if(!_user.isEmpty()){
+            _user.get(0).setisOnline(false); // setto il campo isOnline di questo utente a false per far capire che andrà offline.
+            repository.save(_user.get(0)); // memorizzo in maniera persistente nel DB la modifica fatta allo stato dell'utente.
+
+            return "Settaggio false eseguito.";
+        }
+        else{
+            return "Il nickname inserito è errato.";
+        }
+    }
+
+
 
 }

@@ -27,14 +27,15 @@ public class SecurityConfig {
                 .authorizeHttpRequests( authorizationManagerRequestMatcherRegistry -> {
 
                     authorizationManagerRequestMatcherRegistry
-                            .requestMatchers(HttpMethod.POST, "/api/registration").permitAll() // Permette richieste POST a "/registration" senza autenticazione.
-                            .requestMatchers(HttpMethod.GET, "/api/getAllUsers").permitAll()
-                            .requestMatchers(HttpMethod.GET, "/api/loginRegistered/{nickname}/{password}").permitAll()
-                            .requestMatchers(HttpMethod.GET, "/api/findByNickname/{nickname}").permitAll() // Permette richieste GET a "/loginRegistered" senza autenticazione.
-                            .requestMatchers(HttpMethod.GET, "/api/getEmail/{nickname}").permitAll()
-                            .requestMatchers(HttpMethod.GET, "/api/getNickname/{email}").permitAll()
-                            .requestMatchers(HttpMethod.GET, "/api/getIsOnline/{nickname}").permitAll()
-                            .requestMatchers(HttpMethod.GET, "/api/getPoints/{nickname}").permitAll();
+                            .requestMatchers(HttpMethod.POST, "/api/v1/authenticationService/registration").permitAll() // Permette richieste POST a "/registration" senza autenticazione.
+                            .requestMatchers(HttpMethod.GET, "/api/v1/authenticationService/getAllUsers").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/authenticationService/loginRegistered/{nickname}/{password}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/authenticationService/findByNickname/{nickname}").permitAll() // Permette richieste GET a "/loginRegistered" senza autenticazione.
+                            .requestMatchers(HttpMethod.GET, "/api/v1/authenticationService/getEmail/{nickname}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/authenticationService/getNickname/{email}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/authenticationService/getIsOnline/{nickname}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/authenticationService/getPoints/{nickname}").permitAll()
+                            .requestMatchers(HttpMethod.PUT, "/api/v1/authenticationService/setIsOffline/{nickname}").permitAll();
 
                     authorizationManagerRequestMatcherRegistry.anyRequest().authenticated(); // Richiede l'autenticazione per tutte le altre richieste (ci deve essere altrimenti se faccio la GET dopo che viene scelto l'account Google mi da errore 403).
                 })

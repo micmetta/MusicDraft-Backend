@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="add: gestioneAmici + getNickname + getEmail">
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="add: &#10;isOnline e points nella&#10;tabella Utenti &#10;+ &#10;/getIsOnline/{nickname}&#10;+&#10;/getPoints/{nickname}">
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/ScambiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneScambi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/repository/ScambiRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/service/RichiestaCarta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_08_2023_10_46_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_08_2023_10_46__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneAmici.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneAmici.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/repository/HomeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/repository/HomeRepository.java" afterDir="false" />
@@ -22,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Dockerfile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -191,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692692548973</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add: &#10;isOnline e points nella&#10;tabella Utenti &#10;+ &#10;/getIsOnline/{nickname}&#10;+&#10;/getPoints/{nickname}">
+      <created>1692701677394</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1692701677394</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,7 +237,8 @@
     <MESSAGE value="allineamento con &#10;branch_Pietro" />
     <MESSAGE value="add richiesta amicizia" />
     <MESSAGE value="add: gestioneAmici + getNickname + getEmail" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: gestioneAmici + getNickname + getEmail" />
+    <MESSAGE value="add: &#10;isOnline e points nella&#10;tabella Utenti &#10;+ &#10;/getIsOnline/{nickname}&#10;+&#10;/getPoints/{nickname}" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: &#10;isOnline e points nella&#10;tabella Utenti &#10;+ &#10;/getIsOnline/{nickname}&#10;+&#10;/getPoints/{nickname}" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

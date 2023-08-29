@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1/homeService")
 public class HomeController {
 
     @Autowired
@@ -56,7 +56,7 @@ public class HomeController {
             } else {
                 RestTemplate restTemplate = new RestTemplate();
                 //String response = restTemplate.getForObject("http://localhost:8081/api/findByNickname/giacomoPoretti", String.class); NON FUNZIONAVA..
-                String response = restTemplate.getForObject("http://authentication-service:8081/api/findByNickname/" + nicknameU2, String.class);
+                String response = restTemplate.getForObject("http://authentication-service:8081/api/v1/authenticationService/findByNickname/" + nicknameU2, String.class);
 
                 System.out.println();
                 System.out.println();
@@ -161,7 +161,7 @@ public class HomeController {
         List<String> risposta = new ArrayList<>();
 
         if(lista_amici_lettura_coppie_da_sinistra_a_destra.isEmpty() && lista_amici_lettura_coppie_da_destra_a_sinistra.isEmpty()){
-            return risposta; // sarà null in questo caso perchè l'utente non ha amici
+            return risposta; // sarà [] in questo caso perchè l'utente non ha amici
         }
         else{
             // Allora inserisco in risposta tutti gli amici che ha questo utente:
@@ -185,5 +185,94 @@ public class HomeController {
 
         }
     }
+
+    // Questo endpoint serve per ottenere tutti gli utenti che sono online e che sono amici di un certo utente a cui faccio riferimento tramite
+    // il suo nickname.
+    @GetMapping(value = "/getAllFriendsAreOnline/{nickname}")
+    public List<String> get_friendsAreOnline(@PathVariable String nickname){
+
+        List<GestioneAmici> lista_amici_lettura_coppie_da_sinistra_a_destra = repository.findByNicknameU1AndStato(nickname, "accettata");
+        List<GestioneAmici> lista_amici_lettura_coppie_da_destra_a_sinistra = repository.findByNicknameU2AndStato(nickname, "accettata");
+        List<String> amici_online = new ArrayList<>();
+
+        if((lista_amici_lettura_coppie_da_sinistra_a_destra.isEmpty() && lista_amici_lettura_coppie_da_destra_a_sinistra.isEmpty())){
+
+            // vuol dire che l'utente richiedente non ha amici E QUINDI amici_online non conterrà nessun elemento
+            return amici_online; // sarà [] in questo caso
+        }
+        else{
+            
+            // vuol dire che l'utente richiedente ha degli amici e quindi devo andare a vedere quali di questi sono attualmente online:
+            if(!lista_amici_lettura_coppie_da_sinistra_a_destra.isEmpty()){
+
+                // Qui considero nickname come utente di sinistra della coppia e quindi il suo amico si troverà a destra per questo prendo
+                // il getNicknameU2:
+                for (GestioneAmici amico : lista_amici_lettura_coppie_da_sinistra_a_destra) {
+
+                    // Adesso per sapere se l'amico corrente è online o meno devo chiamare l'endpoint: @GetMapping("/getIsOnline/{nickname}")
+                    // passandogli come {nickname} il nickname dell'amico corrente:
+                    RestTemplate restTemplate = new RestTemplate();
+                    String amico_corrente_isOnline = restTemplate.getForObject("http://authentication-service:8081/api/v1/authenticationService/getIsOnline/" + amico.getNicknameU2(), String.class);
+
+                    System.out.println();
+                    System.out.println();
+                    System.out.println("SONO in /getAllFriendsAreOnline/{nickname} IN GestioneAmici amico : lista_amici_lettura_coppie_da_sinistra_a_destra");
+                    System.out.println("amico_corrente_isOnline: " + amico_corrente_isOnline);
+                    System.out.println();
+                    System.out.println();
+
+                    if(amico_corrente_isOnline.equals("Online")){
+                        amici_online.add(amico.getNicknameU2());
+                    } else if (amico_corrente_isOnline.equals("Utente inserito inesistente.")) {
+
+                        // se entro qui vuol dire che amico.getNicknameU2() è inesistente nella tabella user per qualche motivo..
+                        amici_online.add("ERRORE, amico.getNicknameU2(): " + amico.getNicknameU2() + " è INESISTENTE in user");
+                    }
+                }
+            }
+
+            if(!lista_amici_lettura_coppie_da_destra_a_sinistra.isEmpty()){
+
+                // Qui invece considero nickname come utente di destra della coppia e quindi il suo amico si troverà a sinistra per questo prendo
+                // il getNicknameU1:
+                for (GestioneAmici amico : lista_amici_lettura_coppie_da_destra_a_sinistra){
+
+                    // Adesso per sapere se l'amico corrente è online o meno devo chiamare l'endpoint: @GetMapping("/getIsOnline/{nickname}")
+                    // passandogli come {nickname} il nickname dell'amico corrente:
+                    RestTemplate restTemplate = new RestTemplate();
+                    String amico_corrente_isOnline = restTemplate.getForObject("http://authentication-service:8081/api/v1/authenticationService/getIsOnline/" + amico.getNicknameU1(), String.class);
+
+                    System.out.println();
+                    System.out.println();
+                    System.out.println("SONO in /getAllFriendsAreOnline/{nickname} IN GestioneAmici amico : lista_amici_lettura_coppie_da_destra_a_sinistra");
+                    System.out.println("amico_corrente_isOnline: " + amico_corrente_isOnline);
+                    System.out.println();
+                    System.out.println();
+
+
+                    if(amico_corrente_isOnline.equals("Online")){
+                        amici_online.add(amico.getNicknameU1());
+                    } else if (amico_corrente_isOnline.equals("Utente inserito inesistente.")) {
+
+                        // se entro qui vuol dire che amico.getNicknameU2() è inesistente nella tabella user per qualche motivo..
+                        amici_online.add("ERRORE, amico.getNicknameU1(): " + amico.getNicknameU1() + " è INESISTENTE in user");
+                    }
+                }
+            }
+
+            if(amici_online.isEmpty()){
+                amici_online.add("Nessun amico online.");
+            }
+
+            // SE NESSUN AMICO E' ONLINE ALLORA amici_online avrà un solo elemento e in particolare
+            // amici_online[0] == "Nessun amico online."
+            // ALTRIMENTI, amici_online conterrà tutta la lista degli amici online dell'utente richiedente.
+            return amici_online;
+        }
+
+    }
+
+
+
 
 }
