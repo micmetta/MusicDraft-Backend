@@ -76,7 +76,7 @@ public class AuthenticationController {
         String str2 = "La tua email è: " + email_user;
         String out = str1 + "<br>" + str2; //<br> serve per far capire al broswer (che interpreta l'html) che deve andare a capo.
 
-        System.out.println("Modifica solo per il push nel branch_Michele");
+        System.out.println("Scritta solo per il commit nel master");
 
         System.out.println("Email utente: " + email_user);
         System.out.println("Nome utente: " + name_user);
