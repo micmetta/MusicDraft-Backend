@@ -328,5 +328,6 @@ public class ScambiController {
     //   RabbitMQ in questo caso, può invocare un endpoint di authentication-service per settare i points aggiuntivi all'utente di riferimento.
 
     //   Al termine di tutto questo processo le carte scambiate (+ eventuali points aggiuntivi) saranno assegnate agli utenti giusti.
+    //
 
 }
