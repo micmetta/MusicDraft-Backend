@@ -13,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/cartemazzi")
@@ -63,6 +64,37 @@ public class CarteController {
         public void insert_cart_Artist(@RequestBody CarteBraniN data){
             System.out.println(data.getNome());
             CarteBraniN _track = repoT.save(new CarteBraniN(data.getNome(),data.getDurata(),data.getAnno_pubblicazione(), data.getPopolarita(), data.getImmagine(),data.getNickname()));
+    }
+    @DeleteMapping("/delete-CardArtist/{id}")
+    public void delete_artist(@PathVariable Long id) {
+        System.out.println("Deleting artist with ID: " + id);
+
+        Optional<CarteArtistiN> artistaOptional = repoA.findById(id);
+
+        if (artistaOptional.isPresent()) {
+            CarteArtistiN artista = artistaOptional.get();
+            repoA.delete(artista);
+            System.out.println("Artist with ID " + id + " deleted successfully");
+        } else {
+            System.out.println("Artist with ID " + id + " not found");
+        }
+
+    }
+
+    @DeleteMapping("/delete-CardBrano/{id}")
+    public void delete_track(@PathVariable Long id) {
+        System.out.println("Deleting artist with ID: " + id);
+
+        Optional<CarteBraniN> artistaOptional = repoT.findById(id);
+
+        if (artistaOptional.isPresent()) {
+            CarteBraniN brano = artistaOptional.get();
+            repoT.delete(brano);
+            System.out.println("Artist with ID " + id + " deleted successfully");
+        } else {
+            System.out.println("Artist with ID " + id + " not found");
+        }
+
     }
 
 

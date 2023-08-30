@@ -13,4 +13,5 @@ public interface MarketCardArtistRepo extends CrudRepository<CarteInVenditaArtis
     List<CarteInVenditaArtista> findByGenere(String genere);
 
 
+
 }

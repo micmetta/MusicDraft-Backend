@@ -44,6 +44,15 @@ public class CarteInVenditaTrack {
         this.immagine = immagine;
         this.costo = popolarita*10;
     }
+    public CarteInVenditaTrack(String nome, String durata, String anno_pubblicazione, int popolarita, String immagine,int costo) {
+        this.nome = nome;
+        this.durata = durata;
+        this.anno_pubblicazione = anno_pubblicazione;
+        this.popolarita = popolarita;
+        this.immagine = immagine;
+        this.costo = costo;
+    }
+
 
     public int getCosto() {
         return costo;

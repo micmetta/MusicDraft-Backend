@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="allineamento con &#10;branch_Pietro">
-      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/ScambiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/ScambiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/controller/MarketCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/controller/MarketCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaArtista.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaArtista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaTrack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/repo/MarketCardArtistRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/repo/MarketCardArtistRepo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +73,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pietr/Desktop/Uni/TAAS/Spike/MusicDraft-Backend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pietr/Desktop/Uni/TAAS/Spike/MusicDraft-Frontend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -100,6 +105,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GestioneAmiciApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="home-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.home.GestioneAmiciApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,7 +156,10 @@
       <updated>1692003331228</updated>
       <workItem from="1692864776352" duration="9348000" />
       <workItem from="1693037488095" duration="680000" />
-      <workItem from="1693304942525" duration="933000" />
+      <workItem from="1693304942525" duration="1556000" />
+      <workItem from="1693320909149" duration="351000" />
+      <workItem from="1693324599321" duration="2986000" />
+      <workItem from="1693382617703" duration="3030000" />
     </task>
     <task id="LOCAL-00001" summary="commit per &quot;Scritta solo per il commit&quot;">
       <created>1692008897937</created>
@@ -203,7 +218,23 @@
       <option name="project" value="LOCAL" />
       <updated>1692875093401</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="allineamento con &#10;branch_Pietro">
+      <option name="closed" value="true" />
+      <created>1693306679375</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1693306679375</updated>
+    </task>
+    <task id="LOCAL-00010" summary="allineamento con &#10;branch_Pietro">
+      <option name="closed" value="true" />
+      <created>1693306774146</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1693306774146</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

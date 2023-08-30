@@ -37,6 +37,17 @@ public class CarteInVenditaArtista {
         this.costo = popolarita*10;
     }
 
+
+
+
+    public CarteInVenditaArtista(String nome, int popolarita, String genere, String immagine, int costo) {
+        this.nome = nome;
+        this.popolarita = popolarita;
+        this.genere = genere;
+        this.immagine = immagine;
+        this.costo = costo;
+    }
+
     public int getCosto() {
         return costo;
     }
