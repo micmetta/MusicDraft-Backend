@@ -2,29 +2,31 @@ version: "3.8"
 services:
   authentication-service:
 #    image: authentication-service-server:latest
-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraft-Backend\authentication-service
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
     restart: always
     ports:
       - 8081:8081
     depends_on:
       - mysqldb
+      - rabbitmq
     networks:
       - opnet
 
   home-service:
-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraft-Backend\home-service
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\home-service
     restart: always
     ports:
       - 8082:8082
     depends_on:
       - mysqldb
       - authentication-service
+      - rabbitmq
     networks:
       - opnet
 
   collectdata-service:
 #    image: collectdata-service-server:latest
-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraft-Backend\collectdata-service
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectdata-service
     restart: always
     ports:
       - 9090:9090
@@ -32,8 +34,9 @@ services:
       - mysqldb
     networks:
       - opnet
+
   marketplace-service:
-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraft-Backend\marketplace-service
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\marketplace-service
     restart: always
     ports:
       - 9091:9091
@@ -41,13 +44,15 @@ services:
       - mysqldb
     networks:
       - opnet
+
   carte_e_mazzi-service:
-      build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraft-Backend\carte_e_mazzi
+      build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\carte_e_mazzi-service
       restart: always
       ports:
         - 9092:9092
       depends_on:
         - mysqldb
+        - rabbitmq
       networks:
         - opnet
 
@@ -64,6 +69,17 @@ services:
       MYSQL_ROOT_PASSWORD: musicdraft
     networks:
       - opnet
+
+
+  rabbitmq:
+    image: rabbitmq:management
+    restart: always
+    ports:
+      - "5672:5672" #JMS Port
+      - "15672:15672" #Management Port - default user:pass = guest:guest
+    networks:
+      - opnet
+
 
 networks:
   opnet:

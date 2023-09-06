@@ -38,7 +38,8 @@ public class GestioneScambi {
     private long idStart;
 
     @Column(name = "numControfferta") // questo numero mi dice qual è il numero corrente della controfferta. Questo sarà == 0 solo all'inizio
-    // quando viene proposta la prima offerta.
+    // quando viene fatta la prima offerta. Questo campo posso usarlo per ordinare quando richiesto, tutte le controfferte che ci sono state a
+    // partire da una certa offerta iniziale.
     private int numControfferta;
 
     public GestioneScambi(){

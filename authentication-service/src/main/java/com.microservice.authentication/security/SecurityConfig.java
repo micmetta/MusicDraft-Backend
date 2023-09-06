@@ -35,6 +35,7 @@ public class SecurityConfig {
                             .requestMatchers(HttpMethod.GET, "/api/v1/authenticationService/getNickname/{email}").permitAll()
                             .requestMatchers(HttpMethod.GET, "/api/v1/authenticationService/getIsOnline/{nickname}").permitAll()
                             .requestMatchers(HttpMethod.GET, "/api/v1/authenticationService/getPoints/{nickname}").permitAll()
+                            .requestMatchers(HttpMethod.PUT, "/api/v1/authenticationService/updatePoints/{nickname}/{points}").permitAll()
                             .requestMatchers(HttpMethod.PUT, "/api/v1/authenticationService/setIsOffline/{nickname}").permitAll();
 
                     authorizationManagerRequestMatcherRegistry.anyRequest().authenticated(); // Richiede l'autenticazione per tutte le altre richieste (ci deve essere altrimenti se faccio la GET dopo che viene scelto l'account Google mi da errore 403).

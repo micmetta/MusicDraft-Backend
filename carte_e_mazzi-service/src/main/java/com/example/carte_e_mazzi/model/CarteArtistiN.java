@@ -1,5 +1,4 @@
 package com.example.carte_e_mazzi.model;
-
 import jakarta.persistence.*;
 
 @Entity
@@ -9,7 +8,6 @@ public class CarteArtistiN {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id_Carta")
     private long id;
-
 
     @Column(name="nome")
     private String nome;

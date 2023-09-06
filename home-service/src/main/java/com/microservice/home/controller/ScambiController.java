@@ -4,14 +4,14 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.microservice.home.model.GestioneAmici;
+import com.microservice.home.messages.RabbitMQSender;
 import com.microservice.home.model.GestioneScambi;
 import com.microservice.home.repository.ScambiRepository;
-import com.nimbusds.jose.shaded.gson.Gson;
+import com.microservice.home.service.GestioneScambiService;
+import com.microservice.home.service.InvioMessaggi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -21,6 +21,24 @@ public class ScambiController {
 
     @Autowired
     ScambiRepository scambi_repository;
+
+    private final RabbitMQSender sender; // inietto l'oggetto di tipo RabbitMQSender all'interno del servizio REST ScambiController che in
+    // questo caso sarà il producer.
+    private final RabbitMQSender sender_2;
+
+
+    // qui avrai un altro sender che invierà i pointsOfferti al microservizio authentication-service perchè
+    // è lui che contiene per ogni utente i points:
+    // private final RabbitMQSenderPoints sender_points;
+
+
+    // Questo qui sotto è il costruttore che mi serve per inizializzare
+    // l'oggetto sender della classe ScambiController.
+    public ScambiController(RabbitMQSender sender, RabbitMQSender sender2) {
+        this.sender = sender;
+        this.sender_2 = sender2;
+    }
+
 
     // Questo endpoint viene invocato dopo che l'utente (con "nicknameU1") ha selezionato nell'interfaccia la carta per la quale
     // vuole fare un'offerta al suo amico (con "nicknameU2") ed ha giò impostato la sua offerta che deve contenere questi campi avvalorati:
@@ -265,40 +283,59 @@ public class ScambiController {
 
         if(offerta_accettata != null) {
 
-            // 1) Innanzitutto, verrà invocato RabbitMQ per aggiornare la tabella delle carte in base alle info dell'offerta che si è conclusa.
-            // Innanzitutto prendo il valore del campo numControfferta perchè:
-            // - Se esso è pari allora vuol dire che l'utente che ha accettato l'offerta è quello a cui era stata inviata la primissima offerta.
-            // - Altrimenti, se è dispari allora vuol dire che l'utente che ha accettato l'offerta è quello che invece aveva inviato la
-            //  primissa offerta.
-            int num_controfferta = offerta_accettata.getNumControfferta();
+            // Quello che succederà adesso è questo:
+            // - Nel momento in cui viene accettata una proposta, il microservizio home-service richiama RabbitMQ passandogli tutti i dati necessari
+            //   per poter eseguire correttamente la modifica nella tabella carte fatta da Pietro. A questo punto RabbitMQ manderà l'aggiornamento
+            //   al microservizio fatto da Pietro che si preoccupa di gestire la tabella delle carte (assegnate agli utenti) passandogli tutti i dati
+            //   necessari all'aggiornamento.
 
-            if (num_controfferta % 2 == 0) {
+            // - Per quanto riguarda invece eventuali points aggiuntivi presenti nello scambio, il microservizio home-service anche senza l'utilizzo di
+            //   RabbitMQ in questo caso, può invocare un endpoint di authentication-service per settare i points aggiuntivi all'utente di riferimento.
 
-                // num_controfferta pari
-                System.out.println();
-                System.out.println();
-                System.out.println("Invoco RabbitMQ e gli passo questi dati di aggiornamento: ");
-                System.out.println(offerta_accettata);
-                System.out.println("In particolare, " +
-                        "la listaCarteOfferte contiene gli ids delle carte che devono essere tolte a " + offerta_accettata.getNicknameU1() +
-                        " e date a " + offerta_accettata.getNicknameU2() + " mentre l'idCartaRichiesta, contiene l'id della carta che " +
-                        "deve essere tolta a " + offerta_accettata.getNicknameU2() + " e data a " + offerta_accettata.getNicknameU1());
-                System.out.println();
-                System.out.println();
+            //   Al termine di tutto questo processo le carte scambiate (+ eventuali points aggiuntivi) saranno state assegnate agli utenti giusti.
 
-            } else {
-                // num_controfferta dispari
-                System.out.println();
-                System.out.println();
-                System.out.println("Invoco RabbitMQ e gli passo questi dati di aggiornamento: ");
-                System.out.println(offerta_accettata);
-                System.out.println("In particolare, " +
-                        "la listaCarteOfferte contiene gli ids delle carte che devono essere tolte a " + offerta_accettata.getNicknameU2() +
-                        " e date a " + offerta_accettata.getNicknameU1() + " mentre l'idCartaRichiesta, contiene l'id della carta che " +
-                        "deve essere tolta a " + offerta_accettata.getNicknameU2() + " e data a " + offerta_accettata.getNicknameU1());
-                System.out.println();
-                System.out.println();
-            }
+
+            // 1) Invocazione tramite RABBITmq del receiver che si preoccuperà di fare l'aggiornamento delle carte:
+            System.out.println();
+            System.out.println();
+            System.out.println("Invoco RabbitMQ e gli passo questi dati di aggiornamento: ");
+            System.out.println(offerta_accettata);
+            System.out.println("In particolare, " +
+                    "la listaCarteOfferte contiene gli ids delle carte che devono essere tolte a " + offerta_accettata.getNicknameU1() +
+                    " e date a " + offerta_accettata.getNicknameU2() + " mentre l'idCartaRichiesta, contiene l'id della carta che " +
+                    "deve essere tolta a " + offerta_accettata.getNicknameU2() + " e data a " + offerta_accettata.getNicknameU1());
+            System.out.println();
+            System.out.println();
+
+            // Qui sotto invece, faccio la chiamata al RabbitMQSender che si preoccuperà di mandare
+            // il messaggio DI TIPO STRING sulla coda giusta:
+            System.out.println("SONO PRIMA DEL SENDER JSON (carte_e_mazzi_receiver)..");
+            GestioneScambiService scambio_accettato = new GestioneScambiService(offerta_accettata.getId(),
+                                                                                offerta_accettata.getNicknameU1(), offerta_accettata.getNicknameU2(),
+                                                                                offerta_accettata.getIdCartaRichiesta(), offerta_accettata.getListaCarteOfferte(),
+                                                                                offerta_accettata.getPointsOfferti(), sender);
+            InvioMessaggi gestore_messaggio = new InvioMessaggi();
+            gestore_messaggio.invia_messaggio_aggiornamento_carte(scambio_accettato); // invio la send al microservizio che si preoccupa di gestire le carte per aggiornare la tabella
+            // carte in base allo scambio accettato.
+            System.out.println("SONO DOPO IL SENDER JSON (carte_e_mazzi_receiver)..");
+            System.out.println();
+            System.out.println();
+
+
+            System.out.println("SONO PRIMA IL SENDER JSON (authtentication_service_receiver))..");
+            // Aggiornamento points (da fare solo se i points offerti sono > 0):
+             if(offerta_accettata.getPointsOfferti() > 0) {
+                 GestioneScambiService scambio_accettato_2 = new GestioneScambiService(offerta_accettata.getId(),
+                         offerta_accettata.getNicknameU1(), offerta_accettata.getNicknameU2(),
+                         offerta_accettata.getIdCartaRichiesta(), offerta_accettata.getListaCarteOfferte(),
+                         offerta_accettata.getPointsOfferti(), sender_2);
+                 InvioMessaggi gestore_messaggio_2 = new InvioMessaggi();
+                 gestore_messaggio_2.invia_messaggio_aggiornamento_points(scambio_accettato_2); // richiedo l'aggiornamento dei points sia di "nicknameU1" che di "nicknameU2"
+             }
+            System.out.println("SONO DOPO IL SENDER JSON (authtentication_service_receiver))..");
+            System.out.println();
+            System.out.println();
+
 
             // 2) Verranno eliminate dalla tabella GestioneScambi tutte le righe che facevano riferimento a questa offerta, ovvero
             // che avevano come idStart l'idStart di offerta_accettata:
@@ -314,20 +351,5 @@ public class ScambiController {
         }
 
     }
-
-    // GLI ENDPOINTS INSERITI QUI DENTRO FUNZIONANO.. ADESSO DEVI FARE LA PUSH E POI DOMANI MATTINA PARLA CON PIETRO PER DIRGLI CHE IN QUESTO MICROSERVIZIO
-    // CONVIENE USARE RABBITMQ.
-
-    // Quello che dovrebbe succedere è questo:
-    // - Nel momento in cui viene accettata una proposta, il microservizio home-service richiama RabbitMQ passandogli tutti i dati necessari
-    //   per poter eseguire correttamente la modifica nella tabella carte fatta da Pietro. A questo punto RabbitMQ manderà l'aggiornamento
-    //   al microservizio fatto da Pietro che si preoccupa di gestire la tabella delle carte (assegnate agli utenti) passandogli tutti i dati
-    //   necessari all'aggiornamento.
-
-    // - Per quanto riguarda invece eventuali points aggiuntivi presenti nello scambio, il microservizio home-service anche senza l'utilizzo di
-    //   RabbitMQ in questo caso, può invocare un endpoint di authentication-service per settare i points aggiuntivi all'utente di riferimento.
-
-    //   Al termine di tutto questo processo le carte scambiate (+ eventuali points aggiuntivi) saranno assegnate agli utenti giusti.
-    //
 
 }

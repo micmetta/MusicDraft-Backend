@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>carte_e_mazzi</artifactId>
+    <artifactId>carte_e_mazzi-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>carte_e_mazzi</name>
     <description>carte_e_mazzi</description>
@@ -81,6 +81,18 @@
             <artifactId>collectdata-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>

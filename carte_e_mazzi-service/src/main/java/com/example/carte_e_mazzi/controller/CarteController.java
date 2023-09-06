@@ -37,14 +37,10 @@ public class CarteController {
     @PostMapping("/showCardArtistaUtente")
     public List<CarteArtistiN> crea_Card_artista(@RequestBody String received) {
 
-
-
         List<CarteArtistiN> carteA = new ArrayList<>();
         repoA.findByNickname(received).forEach(carteA::add);
 
          // Assumendo che ci sia un repositoryT per le CarteInVenditaTrack
-
-
 
         return carteA;
     }

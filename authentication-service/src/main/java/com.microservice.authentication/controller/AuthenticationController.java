@@ -211,6 +211,35 @@ public class AuthenticationController {
         }
     }
 
+    // Questo endpoint serve per poter aggiornare il numero di points di un certo utente identificato tramite il suo "nickname".
+    // il valore di {points} dato in input corrisponde al numero di points che dovranno essere aggiunti (se {points} > 0) o tolti
+    // (se {points} < 0) all'utente di riferimento.
+    @PutMapping("/updatePoints/{nickname}/{points}")
+    public String update_points(@PathVariable String nickname, @PathVariable int points){
+
+        List<User> _user = repository.findByNickname(nickname);
+        int points_correnti = 0;
+
+        if(!_user.isEmpty()){
+            points_correnti = _user.get(0).getPoints();
+            _user.get(0).setPoints(points_correnti + points);
+            repository.save(_user.get(0)); // memorizzo l'aggiornamento nel DB
+
+            return "Aggiornamento points eseguito con successo.";
+        }
+        return "Il nickname inserito è errato.";
+    }
+
+
+    // DA FARE Nel fronted:
+    // - Nella pagina-home della dashboard devi mostrare i points dell'utente (tramite /getPoints/{nickname})
+    //   e collegare la possibilità di poterli modificare (tramite /updatePoints/{nickname}/{points}) nell'authService.
+    // - Dopodichè fai il push così Pietro continua la sua parte..
+
+
+
+
+
     // Questo endpoint serve per specificare che un utente è andato offline:
     @PutMapping("/setIsOffline/{nickname}")
     public String set_Offline(@PathVariable String nickname){

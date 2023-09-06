@@ -9,8 +9,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="carte_e_mazzi" />
         <module name="marketplace-service" />
+        <module name="carte_e_mazzi-service" />
         <module name="authentication-service" />
         <module name="collectdata-service" />
         <module name="home-service" />
@@ -29,7 +29,7 @@
       <module name="MusicDraftBackend" options="" />
       <module name="authentication-service" options="-parameters" />
       <module name="card-manage-service" options="-parameters" />
-      <module name="carte_e_mazzi" options="-parameters" />
+      <module name="carte_e_mazzi-service" options="-parameters" />
       <module name="collectdata-service" options="-parameters" />
       <module name="home-service" options="-parameters" />
       <module name="marketplace" options="-parameters" />
