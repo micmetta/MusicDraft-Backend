@@ -8,9 +8,9 @@ import jakarta.persistence.*;
 public class CarteInVenditaTrack {
 
         @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
+
         @Column(name = "id_Carta_VB")
-        private long id;
+        private String id;
 
 
 
@@ -38,7 +38,8 @@ public class CarteInVenditaTrack {
     public CarteInVenditaTrack() {
     }
 
-    public CarteInVenditaTrack(String nome, String durata, String anno_pubblicazione, int popolarita, String immagine) {
+    public CarteInVenditaTrack(String id,String nome, String durata, String anno_pubblicazione, int popolarita, String immagine) {
+        this.id=id;
         this.nome = nome;
         this.durata = durata;
         this.anno_pubblicazione = anno_pubblicazione;
@@ -47,7 +48,9 @@ public class CarteInVenditaTrack {
         this.costo = popolarita*10;
         this.nick = "admin";
     }
-    public CarteInVenditaTrack(String nome, String durata, String anno_pubblicazione, int popolarita, String immagine,int costo, String nick) {
+    public CarteInVenditaTrack(String id,String nome, String durata, String anno_pubblicazione, int popolarita, String immagine,int costo, String nick) {
+        this.id=id;
+
         this.nome = nome;
         this.durata = durata;
         this.anno_pubblicazione = anno_pubblicazione;
@@ -73,10 +76,13 @@ public class CarteInVenditaTrack {
         this.costo = costo;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;

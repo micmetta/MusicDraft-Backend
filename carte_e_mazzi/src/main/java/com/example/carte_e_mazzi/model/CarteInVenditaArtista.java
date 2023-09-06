@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class CarteInVenditaArtista {
 
 
-    private long id;
+    private String id;
 
 
 
@@ -31,7 +31,8 @@ public class CarteInVenditaArtista {
     public CarteInVenditaArtista() {
     }
 
-    public CarteInVenditaArtista(String nome, int popolarita, String genere, String immagine) {
+    public CarteInVenditaArtista(String id,String nome, int popolarita, String genere, String immagine) {
+        this.id=id;
         this.nome = nome;
         this.popolarita = popolarita;
         this.genere = genere;
@@ -43,7 +44,8 @@ public class CarteInVenditaArtista {
 
 
 
-    public CarteInVenditaArtista(String nome, int popolarita, String genere, String immagine, int costo, String nick) {
+    public CarteInVenditaArtista(String id,String nome, int popolarita, String genere, String immagine, int costo, String nick) {
+        this.id=id;
         this.nome = nome;
         this.popolarita = popolarita;
         this.genere = genere;
@@ -68,8 +70,12 @@ public class CarteInVenditaArtista {
         this.costo = costo;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNome() {

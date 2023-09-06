@@ -58,12 +58,12 @@ public class CarteController {
         @PostMapping("/acquistaCartaArtista")
         public void insert_cart_Artist(@RequestBody CarteArtistiN data){
             System.out.println(data.getNome());
-            CarteArtistiN _artista = repoA.save(new CarteArtistiN(data.getNome(), data.getPopolarita(), data.getGenere(), data.getImmagine(),data.getNickname()));
+            CarteArtistiN _artista = repoA.save(new CarteArtistiN(data.getId(),data.getNome(), data.getPopolarita(), data.getGenere(), data.getImmagine(),data.getNickname()));
         }
         @PostMapping("/acquistaCartaBrano")
         public void insert_cart_Artist(@RequestBody CarteBraniN data){
             System.out.println(data.getNome());
-            CarteBraniN _track = repoT.save(new CarteBraniN(data.getNome(),data.getDurata(),data.getAnno_pubblicazione(), data.getPopolarita(), data.getImmagine(),data.getNickname()));
+            CarteBraniN _track = repoT.save(new CarteBraniN(data.getId(),data.getNome(),data.getDurata(),data.getAnno_pubblicazione(), data.getPopolarita(), data.getImmagine(),data.getNickname()));
     }
     @DeleteMapping("/delete-CardArtist/{id}")
     public void delete_artist(@PathVariable Long id) {

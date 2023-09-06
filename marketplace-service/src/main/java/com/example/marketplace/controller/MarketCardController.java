@@ -35,7 +35,7 @@ public class MarketCardController {
         if (artistArray != null) {
             for (Artista items : artistArray) {
 
-                CarteInVenditaArtista _artista = repositoryA.save(new CarteInVenditaArtista(items.getNome(), items.getPopolarita(), items.getGenere(), items.getImmagine()));
+                CarteInVenditaArtista _artista = repositoryA.save(new CarteInVenditaArtista(items.getId(),items.getNome(), items.getPopolarita(), items.getGenere(), items.getImmagine()));
             }
         }
     }
@@ -49,7 +49,7 @@ public class MarketCardController {
         if (trackArray != null) {
             for (Brano items : trackArray) {
 
-                CarteInVenditaTrack _brano = repositoryT.save(new CarteInVenditaTrack(items.getNome(), items.getDurata(), items.getAnno_pubblicazione(), items.getPopolarita(), items.getImmagine()));
+                CarteInVenditaTrack _brano = repositoryT.save(new CarteInVenditaTrack(items.getId(), items.getNome(), items.getDurata(), items.getAnno_pubblicazione(), items.getPopolarita(), items.getImmagine()));
             }
         }
     }
@@ -130,12 +130,12 @@ public class MarketCardController {
     @PostMapping("/vendiCartaArtista")
     public void insert_cart_Artist(@RequestBody CarteInVenditaArtista data){
         System.out.println(data.getNome());
-        CarteInVenditaArtista _artista = repositoryA.save(new CarteInVenditaArtista(data.getNome(), data.getPopolarita(), data.getGenere(), data.getImmagine(),data.getCosto(), data.getNick()));
+        CarteInVenditaArtista _artista = repositoryA.save(new CarteInVenditaArtista(data.getId(), data.getNome(), data.getPopolarita(), data.getGenere(), data.getImmagine(),data.getCosto(), data.getNick()));
     }
     @PostMapping("/vendiCartaBrano")
     public void insert_cart_Artist(@RequestBody CarteInVenditaTrack data){
         System.out.println(data.getNome());
-        CarteInVenditaTrack _track = repositoryT.save(new CarteInVenditaTrack(data.getNome(),data.getDurata(),data.getAnno_pubblicazione(), data.getPopolarita(), data.getImmagine(),data.getCosto(),data.getNick()));
+        CarteInVenditaTrack _track = repositoryT.save(new CarteInVenditaTrack(data.getId(), data.getNome(),data.getDurata(),data.getAnno_pubblicazione(), data.getPopolarita(), data.getImmagine(),data.getCosto(),data.getNick()));
     }
 }
 

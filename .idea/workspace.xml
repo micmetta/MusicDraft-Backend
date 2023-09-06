@@ -6,15 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="allineamento con &#10;branch_Pietro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteArtistiN.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteArtistiN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteBraniN.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteBraniN.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaArtista.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaArtista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaTrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/ArtistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/TrackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/model/Artista.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/model/Artista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/model/Brano.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/model/Brano.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/controller/MarketCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/controller/MarketCardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/Artista.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/Artista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/Brano.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/Brano.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaArtista.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaArtista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaTrack.java" afterDir="false" />
     </list>
@@ -195,7 +192,7 @@
       <workItem from="1693324599321" duration="2986000" />
       <workItem from="1693382617703" duration="3051000" />
       <workItem from="1693932643103" duration="613000" />
-      <workItem from="1693990045217" duration="1193000" />
+      <workItem from="1693990045217" duration="1892000" />
     </task>
     <task id="LOCAL-00001" summary="commit per &quot;Scritta solo per il commit&quot;">
       <created>1692008897937</created>
@@ -278,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693388051225</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="allineamento con &#10;branch_Pietro">
+      <option name="closed" value="true" />
+      <created>1693991281892</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1693991281892</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

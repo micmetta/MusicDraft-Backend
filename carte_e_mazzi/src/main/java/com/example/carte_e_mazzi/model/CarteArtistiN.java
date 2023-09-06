@@ -6,9 +6,9 @@ import jakarta.persistence.*;
 @Table(name="carte_artista_associate")
 public class CarteArtistiN {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     @Column(name="id_Carta")
-    private long id;
+    private String id;
 
 
     @Column(name="nome")
@@ -29,7 +29,8 @@ public class CarteArtistiN {
     public CarteArtistiN() {
     }
 
-    public CarteArtistiN(String nome, int popolarita, String genere, String immagine, String nickname) {
+    public CarteArtistiN(String id,String nome, int popolarita, String genere, String immagine, String nickname) {
+        this.id=id;
         this.nome = nome;
         this.popolarita = popolarita;
         this.genere = genere;
@@ -37,8 +38,12 @@ public class CarteArtistiN {
         this.nickname = nickname;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNome() {
