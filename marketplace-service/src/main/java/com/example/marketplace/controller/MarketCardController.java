@@ -97,31 +97,34 @@ public class MarketCardController {
     }
 
     @DeleteMapping("/delete-CardArtist/{id}")
-    public void delete_artist(@PathVariable Long id) {
+    public void delete_artist(@PathVariable String id) {
         System.out.println("Deleting artist with ID: " + id);
 
-        Optional<CarteInVenditaArtista> artistaOptional = repositoryA.findById(id);
+        List<CarteInVenditaArtista> artista = repositoryA.findById(id);
 
-        if (artistaOptional.isPresent()) {
-            CarteInVenditaArtista artista = artistaOptional.get();
-            repositoryA.delete(artista);
-            System.out.println("Artist with ID " + id + " deleted successfully");
-        } else {
-            System.out.println("Artist with ID " + id + " not found");
-        }
+        if (artista != null) {
+            for (CarteInVenditaArtista a: artista) {
+                repositoryA.delete(a);
+                System.out.println("Artist with ID " + id + " deleted successfully");
+            }
+            } else{
+                System.out.println("Artist with ID " + id + " not found");
+            }
+
 
     }
 
     @DeleteMapping("/delete-CardBrano/{id}")
-    public void delete_track(@PathVariable Long id) {
+    public void delete_track(@PathVariable String id) {
         System.out.println("Deleting artist with ID: " + id);
 
-        Optional<CarteInVenditaTrack> artistaOptional = repositoryT.findById(id);
+        List<CarteInVenditaTrack> track = repositoryT.findById(id);
 
-        if (artistaOptional.isPresent()) {
-            CarteInVenditaTrack brano = artistaOptional.get();
-            repositoryT.delete(brano);
-            System.out.println("Artist with ID " + id + " deleted successfully");
+        if (track != null) {
+            for(CarteInVenditaTrack t:track) {
+                repositoryT.delete(t);
+                System.out.println("Artist with ID " + id + " deleted successfully");
+            }
         } else {
             System.out.println("Artist with ID " + id + " not found");
         }
