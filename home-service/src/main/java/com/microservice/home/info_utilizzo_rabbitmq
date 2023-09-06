@@ -1,0 +1,8 @@
+Info per esecuzione microservizi con uso di rabbitmq:
+
+- Dopo aver creato le code e aver collegato sender e receiver sulla stessa devi permettere al sender di creare la coda la prima volta
+  e per farlo devi fargli mandare una send, anche se il receiver non funzionerà subito, subito dopo che il sender avrà mandato
+  la primissima send potrai restartare il microservizio che si comporta da receiver e vedrai che quest'ultimo riceverà i messaggi
+  sulla coda d'interesse. (puoi anche restartare il microservizio che manda la send prima di farla per essere certo che la mandi).
+
+- Non c'è bisogno di cancellare l'immagine di Rabbit prima di fare quello sopra citato.

@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface UtenteRepoCarteBrano extends CrudRepository<CarteBraniN,Long> {
     List<CarteBraniN> findByNickname (String nick);
+    List<CarteBraniN> findById(String id);
 }

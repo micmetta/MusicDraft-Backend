@@ -5,36 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="push branch_Michele">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/CarteEMazziApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/CarteEMazziApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteArtistiN.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/model/CarteArtistiN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteBraniN.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/model/CarteBraniN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaArtista.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaArtista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaTrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/repo/UtenteRepoCarteArtisti.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/repo/UtenteRepoCarteArtisti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/repo/UtenteRepoCarteBrano.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/repo/UtenteRepoCarteBrano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/test/java/com/example/carte_e_mazzi/CarteEMazziApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/test/java/com/example/carte_e_mazzi/CarteEMazziApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/ScambiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/ScambiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneScambi.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneScambi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/repo/UtenteRepoCarteArtisti.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/repo/UtenteRepoCarteArtisti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/repo/UtenteRepoCarteBrano.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/repo/UtenteRepoCarteBrano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/repo/MarketCardArtistRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/repo/MarketCardArtistRepo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,31 +65,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/authentication-service/src/main/java/com.microservice.authentication",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/home-service/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "5fa80c7f1a218a93d5ca8b42217deccb",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/authentication-service/src/main/java/com.microservice.authentication&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/home-service/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5fa80c7f1a218a93d5ca8b42217deccb&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\main\java\com.microservice.authentication" />
@@ -280,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693307020132</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="push branch_Michele">
+      <created>1694015075550</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694015075550</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

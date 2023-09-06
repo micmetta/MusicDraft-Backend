@@ -62,31 +62,34 @@ public class CarteController {
             CarteBraniN _track = repoT.save(new CarteBraniN(data.getId(),data.getNome(),data.getDurata(),data.getAnno_pubblicazione(), data.getPopolarita(), data.getImmagine(),data.getNickname()));
     }
     @DeleteMapping("/delete-CardArtist/{id}")
-    public void delete_artist(@PathVariable Long id) {
+    public void delete_artist(@PathVariable String id) {
         System.out.println("Deleting artist with ID: " + id);
 
-        Optional<CarteArtistiN> artistaOptional = repoA.findById(id);
+        List<CarteArtistiN> artista = repoA.findById(id);
 
-        if (artistaOptional.isPresent()) {
-            CarteArtistiN artista = artistaOptional.get();
-            repoA.delete(artista);
-            System.out.println("Artist with ID " + id + " deleted successfully");
-        } else {
+        if (artista != null) {
+            for (CarteArtistiN a: artista) {
+                repoA.delete(a);
+                System.out.println("Artist with ID " + id + " deleted successfully");
+            }
+        } else{
             System.out.println("Artist with ID " + id + " not found");
         }
+
 
     }
 
     @DeleteMapping("/delete-CardBrano/{id}")
-    public void delete_track(@PathVariable Long id) {
+    public void delete_track(@PathVariable String id) {
         System.out.println("Deleting artist with ID: " + id);
 
-        Optional<CarteBraniN> artistaOptional = repoT.findById(id);
+        List<CarteBraniN> track = repoT.findById(id);
 
-        if (artistaOptional.isPresent()) {
-            CarteBraniN brano = artistaOptional.get();
-            repoT.delete(brano);
-            System.out.println("Artist with ID " + id + " deleted successfully");
+        if (track != null) {
+            for(CarteBraniN t:track) {
+                repoT.delete(t);
+                System.out.println("Artist with ID " + id + " deleted successfully");
+            }
         } else {
             System.out.println("Artist with ID " + id + " not found");
         }
