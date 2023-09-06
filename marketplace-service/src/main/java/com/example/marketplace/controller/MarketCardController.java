@@ -130,12 +130,12 @@ public class MarketCardController {
     @PostMapping("/vendiCartaArtista")
     public void insert_cart_Artist(@RequestBody CarteInVenditaArtista data){
         System.out.println(data.getNome());
-        CarteInVenditaArtista _artista = repositoryA.save(new CarteInVenditaArtista(data.getNome(), data.getPopolarita(), data.getGenere(), data.getImmagine(),data.getCosto()));
+        CarteInVenditaArtista _artista = repositoryA.save(new CarteInVenditaArtista(data.getNome(), data.getPopolarita(), data.getGenere(), data.getImmagine(),data.getCosto(), data.getNick()));
     }
     @PostMapping("/vendiCartaBrano")
     public void insert_cart_Artist(@RequestBody CarteInVenditaTrack data){
         System.out.println(data.getNome());
-        CarteInVenditaTrack _track = repositoryT.save(new CarteInVenditaTrack(data.getNome(),data.getDurata(),data.getAnno_pubblicazione(), data.getPopolarita(), data.getImmagine(),data.getCosto()));
+        CarteInVenditaTrack _track = repositoryT.save(new CarteInVenditaTrack(data.getNome(),data.getDurata(),data.getAnno_pubblicazione(), data.getPopolarita(), data.getImmagine(),data.getCosto(),data.getNick()));
     }
 }
 

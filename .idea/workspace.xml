@@ -6,11 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="allineamento con &#10;branch_Pietro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaArtista.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaArtista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi/src/main/java/com/example/carte_e_mazzi/model/CarteInVenditaTrack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/ArtistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/TrackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/model/Artista.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/model/Artista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/model/Brano.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/model/Brano.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/controller/MarketCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/controller/MarketCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/Artista.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/Artista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/Brano.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/Brano.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaArtista.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaArtista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/model/CarteInVenditaTrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/repo/MarketCardArtistRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace-service/src/main/java/com/example/marketplace/repo/MarketCardArtistRepo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,26 +72,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pietr/Desktop/Uni/TAAS/Spike/MusicDraft-Frontend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/home-service/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;5fa80c7f1a218a93d5ca8b42217deccb&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/pietr/Desktop/Uni/TAAS/Spike/MusicDraft-Backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/home-service/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "spring.configuration.checksum": "5fa80c7f1a218a93d5ca8b42217deccb",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend" />
@@ -109,9 +115,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.authentication.AuthenticationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarteEMazziApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="carte_e_mazzi" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.carte_e_mazzi.CarteEMazziApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GestioneAmiciApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="home-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.home.GestioneAmiciApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarketplaceSeviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="marketplace-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.marketplace.MarketplaceSeviceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpotifySpike2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="collectdata-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.collectdata.SpotifySpike2Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,7 +193,9 @@
       <workItem from="1693304942525" duration="1556000" />
       <workItem from="1693320909149" duration="351000" />
       <workItem from="1693324599321" duration="2986000" />
-      <workItem from="1693382617703" duration="3030000" />
+      <workItem from="1693382617703" duration="3051000" />
+      <workItem from="1693932643103" duration="613000" />
+      <workItem from="1693990045217" duration="1193000" />
     </task>
     <task id="LOCAL-00001" summary="commit per &quot;Scritta solo per il commit&quot;">
       <created>1692008897937</created>
@@ -234,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693306774146</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="allineamento con &#10;branch_Pietro">
+      <option name="closed" value="true" />
+      <created>1693388051225</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1693388051225</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,9 +311,9 @@
     <MESSAGE value="commit per &quot;Scritta solo per il commit&quot;" />
     <MESSAGE value="add richiesta amicizia" />
     <MESSAGE value="add: gestioneAmici + getNickname + getEmail" />
-    <MESSAGE value="allineamento con &#10;branch_Pietro" />
     <MESSAGE value="push branch_Michele" />
-    <option name="LAST_COMMIT_MESSAGE" value="push branch_Michele" />
+    <MESSAGE value="allineamento con &#10;branch_Pietro" />
+    <option name="LAST_COMMIT_MESSAGE" value="allineamento con &#10;branch_Pietro" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

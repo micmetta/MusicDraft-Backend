@@ -26,6 +26,9 @@ public class CarteInVenditaArtista {
     @Column(name="costo")
     private int costo;
 
+    @Column(name="nickname")
+    private String nick;
+
     public CarteInVenditaArtista() {
     }
 
@@ -35,17 +38,27 @@ public class CarteInVenditaArtista {
         this.genere = genere;
         this.immagine = immagine;
         this.costo = popolarita*10;
+        this.nick= "admin";
     }
 
 
 
 
-    public CarteInVenditaArtista(String nome, int popolarita, String genere, String immagine, int costo) {
+    public CarteInVenditaArtista(String nome, int popolarita, String genere, String immagine, int costo, String nick) {
         this.nome = nome;
         this.popolarita = popolarita;
         this.genere = genere;
         this.immagine = immagine;
         this.costo = costo;
+        this.nick = nick;
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
     }
 
     public int getCosto() {

@@ -32,6 +32,8 @@ public class CarteInVenditaTrack {
     @Column(name="costo")
     private int costo;
 
+    @Column(name="nickname")
+    private String nick;
 
     public CarteInVenditaTrack() {
     }
@@ -43,16 +45,25 @@ public class CarteInVenditaTrack {
         this.popolarita = popolarita;
         this.immagine = immagine;
         this.costo = popolarita*10;
+        this.nick = "admin";
     }
-    public CarteInVenditaTrack(String nome, String durata, String anno_pubblicazione, int popolarita, String immagine,int costo) {
+    public CarteInVenditaTrack(String nome, String durata, String anno_pubblicazione, int popolarita, String immagine,int costo, String nick) {
         this.nome = nome;
         this.durata = durata;
         this.anno_pubblicazione = anno_pubblicazione;
         this.popolarita = popolarita;
         this.immagine = immagine;
         this.costo = costo;
+        this.nick=nick;
     }
 
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
+    }
 
     public int getCosto() {
         return costo;
