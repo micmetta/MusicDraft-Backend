@@ -9,7 +9,7 @@ import jakarta.persistence.*;
 public class Artista {
 
 
-    private long id;
+    private String id;
 
 
     private String nome;
@@ -29,7 +29,8 @@ public class Artista {
     public Artista() {
     }
 
-    public Artista(String nome, int popolarita, String genere, String immagine) {
+    public Artista(String id,String nome, int popolarita, String genere, String immagine) {
+        this.id=id;
         this.nome = nome;
         this.popolarita = popolarita;
         this.genere = genere;
@@ -44,8 +45,12 @@ public class Artista {
         this.immagine = immagine;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNome() {

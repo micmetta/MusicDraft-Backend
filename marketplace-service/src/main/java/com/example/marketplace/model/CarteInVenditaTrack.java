@@ -8,9 +8,9 @@ import jakarta.persistence.*;
 public class CarteInVenditaTrack {
 
         @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
+
         @Column(name = "id_Carta_VB")
-        private long id;
+        private String id;
 
 
 
@@ -32,17 +32,40 @@ public class CarteInVenditaTrack {
     @Column(name="costo")
     private int costo;
 
+    @Column(name="nickname")
+    private String nick;
 
     public CarteInVenditaTrack() {
     }
 
-    public CarteInVenditaTrack(String nome, String durata, String anno_pubblicazione, int popolarita, String immagine) {
+    public CarteInVenditaTrack(String id,String nome, String durata, String anno_pubblicazione, int popolarita, String immagine) {
+        this.id=id;
         this.nome = nome;
         this.durata = durata;
         this.anno_pubblicazione = anno_pubblicazione;
         this.popolarita = popolarita;
         this.immagine = immagine;
         this.costo = popolarita*10;
+        this.nick = "admin";
+    }
+    public CarteInVenditaTrack(String id,String nome, String durata, String anno_pubblicazione, int popolarita, String immagine,int costo, String nick) {
+        this.id=id;
+
+        this.nome = nome;
+        this.durata = durata;
+        this.anno_pubblicazione = anno_pubblicazione;
+        this.popolarita = popolarita;
+        this.immagine = immagine;
+        this.costo = costo;
+        this.nick=nick;
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
     }
 
     public int getCosto() {
@@ -53,10 +76,13 @@ public class CarteInVenditaTrack {
         this.costo = costo;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;

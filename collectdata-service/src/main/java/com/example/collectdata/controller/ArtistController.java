@@ -56,9 +56,9 @@ public class ArtistController {
                 }
                 System.out.println(i+". nome: "+items[i].getName()+", popolarità:"+items[i].getPopularity()+", genere:"+genere);
                 if(items[i].getImages().length!=0) {
-                    Artista _artista = repository.save(new Artista(items[i].getName(), items[i].getPopularity().intValue(), genere, items[i].getImages()[0].getUrl()));
+                    Artista _artista = repository.save(new Artista(items[i].getId(),items[i].getName(), items[i].getPopularity().intValue(), genere, items[i].getImages()[0].getUrl()));
                 }else{
-                    Artista _artista = repository.save(new Artista(items[i].getName(), items[i].getPopularity().intValue(), genere, "https://www.heartoftheorient.com/wp-content/uploads/2018/08/utente-sconosciuto.png"));
+                    Artista _artista = repository.save(new Artista(items[i].getId(),items[i].getName(), items[i].getPopularity().intValue(), genere, "https://www.heartoftheorient.com/wp-content/uploads/2018/08/utente-sconosciuto.png"));
 
                 }
             }

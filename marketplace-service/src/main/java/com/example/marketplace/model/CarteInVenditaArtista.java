@@ -6,9 +6,9 @@ import jakarta.persistence.*;
 public class CarteInVenditaArtista {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     @Column(name="id_Carta_VA")
-    private long id;
+    private String id;
 
 
     @Column(name="nome")
@@ -26,15 +26,42 @@ public class CarteInVenditaArtista {
     @Column(name="costo")
     private int costo;
 
+    @Column(name="nickname")
+    private String nick;
+
     public CarteInVenditaArtista() {
     }
 
-    public CarteInVenditaArtista(String nome, int popolarita, String genere, String immagine) {
+    public CarteInVenditaArtista(String id,String nome, int popolarita, String genere, String immagine) {
+        this.id=id;
         this.nome = nome;
         this.popolarita = popolarita;
         this.genere = genere;
         this.immagine = immagine;
         this.costo = popolarita*10;
+        this.nick= "admin";
+    }
+
+
+
+
+    public CarteInVenditaArtista(String id,String nome, int popolarita, String genere, String immagine, int costo, String nick) {
+        this.id=id;
+
+        this.nome = nome;
+        this.popolarita = popolarita;
+        this.genere = genere;
+        this.immagine = immagine;
+        this.costo = costo;
+        this.nick = nick;
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
     }
 
     public int getCosto() {
@@ -45,8 +72,12 @@ public class CarteInVenditaArtista {
         this.costo = costo;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNome() {

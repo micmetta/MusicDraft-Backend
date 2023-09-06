@@ -8,8 +8,8 @@ import jakarta.persistence.*;
 public class Brano {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+
+    private String id;
 
     @Column(name = "nome")
     private String nome;
@@ -37,8 +37,12 @@ public class Brano {
         return immagine;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -76,7 +80,8 @@ public class Brano {
     public Brano() {
     }
 
-    public Brano(String nome_brano, String durata, String anno_pubblicazione, int popolarita, String immagine) {
+    public Brano(String id,String nome_brano, String durata, String anno_pubblicazione, int popolarita, String immagine) {
+        this.id=id;
         this.nome = nome_brano;
         this.durata = durata;
         this.anno_pubblicazione = anno_pubblicazione;

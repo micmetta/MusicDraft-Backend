@@ -8,9 +8,11 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface MarketCardArtistRepo extends CrudRepository<CarteInVenditaArtista,Long> {
+    List<CarteInVenditaArtista> findById(String id);
     List<CarteInVenditaArtista> findByNome(String nome);
     List<CarteInVenditaArtista> findByPopolaritaGreaterThanEqual(int pop);
     List<CarteInVenditaArtista> findByGenere(String genere);
+
 
 
 }

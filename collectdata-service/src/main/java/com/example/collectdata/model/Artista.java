@@ -9,10 +9,9 @@ import jakarta.persistence.*;
 
 public class Artista {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id")
 
-    private long id;
+    private String id;
 
     @Column(name="nome")
     private String nome;
@@ -32,11 +31,16 @@ public class Artista {
     public Artista() {
     }
 
-    public Artista(String nome, int popolarita, String genere,String immagine) {
+    public Artista(String id,String nome, int popolarita, String genere,String immagine) {
+        this.id=id;
         this.nome = nome;
         this.popolarita = popolarita;
         this.genere = genere;
         this.immagine=immagine;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getImmagine() {
@@ -47,7 +51,7 @@ public class Artista {
         this.immagine = immagine;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 

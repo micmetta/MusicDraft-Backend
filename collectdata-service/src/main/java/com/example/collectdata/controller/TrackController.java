@@ -47,9 +47,9 @@ public class TrackController {
                 durata+=minuti+"minuti e "+secondi+"secondi";
 
                 if(items[i].getAlbum().getImages().length !=0) {
-                    Brano _brano = repository.save(new Brano(items[i].getName(), durata, items[i].getAlbum().getReleaseDate(), items[i].getPopularity().intValue(), items[i].getAlbum().getImages()[0].getUrl()));
+                    Brano _brano = repository.save(new Brano(items[i].getId(),items[i].getName(), durata, items[i].getAlbum().getReleaseDate(), items[i].getPopularity().intValue(), items[i].getAlbum().getImages()[0].getUrl()));
                 }else{
-                    Brano _brano = repository.save(new Brano(items[i].getName(), durata, items[i].getAlbum().getReleaseDate(), items[i].getPopularity(), "https://www.heartoftheorient.com/wp-content/uploads/2018/08/utente-sconosciuto.png"));
+                    Brano _brano = repository.save(new Brano(items[i].getId(),items[i].getName(), durata, items[i].getAlbum().getReleaseDate(), items[i].getPopularity(), "https://www.heartoftheorient.com/wp-content/uploads/2018/08/utente-sconosciuto.png"));
 
                 }
             }
