@@ -22,10 +22,19 @@ public class GestioneScambi {
     @Column(name = "idCartaRichiesta") // campo che conterrà l'id della carta richiesta da nicknameU1 che è presente nelle carte possedute da nicknameU2.
     private String idCartaRichiesta;
 
+    @Column(name = "tipoCartaRichiesta")
+    private String tipoCartaRichiesta; // "artista" o "brano"
+
     @Column(name = "listaCarteOfferte", columnDefinition = "JSON") // campo che conterrà la lista delle carte (anche solo una o 0 perchè magari ha offerto solo points)
     // offerte da "nicknameU1" in cambio di "cartaRichiesta".
     // private List<String> listaCarteOfferte;
     private String listaCarteOfferte;
+
+    @Column(name = "listaTipiCarteOfferte", columnDefinition = "JSON") // campo che conterrà la lista delle carte (anche solo una o 0 perchè magari ha offerto solo points)
+    // offerte da "nicknameU1" in cambio di "cartaRichiesta".
+    // private List<String> listaCarteOfferte;
+    private String listaTipiCarteOfferte; // per ogni carta in listaCarteOfferte: "artista" o "brano"
+
 
     @Column(name = "pointsOfferti") // conterrà il quantitativo di points offerti (può essere anche 0 perchè magari ha offerto solo
     // delle carte) da "nicknameU1" a "nicknameU2" per la "cartaRichiesta"
@@ -45,11 +54,13 @@ public class GestioneScambi {
     public GestioneScambi(){
     }
 
-    public GestioneScambi(String nicknameU1, String nicknameU2, String idCartaRichiesta, String listaCarteOfferte, int pointsOfferti, String statoOfferta, long idStart, int numControfferta){
+    public GestioneScambi(String nicknameU1, String nicknameU2, String idCartaRichiesta, String tipoCartaRichiesta, String listaCarteOfferte, String listaTipiCarteOfferte, int pointsOfferti, String statoOfferta, long idStart, int numControfferta){
         this.nicknameU1 = nicknameU1;
         this.nicknameU2 = nicknameU2;
         this.idCartaRichiesta = idCartaRichiesta;
+        this.tipoCartaRichiesta = tipoCartaRichiesta;
         this.listaCarteOfferte = listaCarteOfferte;
+        this.listaTipiCarteOfferte = listaTipiCarteOfferte;
         this.pointsOfferti = pointsOfferti;
         this.statoOfferta = statoOfferta;
         this.idStart = idStart;
@@ -88,6 +99,10 @@ public class GestioneScambi {
         this.idCartaRichiesta = idCartaRichiesta;
     }
 
+    public String getTipoCartaRichiesta() {return tipoCartaRichiesta; }
+
+    public void setTipoCartaRichiesta(String tipoCartaRichiesta) { this.tipoCartaRichiesta = tipoCartaRichiesta; }
+
     public String getListaCarteOfferte() {
         return listaCarteOfferte;
     }
@@ -95,6 +110,12 @@ public class GestioneScambi {
     public void setListaCarteOfferte(String listaCarteOfferte) {
         this.listaCarteOfferte = listaCarteOfferte;
     }
+
+    public String getListaTipiCarteOfferte() {
+        return listaTipiCarteOfferte;
+    }
+
+    public void setListaTipiCarteOfferte(String listaTipiCarteOfferte) {this.listaCarteOfferte = listaTipiCarteOfferte; }
 
     public int getPointsOfferti() {
         return pointsOfferti;

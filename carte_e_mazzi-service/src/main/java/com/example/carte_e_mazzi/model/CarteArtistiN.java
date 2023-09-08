@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 @Table(name="carte_artista_associate")
 public class CarteArtistiN {
     @Id
-
     @Column(name="id_Carta")
     private String id;
 

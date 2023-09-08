@@ -64,16 +64,16 @@ public class RabbitMQReceiver implements RabbitListenerConfigurer{
 //            UpdateUser obj_user = new UpdateUser();
 
             // 1) invoco l'endpoint "/updatePoints/{nickname}/{points}" tramite la classe service chiamata "UpdateUser" per togliere dai points
-            //    di "nicknameU2" un quantitativo di points pari a "points_scambiati".
+            //    di "nicknameU1" un quantitativo di points pari a "points_scambiati".
             // oss: "points_scambiati" qui sarà un valore negativo.
-            String out = obj_user.aggiornamento_points(nicknameU2, -points_scambiati);
+            String out = obj_user.aggiornamento_points(nicknameU1, -points_scambiati);
             System.out.println("ris aggiornamento points nicknameU2:" + out);
             System.out.println();
 
             // 2) invoco l'endpoint "/updatePoints/{nickname}/{points}" tramite la classe service chiamata "UpdateUser" per aggiungere ai points
-            //    di "nicknameU1" un quantitativo di points pari a "points_scambiati".
+            //    di "nicknameU2" un quantitativo di points pari a "points_scambiati".
             // oss: "points_scambiati" qui sarà un valore positivo.
-            out = obj_user.aggiornamento_points(nicknameU1, points_scambiati);
+            out = obj_user.aggiornamento_points(nicknameU2, points_scambiati);
             System.out.println("ris aggiornamento points nicknameU1:" + out);
             System.out.println();
 

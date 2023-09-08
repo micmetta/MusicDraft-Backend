@@ -69,7 +69,9 @@ public class ScambiController {
 
         //Adesso faccio il parsing della stringa JSON listaCarteOfferte e la converto in una lista di stringhe:
         ObjectMapper objectMapper = new ObjectMapper();
+        ObjectMapper objectMapper_2 = new ObjectMapper();
         List<String> listaCarteOfferte = objectMapper.readValue(gestioneScambi.getListaCarteOfferte(), new TypeReference<List<String>>() {});
+        List<String> listaTipiCarteOfferte = objectMapper_2.readValue(gestioneScambi.getListaCarteOfferte(), new TypeReference<List<String>>() {});
 
 //        System.out.println("listaCarteOfferte:");
 //        System.out.println(listaCarteOfferte);
@@ -87,7 +89,9 @@ public class ScambiController {
                                                     gestioneScambi.getNicknameU1(),
                                                     gestioneScambi.getNicknameU2(),
                                                     gestioneScambi.getIdCartaRichiesta(),
+                                                    gestioneScambi.getTipoCartaRichiesta(),
                                                     objectMapper.writeValueAsString(listaCarteOfferte), // posso usare writeValueAsString(listaCarteOfferte) per popolare l'attributo listaCarteOfferte di GestioneScambi.
+                                                    objectMapper_2.writeValueAsString(listaTipiCarteOfferte),
                                                     gestioneScambi.getPointsOfferti(),
                                                     "in_attesa", // non me lo faccio passare dal frontend ma lo aggiungo direttamente nel backend.
                                                     0, // Imposto idStart a 0 temporaneamente.
@@ -200,8 +204,13 @@ public class ScambiController {
         controfferta.setNicknameU2(gestioneScambi.getNicknameU2());
         controfferta.setIdCartaRichiesta(gestioneScambi.getIdCartaRichiesta());
         ObjectMapper objectMapper = new ObjectMapper();
+        ObjectMapper objectMapper_2 = new ObjectMapper();
+
         List<String> listaCarteOfferte = objectMapper.readValue(gestioneScambi.getListaCarteOfferte(), new TypeReference<List<String>>() {});
         controfferta.setListaCarteOfferte(objectMapper.writeValueAsString(listaCarteOfferte));
+        List<String> listaTipiCarteOfferte = objectMapper_2.readValue(gestioneScambi.getListaTipiCarteOfferte(), new TypeReference<List<String>>() {});
+        controfferta.setListaTipiCarteOfferte(objectMapper_2.writeValueAsString(listaTipiCarteOfferte));
+
         controfferta.setPointsOfferti(gestioneScambi.getPointsOfferti());
         controfferta.setStatoOfferta("controfferta");
         controfferta.setIdStart(gestioneScambi.getIdStart()); // rimane invariato.
@@ -214,8 +223,10 @@ public class ScambiController {
                         controfferta.getNicknameU1(),
                         controfferta.getNicknameU2(),
                         controfferta.getIdCartaRichiesta(),
+                        controfferta.getTipoCartaRichiesta(),
                         controfferta.getListaCarteOfferte(), // posso usare writeValueAsString(listaCarteOfferte) per popolare l'attributo listaCarteOfferte di GestioneScambi.
-                        controfferta.getPointsOfferti(),
+                        controfferta.getListaTipiCarteOfferte(),
+                        controfferta.getPointsOfferti(), // sono quelli che toglierò da getNicknameU1() per darli a getNicknameU2()
                         controfferta.getStatoOfferta(), // non me lo faccio passare dal frontend ma lo aggiungo direttamente nel backend.
                         controfferta.getIdStart(), // Imposto idStart a 0 temporaneamente.
                         controfferta.getNumControfferta() // numControfferta all'inizio l'ha imposto su 0.
@@ -311,8 +322,12 @@ public class ScambiController {
             // il messaggio DI TIPO STRING sulla coda giusta:
             System.out.println("SONO PRIMA DEL SENDER JSON (carte_e_mazzi_receiver)..");
             GestioneScambiService scambio_accettato = new GestioneScambiService(offerta_accettata.getId(),
-                                                                                offerta_accettata.getNicknameU1(), offerta_accettata.getNicknameU2(),
-                                                                                offerta_accettata.getIdCartaRichiesta(), offerta_accettata.getListaCarteOfferte(),
+                                                                                offerta_accettata.getNicknameU1(),
+                                                                                offerta_accettata.getNicknameU2(),
+                                                                                offerta_accettata.getIdCartaRichiesta(),
+                                                                                offerta_accettata.getTipoCartaRichiesta(),
+                                                                                offerta_accettata.getListaCarteOfferte(),
+                                                                                offerta_accettata.getListaTipiCarteOfferte(),
                                                                                 offerta_accettata.getPointsOfferti(), sender);
             InvioMessaggi gestore_messaggio = new InvioMessaggi();
             gestore_messaggio.invia_messaggio_aggiornamento_carte(scambio_accettato); // invio la send al microservizio che si preoccupa di gestire le carte per aggiornare la tabella
@@ -326,8 +341,12 @@ public class ScambiController {
             // Aggiornamento points (da fare solo se i points offerti sono > 0):
              if(offerta_accettata.getPointsOfferti() > 0) {
                  GestioneScambiService scambio_accettato_2 = new GestioneScambiService(offerta_accettata.getId(),
-                         offerta_accettata.getNicknameU1(), offerta_accettata.getNicknameU2(),
-                         offerta_accettata.getIdCartaRichiesta(), offerta_accettata.getListaCarteOfferte(),
+                         offerta_accettata.getNicknameU1(),
+                         offerta_accettata.getNicknameU2(),
+                         offerta_accettata.getIdCartaRichiesta(),
+                         offerta_accettata.getTipoCartaRichiesta(),
+                         offerta_accettata.getListaCarteOfferte(),
+                         offerta_accettata.getListaTipiCarteOfferte(),
                          offerta_accettata.getPointsOfferti(), sender_2);
                  InvioMessaggi gestore_messaggio_2 = new InvioMessaggi();
                  gestore_messaggio_2.invia_messaggio_aggiornamento_points(scambio_accettato_2); // richiedo l'aggiornamento dei points sia di "nicknameU1" che di "nicknameU2"

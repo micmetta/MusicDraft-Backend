@@ -1,6 +1,7 @@
 package com.example.carte_e_mazzi.messages;
 
 
+import com.example.carte_e_mazzi.service.SostituzioneProprietariCarte;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -12,6 +13,9 @@ import lombok.RequiredArgsConstructor;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // Questa classe serve per defire un consumer dei messaggi che arriveranno su una certa
 // coda.
 @RequiredArgsConstructor
@@ -20,6 +24,8 @@ public class RabbitMQReceiver implements RabbitListenerConfigurer{
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RabbitMQReceiver.class);
     // qui dovrai mettere la classe service..
+    private final SostituzioneProprietariCarte sost_proprietario;
+
 
     @Override
     public void configureRabbitListeners(RabbitListenerEndpointRegistrar rabbitListenerEndpointRegistrar) {}
@@ -41,23 +47,37 @@ public class RabbitMQReceiver implements RabbitListenerConfigurer{
 
         // Gestisco l'oggetto JSON ricevuto:
         ObjectMapper objectMapper = new ObjectMapper();
+        List<String> listaCarteOfferte = new ArrayList<>(); // creo una lista di stringhe per memorizzare gli id delle carte
+
 
         try {
-            // Parsa la stringa JSON in un oggetto JsonNode
-            JsonNode jsonNode = objectMapper.readTree(message);
 
-            // Ora puoi accedere ai campi del JSON come descritto nella risposta precedente
-            int id = jsonNode.get("id").asInt();
+            // Parserizzo la stringa JSON in un oggetto JsonNode
+            JsonNode jsonNode = objectMapper.readTree(message);
             String nicknameU1 = jsonNode.get("nicknameU1").asText();
             String nicknameU2 = jsonNode.get("nicknameU2").asText();
             String idCartaRichiesta = jsonNode.get("idCartaRichiesta").asText();
-            String listaCarteOfferte = jsonNode.get("listaCarteOfferte").asText();
+            String tipoCartaRichiesta = jsonNode.get("tipoCartaRichiesta").asText();
+            String stringaCarteOfferte = jsonNode.get("listaCarteOfferte").asText();
+            String stringaTipiCarteOfferte = jsonNode.get("listaTipiCarteOfferte").asText();
+
+
+            // Rimuovi i caratteri '[' e ']' iniziali e finali, quindi dividi la stringa in base alle virgole
+            String[] carteArray = stringaCarteOfferte.replaceAll("\\[|\\]", "").split(",");
+            String[] tipicarteArray = stringaTipiCarteOfferte.replaceAll("\\[|\\]", "").split(",");
+
+
+
+            // Itero attraverso gli elementi dell'array carteArray e li aggiungo alla lista:
+            for (String id_carta_offerta : carteArray) {
+                listaCarteOfferte.add(id_carta_offerta.replaceAll("\"", "").trim()); // trim() rimuove eventuali spazi bianchi in eccesso
+            }
 
             // Eseguo le azioni necessarie con i dati JSON
             System.out.println("nicknameU1: " + nicknameU1);
             System.out.println("nicknameU2: " + nicknameU2);
             System.out.println("idCartaRichiesta: " + idCartaRichiesta);
-            System.out.println("listaCarteOfferte: " + listaCarteOfferte);
+            System.out.println("listaCarteOfferte: " + listaCarteOfferte); // Ora listaCarteOfferte contiene la lista di stringhe
             System.out.println();
 
 
@@ -65,17 +85,32 @@ public class RabbitMQReceiver implements RabbitListenerConfigurer{
             // e date a "nicknameU2" mentre "l'idCartaRichiesta", contiene l'id della carta che
             // deve essere tolta a "nicknameU2" e data a "nicknameU1", quindi:
 
-            // 1) invoco l'endpoint di Pietro per cancellare tutte le carte di "nicknameU1" presenti in "listaCarteOfferte".
+            // RICORDA: per far funzionare correttamente questi 2 punti di sotto HAI BISOGNO DI LEGGERE PRIMA SE OGNI CARTA
+            // E' DI TIPO ARTISTA O DI TIPO BRANO in modo tale da essere certo di quale metodo di "SostituzioneProprietariCarte"
+            // devi chiamare perchè dipenderà da qual è la tabella a cui farai riferimento se "CarteArtistiN" o "CarteArtistiB" !!!!
 
 
-            // 2) invoco l'endpoint di Pietro per aggiungere alle di carte "nicknameU2" tutte quelle presenti in "listaCarteOfferte".
+            // 1) invoco l'endpoint di Pietro per sostituire "nicknameU1" con "nicknameU2" tutte le carte di presenti in "listaCarteOfferte":
+
+            System.out.println("SONO PRIMA DI AVER AGGIORNATO il proprietario scorrendo listaCarteOfferte");
+            // Per farlo uso la classe di servizio "SostituzioneProprietariCarte" e i suoi metodi.
+//            for (String id_carta: listaCarteOfferte) {
+//                sost_proprietario.aggiorna_proprietario(id_carta, nicknameU2);
+//            }
+            // listaCarteOfferte.size() ==
+            for (int i = 0; i < listaCarteOfferte.size(); i++){
+
+            }
+
+            System.out.println("SONO DOPO AVER AGGIORNATO il proprietario scorrendo listaCarteOfferte");
 
 
-            // 3) invoco l'endpoint di Pietro per togliere a "nicknameU2" la carta con "idCartaRichiesta".
 
+            // 2) invoco l'endpoint di Pietro per sostituire "nicknameU2" con "nicknameU1" alla carta con "idCartaRichiesta":
 
-            // 4) invoco l'endpoint di Pietro per aggiungere alle carte di "nicknameU1" la carta con "idCartaRichiesta".
-
+            System.out.println("SONO PRIMA DI AVER AGGIORNATO il proprietario di idCartaRichiesta");
+            //sost_proprietario.aggiorna_proprietario(idCartaRichiesta, nicknameU1);
+            System.out.println("SONO DOPO AVER AGGIORNATO il proprietario di idCartaRichiesta");
 
 
         } catch (Exception e) {
