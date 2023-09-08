@@ -27,12 +27,10 @@ public class GestioneScambi {
 
     @Column(name = "listaCarteOfferte", columnDefinition = "JSON") // campo che conterrà la lista delle carte (anche solo una o 0 perchè magari ha offerto solo points)
     // offerte da "nicknameU1" in cambio di "cartaRichiesta".
-    // private List<String> listaCarteOfferte;
     private String listaCarteOfferte;
 
-    @Column(name = "listaTipiCarteOfferte", columnDefinition = "JSON") // campo che conterrà la lista delle carte (anche solo una o 0 perchè magari ha offerto solo points)
+    @Column(name = "listaTipiCarteOfferte", columnDefinition = "JSON") // campo che conterrà i tipi della lista delle carte (anche solo una o 0 perchè magari ha offerto solo points)
     // offerte da "nicknameU1" in cambio di "cartaRichiesta".
-    // private List<String> listaCarteOfferte;
     private String listaTipiCarteOfferte; // per ogni carta in listaCarteOfferte: "artista" o "brano"
 
 
@@ -115,7 +113,7 @@ public class GestioneScambi {
         return listaTipiCarteOfferte;
     }
 
-    public void setListaTipiCarteOfferte(String listaTipiCarteOfferte) {this.listaCarteOfferte = listaTipiCarteOfferte; }
+    public void setListaTipiCarteOfferte(String listaTipiCarteOfferte) {this.listaTipiCarteOfferte = listaTipiCarteOfferte; }
 
     public int getPointsOfferti() {
         return pointsOfferti;

@@ -48,7 +48,7 @@ public class RabbitMQReceiver implements RabbitListenerConfigurer{
         // Gestisco l'oggetto JSON ricevuto:
         ObjectMapper objectMapper = new ObjectMapper();
         List<String> listaCarteOfferte = new ArrayList<>(); // creo una lista di stringhe per memorizzare gli id delle carte
-
+        List<String> listaTipiCarteOfferte = new ArrayList<>();
 
         try {
 
@@ -72,12 +72,19 @@ public class RabbitMQReceiver implements RabbitListenerConfigurer{
             for (String id_carta_offerta : carteArray) {
                 listaCarteOfferte.add(id_carta_offerta.replaceAll("\"", "").trim()); // trim() rimuove eventuali spazi bianchi in eccesso
             }
+            for (String tipo_carta_offerta : tipicarteArray) {
+                listaTipiCarteOfferte.add(tipo_carta_offerta.replaceAll("\"", "").trim()); // trim() rimuove eventuali spazi bianchi in eccesso
+            }
+
+
 
             // Eseguo le azioni necessarie con i dati JSON
             System.out.println("nicknameU1: " + nicknameU1);
             System.out.println("nicknameU2: " + nicknameU2);
             System.out.println("idCartaRichiesta: " + idCartaRichiesta);
+            System.out.println("tipoCartaRichiesta: " + tipoCartaRichiesta);
             System.out.println("listaCarteOfferte: " + listaCarteOfferte); // Ora listaCarteOfferte contiene la lista di stringhe
+            System.out.println("listaTipiCarteOfferte: " + listaTipiCarteOfferte); // Ora listaTipiCarteOfferte contiene la lista di stringhe
             System.out.println();
 
 
@@ -97,19 +104,32 @@ public class RabbitMQReceiver implements RabbitListenerConfigurer{
 //            for (String id_carta: listaCarteOfferte) {
 //                sost_proprietario.aggiorna_proprietario(id_carta, nicknameU2);
 //            }
-            // listaCarteOfferte.size() ==
+            // listaCarteOfferte.size() == listaTipiCarteOfferte.size()
             for (int i = 0; i < listaCarteOfferte.size(); i++){
-
+                // per ogni carta presente in listaCarteOfferte controllo il suo tipo e in base ad esso saprò in quale tabella
+                // dovrò fare l'aggiornamento (artista o brano)
+                if(listaTipiCarteOfferte.get(i).equals("artista")){
+                    sost_proprietario.aggiorna_proprietario_cartaArtista(listaCarteOfferte.get(i), nicknameU2);
+                }
+                else{
+                    // vuol dire che la carta è di tipo "brano"
+                    sost_proprietario.aggiorna_proprietario_cartaBrano(listaCarteOfferte.get(i), nicknameU2);
+                }
             }
 
             System.out.println("SONO DOPO AVER AGGIORNATO il proprietario scorrendo listaCarteOfferte");
-
 
 
             // 2) invoco l'endpoint di Pietro per sostituire "nicknameU2" con "nicknameU1" alla carta con "idCartaRichiesta":
 
             System.out.println("SONO PRIMA DI AVER AGGIORNATO il proprietario di idCartaRichiesta");
             //sost_proprietario.aggiorna_proprietario(idCartaRichiesta, nicknameU1);
+            if(tipoCartaRichiesta.equals("artista")){
+                sost_proprietario.aggiorna_proprietario_cartaArtista(idCartaRichiesta, nicknameU1);
+            }
+            else{
+                sost_proprietario.aggiorna_proprietario_cartaBrano(idCartaRichiesta, nicknameU1);
+            }
             System.out.println("SONO DOPO AVER AGGIORNATO il proprietario di idCartaRichiesta");
 
 

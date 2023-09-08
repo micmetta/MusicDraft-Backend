@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="push branch_Michele">
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="push branch_Michele problema">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/messages/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/messages/RabbitMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/messages/RabbitMQReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/messages/RabbitMQReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/ScambiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/ScambiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneScambi.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneScambi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +275,35 @@
       <option name="project" value="LOCAL" />
       <updated>1694166229326</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="push branch_Michele">
+      <created>1694167180933</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1694167180933</updated>
+    </task>
+    <task id="LOCAL-00014" summary="push branch_Michele problema">
+      <created>1694167377925</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1694167377925</updated>
+    </task>
+    <task id="LOCAL-00015" summary="push branch_Michele problema">
+      <created>1694167400359</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1694167400359</updated>
+    </task>
+    <task id="LOCAL-00016" summary="push branch_Michele problema">
+      <created>1694167411919</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1694167411919</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +338,8 @@
     <MESSAGE value="add: gestioneAmici + getNickname + getEmail" />
     <MESSAGE value="allineamento con &#10;branch_Pietro" />
     <MESSAGE value="push branch_Michele" />
-    <option name="LAST_COMMIT_MESSAGE" value="push branch_Michele" />
+    <MESSAGE value="push branch_Michele problema" />
+    <option name="LAST_COMMIT_MESSAGE" value="push branch_Michele problema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

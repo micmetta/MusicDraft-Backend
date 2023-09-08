@@ -71,7 +71,7 @@ public class ScambiController {
         ObjectMapper objectMapper = new ObjectMapper();
         ObjectMapper objectMapper_2 = new ObjectMapper();
         List<String> listaCarteOfferte = objectMapper.readValue(gestioneScambi.getListaCarteOfferte(), new TypeReference<List<String>>() {});
-        List<String> listaTipiCarteOfferte = objectMapper_2.readValue(gestioneScambi.getListaCarteOfferte(), new TypeReference<List<String>>() {});
+        List<String> listaTipiCarteOfferte = objectMapper_2.readValue(gestioneScambi.getListaTipiCarteOfferte(), new TypeReference<List<String>>() {});
 
 //        System.out.println("listaCarteOfferte:");
 //        System.out.println(listaCarteOfferte);
@@ -203,6 +203,7 @@ public class ScambiController {
         controfferta.setNicknameU1(gestioneScambi.getNicknameU1());
         controfferta.setNicknameU2(gestioneScambi.getNicknameU2());
         controfferta.setIdCartaRichiesta(gestioneScambi.getIdCartaRichiesta());
+        controfferta.setTipoCartaRichiesta(gestioneScambi.getTipoCartaRichiesta());
         ObjectMapper objectMapper = new ObjectMapper();
         ObjectMapper objectMapper_2 = new ObjectMapper();
 
