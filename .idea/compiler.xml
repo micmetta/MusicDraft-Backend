@@ -23,6 +23,7 @@
       <module name="authentication-service (1)" target="18" />
       <module name="authentication-service (2)" target="18" />
       <module name="card-manage-service" target="17" />
+      <module name="carte_e_mazzi" target="17" />
       <module name="marketplace" target="17" />
       <module name="marketplace-sevice" target="17" />
     </bytecodeTargetLevel>
