@@ -55,7 +55,7 @@ public class RabbitMQConfig {
 //    public Binding binding(){
 //        return BindingBuilder.bind(queue())
 //                .to(exchange())
-//                .with(routing_key);
+//                .with(routing_key);//
 //    }
     @Bean Binding updatePointsBinding(){
         return BindingBuilder
