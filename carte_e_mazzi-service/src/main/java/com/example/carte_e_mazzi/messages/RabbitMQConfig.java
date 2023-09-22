@@ -6,7 +6,9 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class RabbitMQConfig {
 
 //    @Value("${rabbitmq.queue.name}") // questo valore l'ho settato nell'application proprieties di questo microservizio
@@ -58,7 +60,8 @@ public class RabbitMQConfig {
 //                .to(exchange())
 //                .with(routing_key);
 //    }
-    @Bean Binding updateCardsBinding(){
+    @Bean
+    public Binding updateCardsBinding(){
         return BindingBuilder
                 .bind(updateCardsQueue())
                 .to(exchange())

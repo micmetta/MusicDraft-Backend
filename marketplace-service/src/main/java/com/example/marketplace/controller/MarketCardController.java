@@ -7,7 +7,7 @@ import com.example.marketplace.model.CarteInVenditaTrack;
 import com.example.marketplace.repo.MarketCardArtistRepo;
 import com.example.marketplace.repo.MarketCardTrackRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -130,16 +130,32 @@ public class MarketCardController {
         }
 
     }
-    @PostMapping("/vendiCartaArtista")
-    public void insert_cart_Artist(@RequestBody CarteInVenditaArtista data){
-        System.out.println(data.getNome());
-        CarteInVenditaArtista _artista = repositoryA.save(new CarteInVenditaArtista(data.getId(), data.getNome(), data.getPopolarita(), data.getGenere(), data.getImmagine(),data.getCosto(), data.getNick()));
+    @PostMapping("/vendiCartaArtista/{nickname}")
+    public ResponseEntity<?> insert_cart_Artist(@PathVariable String nickname,@RequestBody CarteInVenditaArtista data){
+        System.out.println(nickname);
+        RestTemplate restTemplate1 = new RestTemplate();
+        ResponseEntity<Integer> pointUtente = restTemplate1.getForEntity("http://authentication-service:8081/api/v1/authenticationService/getPoints/" + data.getNick(), Integer.class);
+        if(pointUtente.getBody() < data.getCosto()*20 ) {
+            CarteInVenditaArtista _artista = repositoryA.save(new CarteInVenditaArtista(data.getId(), data.getNome(), data.getPopolarita(), data.getGenere(), data.getImmagine(),data.getCosto(), nickname));
+            return ResponseEntity.ok(_artista);
+        }else{
+            String errorMessage = "Punti insufficienti per acquistare questa carta.";
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessage);
+        }
     }
-    @PostMapping("/vendiCartaBrano")
-    public void insert_cart_Artist(@RequestBody CarteInVenditaTrack data){
-        System.out.println(data.getNome());
-        CarteInVenditaTrack _track = repositoryT.save(new CarteInVenditaTrack(data.getId(), data.getNome(),data.getDurata(),data.getAnno_pubblicazione(), data.getPopolarita(), data.getImmagine(),data.getCosto(),data.getNick()));
+    @PostMapping("/vendiCartaBrano/{nickname}")
+    public ResponseEntity<?> insert_cart_Artist(@PathVariable String nickname,@RequestBody CarteInVenditaTrack data) {
+        RestTemplate restTemplate1 = new RestTemplate();
+        ResponseEntity<Integer> pointUtente = restTemplate1.getForEntity("http://authentication-service:8081/api/v1/authenticationService/getPoints/" + data.getNick(), Integer.class);
+        if (pointUtente.getBody() < data.getCosto() * 20) {
+            CarteInVenditaTrack _artista = repositoryT.save(new CarteInVenditaTrack(data.getId(), data.getNome(), data.getDurata(), data.getAnno_pubblicazione(), data.getPopolarita(), data.getImmagine(), data.getCosto(), nickname));
+            return ResponseEntity.ok(_artista);
+        } else {
+            String errorMessage = "Punti insufficienti per acquistare questa carta.";
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessage);
+        }
     }
-}
+    }
+
 
 

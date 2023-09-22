@@ -126,9 +126,28 @@ public class ScambiController {
         }
     }
 
-    // MOSTRA TUTTE LE OFFERTE INVIATE DA UN CERTO UTENTE attraverso il suo nickname..
 
+
+    // Questo enpoint MOSTRA TUTTE LE OFFERTE INVIATE DA UN CERTO UTENTE attraverso il suo nickname..
+    @GetMapping(value = "/getAllOfferteInviate/{nickname}")
+    public List<GestioneScambi> get_allOfferte_inviate(@PathVariable String nickname){
+
+        List<GestioneScambi> offerte_inviate = scambi_repository.findByNicknameU1(nickname);
+
+        // QUESTO IF NON SERVE PUOI TOGLIERLO..
+        if(!offerte_inviate.isEmpty()){
+            // vuol dire che l'utente ha inviato delle offerte e gliele restituisco tutte.
+            return offerte_inviate;
+        }
+        else{
+            // vuol dire che l'utente corrente non ha inviato nessuna offerta.
+            return offerte_inviate; // sarà vuota.
+        }
+    }
     ////////////////////////////////////////////////////////
+
+
+
 
 
     // Adesso devi implementare l'accetta, il rifiuta e la controfferta di una certa offerta ricevuta da parte di un utente con nicknameU2
@@ -164,17 +183,29 @@ public class ScambiController {
     @DeleteMapping(value = "/cancellaOffertaTramiteIdStart/{idStart}")
     public String cancella_offerta_con_idStart(@PathVariable long idStart){
 
-        GestioneScambi offerta_rifiutata = scambi_repository.findById(idStart);
+        // raccolgo in una lista (perchè potrebbe esserci più di 1 offerta/controfferta con lo stesso idStart) tutte le offerte/controfferte
+        // che hanno lo stesso idStart:
+        List<GestioneScambi> offerte_da_cancellare = scambi_repository.findByIdStart(idStart);
 
-        if(offerta_rifiutata != null){
-            // se entro qui vuol dire che devo cancellare la riga rappresentata da "offerta_rifiutata" dalla tabella "gestione_scambi":
-            scambi_repository.delete(offerta_rifiutata);
-
-            return "Offerta cancellata con successo.";
+        if(!offerte_da_cancellare.isEmpty()) {
+            for (GestioneScambi offerta_da_cancellare : offerte_da_cancellare) {
+                scambi_repository.delete(offerta_da_cancellare);
+            }
+            return "Tutte le offerte con lo stesso idStart sono state cancellate.";
         }
         else{
-            return "Non esiste nessuna offerta con questo idStart.";
+            return "Non ci sono altre offerte/controfferte da cancellare con l'idStart dato in input.";
         }
+
+//        if(offerta_rifiutata != null){
+//            // se entro qui vuol dire che devo cancellare la riga rappresentata da "offerta_rifiutata" dalla tabella "gestione_scambi":
+//            scambi_repository.delete(offerta_rifiutata);
+//
+//            return "Offerta cancellata con successo.";
+//        }
+//        else{
+//            return "Non esiste nessuna offerta con questo idStart.";
+//        }
 
     }
 
@@ -244,15 +275,11 @@ public class ScambiController {
     @GetMapping(value = "getStorico/{id}")
     public List<GestioneScambi> get_storico(@PathVariable long id){
 
+        GestioneScambi offerta_iniziale = scambi_repository.findById(id);
         List<GestioneScambi> storico_offerta = scambi_repository.findByIdStartAndStatoOfferta(id, "controfferta");
+        storico_offerta.add(0, offerta_iniziale); // aggiungo in cima l'offerta iniziale
 
-        // QUESTO IF NON SERVE PUOI TOGLIERLO..
-        if(!storico_offerta.isEmpty()){
-            return storico_offerta; // non sarà vuota e conterrà tutte le controfferte di quell'offerta particolare.
-        }
-        else{
-            return storico_offerta; // sarà vuota e questo vuol dire che per l'offerta inserita non ci sono state controfferte.
-        }
+        return storico_offerta; // non sarà vuota e conterrà tutte le controfferte di quell'offerta particolare.
     }
 
 

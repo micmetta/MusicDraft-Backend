@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>carte_e_mazzi-service</artifactId>
+    <artifactId>carte-e-mazzi-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>carte_e_mazzi</name>
     <description>carte_e_mazzi</description>

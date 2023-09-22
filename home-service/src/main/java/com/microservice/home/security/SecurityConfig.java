@@ -36,6 +36,7 @@ public class SecurityConfig {
                             .requestMatchers(HttpMethod.DELETE, "/api/v1/homeService/scambiController/cancellaOffertaTramiteId/{id}").permitAll()
                             .requestMatchers(HttpMethod.DELETE, "/api/v1/homeService/scambiController/cancellaOffertaTramiteIdStart/{idStart}").permitAll()
                             .requestMatchers(HttpMethod.GET, "/api/v1/homeService/scambiController/getAllOfferte/{nickname}").permitAll()
+                            .requestMatchers(HttpMethod.GET, "/api/v1/homeService/scambiController/getAllOfferteInviate/{nickname}").permitAll()
                             .requestMatchers(HttpMethod.GET, "/api/v1/homeService/scambiController/getStorico/{id}").permitAll()
                             .requestMatchers(HttpMethod.GET, "/api/v1/homeService/scambiController/getUltimaControfferta/{id}").permitAll()
                             .requestMatchers(HttpMethod.PUT, "/api/v1/homeService/scambiController/controfferta").permitAll()

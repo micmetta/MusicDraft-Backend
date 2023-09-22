@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="push branch_Michele problema">
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="Merge remote-tracking branch 'origin/branch_Michele' into branch_Michele&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/messages/RabbitMQReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/messages/RabbitMQReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/ScambiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/ScambiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneScambi.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/model/GestioneScambi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/repository/ScambiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/repository/ScambiRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +303,21 @@
       <option name="project" value="LOCAL" />
       <updated>1694167411919</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="push branch_Michele scambio_carte completo">
+      <created>1694172960605</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1694172960605</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Merge remote-tracking branch 'origin/branch_Michele' into branch_Michele&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1694173054864</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1694173054864</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +353,9 @@
     <MESSAGE value="allineamento con &#10;branch_Pietro" />
     <MESSAGE value="push branch_Michele" />
     <MESSAGE value="push branch_Michele problema" />
-    <option name="LAST_COMMIT_MESSAGE" value="push branch_Michele problema" />
+    <MESSAGE value="push branch_Michele scambio_carte completo" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/branch_Michele' into branch_Michele&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/branch_Michele' into branch_Michele&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
