@@ -13,6 +13,7 @@
         <module name="carte_e_mazzi-service" />
         <module name="authentication-service" />
         <module name="collectdata-service" />
+        <module name="carte-e-mazzi-service" />
         <module name="home-service" />
       </profile>
     </annotationProcessing>
@@ -29,6 +30,7 @@
       <module name="MusicDraftBackend" options="" />
       <module name="authentication-service" options="-parameters" />
       <module name="card-manage-service" options="-parameters" />
+      <module name="carte-e-mazzi-service" options="-parameters" />
       <module name="carte_e_mazzi-service" options="-parameters" />
       <module name="collectdata-service" options="-parameters" />
       <module name="home-service" options="-parameters" />
