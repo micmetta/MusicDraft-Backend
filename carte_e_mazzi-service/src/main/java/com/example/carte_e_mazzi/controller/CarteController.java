@@ -30,7 +30,6 @@ public class CarteController {
     UtenteRepoCarteBrano repoT;
 
 
-
     @GetMapping("/showCardArtistaUtente/{received}")
     public List<CarteArtistiN> crea_Card_artista(@PathVariable String received) {
 

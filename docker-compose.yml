@@ -45,7 +45,7 @@ services:
     networks:
       - opnet
 
-  carte_e_mazzi-service:
+  carte-e-mazzi-service:
       build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\carte_e_mazzi-service
       restart: always
       ports:
