@@ -3,6 +3,7 @@ package com.example.collectdata.controller;
 import com.example.collectdata.repository.ArtistRep;
 import com.example.collectdata.model.Artista;
 import com.example.collectdata.model.Auth;
+//import com.example.collectdata.repository.ImplArtistiRep;
 import org.apache.hc.core5.http.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,16 +16,25 @@ import se.michaelthelin.spotify.requests.data.search.simplified.SearchArtistsReq
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/collect") // CAMBIATO
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ArtistController {
+
+
+//    private final ImplArtistiRep implArtistiRep;
+//
+//    @Autowired
+//    public ArtistController(ImplArtistiRep customArtistRepository) {
+//        this.implArtistiRep = customArtistRepository;
+//    }
+
 
     @Autowired
     ArtistRep repository;
     Auth user = new Auth();
-
-
 
 
     @PostMapping("/insert-artist")
@@ -41,7 +51,6 @@ public class ArtistController {
                 .build();
 
         try {
-
 
             final Paging<Artist> albumSimplifiedPaging = searchAlbumsRequest.execute();
             Artist[] items = albumSimplifiedPaging.getItems();
@@ -73,11 +82,20 @@ public class ArtistController {
 
     @GetMapping("/show-artist")
     public  List<Artista> showArtista_Sync() {
-        System.out.println("Get All customer");
+        System.out.println("Get All artists");
         List<Artista> artisti = new ArrayList<>();
         repository.findAll().forEach(artisti::add);
         return artisti;
     }
+
+
+    @GetMapping("/showArtistById/{id}")
+    public Optional<Artista> showArtistaById_Sync(@PathVariable String id) {
+        System.out.println("Get artist by id");
+
+        return repository.findById(id);
+    }
+
 
 
     @DeleteMapping("/delete-artist/{nome_artista}")

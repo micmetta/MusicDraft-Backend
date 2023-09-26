@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/carte_e_mazzi/pom.xml" />
         <option value="$PROJECT_DIR$/carteEmazzi-service/pom.xml" />
         <option value="$PROJECT_DIR$/carte_e_mazzi-service/pom.xml" />
+        <option value="$PROJECT_DIR$/matchmaking-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

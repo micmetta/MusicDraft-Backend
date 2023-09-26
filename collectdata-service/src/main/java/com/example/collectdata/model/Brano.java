@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 public class Brano {
 
     @Id
-
+    @Column(name="id")
     private String id;
 
     @Column(name = "nome")

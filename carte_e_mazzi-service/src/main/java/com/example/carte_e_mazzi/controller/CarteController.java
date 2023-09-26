@@ -166,6 +166,7 @@ public class CarteController {
     public List<CarteArtistiN> getArtisti(@PathVariable String id_artista){
         return repoA.findById(id_artista);
     }
+
     @GetMapping("/getUserBrano/{id_brano}")
     public List<CarteBraniN> getBrano(@PathVariable String id_brano){
         return repoT.findById(id_brano);

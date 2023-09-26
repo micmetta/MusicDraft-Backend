@@ -29,7 +29,7 @@ public class MarketCardController {
     @GetMapping("/creaCardArtista")
     public void crea_Card_artista() {
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<Artista[]> responseEntity = restTemplate.getForEntity("http://collectdata-service:9090/api/v1/show-artist", Artista[].class);
+        ResponseEntity<Artista[]> responseEntity = restTemplate.getForEntity("http://collectdata-service:9090/api/v1/collect/show-artist", Artista[].class);
         Artista[] artistArray = responseEntity.getBody();
 
         if (artistArray != null) {
@@ -43,7 +43,7 @@ public class MarketCardController {
     @GetMapping("/creaCardTrack")
     public void crea_Card_Brano() {
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<Brano[]> responseEntity = restTemplate.getForEntity("http://collectdata-service:9090/api/v1/show-track", Brano[].class);
+        ResponseEntity<Brano[]> responseEntity = restTemplate.getForEntity("http://collectdata-service:9090/api/v1/collect/show-track", Brano[].class);
         Brano[] trackArray = responseEntity.getBody();
 
         if (trackArray != null) {
