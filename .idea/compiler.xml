@@ -9,7 +9,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="carte_e_mazzi-service" />
         <module name="authentication-service" />
         <module name="carte-e-mazzi-service" />
         <module name="home-service" />
