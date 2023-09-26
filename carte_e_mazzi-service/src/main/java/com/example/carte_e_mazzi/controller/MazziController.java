@@ -117,10 +117,10 @@ public class MazziController {
             float pop = 0;
             for (Object cartaDTO : carteSelezionate) {
                 String s = cartaDTO.toString();
-                if (s.contains("genere")) {
+                if (s.contains("genere")) { // genere = ARTISTA
                     CarteArtistiN artista = new ObjectMapper().convertValue(cartaDTO, CarteArtistiN.class);
                     pop+=artista.getPopolarita();
-                }else if (s.contains("durata")){
+                }else if (s.contains("durata")){ // durata = BRANO
                     CarteBraniN brano = new ObjectMapper().convertValue(cartaDTO, CarteBraniN.class);
                     pop+=brano.getPopolarita();
                 }

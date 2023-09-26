@@ -80,7 +80,6 @@ public class ScambiController {
 //        System.out.println();
 //        System.out.println();
 
-        // PROBLEMA: I VALORI CHE PASSO IN INPUT CON POSTMAN NON VENGONO PRESI CORRETTAMENTE...
         if( (!listaCarteOfferte.isEmpty()) || (!(gestioneScambi.getPointsOfferti() == 0)) ){
 
             // allora vuol dire che l'offerta fatta è valida, quindi posso aggiungere alla tabella gestione_scambi la nuova riga:

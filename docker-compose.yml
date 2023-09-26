@@ -24,6 +24,19 @@ services:
     networks:
       - opnet
 
+
+  matchmaking-service:
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\matchmaking-service
+    restart: always
+    ports:
+      - 8083:8083
+    depends_on:
+      - mysqldb
+      - rabbitmq
+    networks:
+      - opnet
+
+
   collectdata-service:
 #    image: collectdata-service-server:latest
     build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\collectdata-service
@@ -55,7 +68,6 @@ services:
         - rabbitmq
       networks:
         - opnet
-
 
   mysqldb:
     image: "mysql:5.7"

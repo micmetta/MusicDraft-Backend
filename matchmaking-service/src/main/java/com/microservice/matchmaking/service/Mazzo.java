@@ -1,10 +1,9 @@
-package com.example.carte_e_mazzi.model;
+package com.microservice.matchmaking.service;
 import jakarta.persistence.*;
-import org.hibernate.id.factory.internal.AutoGenerationTypeStrategy;
+import org.springframework.stereotype.Service;
 
-@Entity
-@Table(name="mazzi")
-public class Mazzi {
+@Service
+public class Mazzo {
 
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,10 +23,10 @@ public class Mazzi {
     private float popolarita;
 
 
-    public Mazzi() {
+    public Mazzo() {
     }
 
-    public Mazzi(String nomemazzo, String cartaassociata, String nickname, float popolarita) {
+    public Mazzo(String nomemazzo, String cartaassociata, String nickname, float popolarita) {
         this.nomemazzo = nomemazzo;
         this.cartaassociata = cartaassociata;
         this.nickname = nickname;

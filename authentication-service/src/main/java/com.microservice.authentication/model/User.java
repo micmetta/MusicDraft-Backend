@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Table(name = "user")
 public class User {
 
-    @Id //Con questa annotation specifico che ogni customer avrà un id univoco
+    @Id //Con questa annotation specifico che ogni utente avrà un id univoco
     @GeneratedValue(strategy = GenerationType.AUTO) //con questa annotation specifico che ogni volta che aggiungo una nuova riga ovvero un nuovo customer, l'id si autoincrementerà da solo.
     private long id;
 

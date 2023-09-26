@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="Push applicazione aggiornata">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/messages/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/messages/RabbitMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="Aggiunta matchmaking" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Dockerfile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -76,7 +70,7 @@
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/home-service/src/main/java/org/example/Main.java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/matchmaking-service/src/main/java/com/microservice/matchmaking/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -102,10 +96,24 @@
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.microservice.matchmaking.service" />
       <recent name="com.microservice.authentication.messages" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+    <configuration name="MatchmakingApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.microservice.matchmaking.MatchmakingApplication" />
+      <module name="matchmaking-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.microservice.matchmaking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -115,19 +123,6 @@
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.carte_e_mazzi-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="carte_e_mazzi-service" />
-            </list>
-          </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
@@ -146,12 +141,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.mysqldb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.matchmaking-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="mysqldb" />
+              <option value="matchmaking-service" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -175,10 +170,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.matchmaking-service: Compose Deployment" />
+        <item itemvalue="Application.MatchmakingApplication" />
         <item itemvalue="Docker.docker-compose.yml.home-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.mysqldb: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.carte_e_mazzi-service: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -328,7 +323,21 @@
       <option name="project" value="LOCAL" />
       <updated>1695374412267</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Allineamento backend">
+      <created>1695378277360</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1695378277361</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Aggiunta matchmaking">
+      <created>1695742802370</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1695742802370</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +376,9 @@
     <MESSAGE value="push branch_Michele scambio_carte completo" />
     <MESSAGE value="Merge remote-tracking branch 'origin/branch_Michele' into branch_Michele&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Push applicazione aggiornata" />
-    <option name="LAST_COMMIT_MESSAGE" value="Push applicazione aggiornata" />
+    <MESSAGE value="Allineamento backend" />
+    <MESSAGE value="Aggiunta matchmaking" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta matchmaking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -376,6 +387,11 @@
           <url>file://$PROJECT_DIR$/authentication-service/src/main/java/org/example/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/matchmaking-service/src/main/java/org/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
