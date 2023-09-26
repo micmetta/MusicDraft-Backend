@@ -14,10 +14,9 @@ import se.michaelthelin.spotify.requests.data.search.simplified.SearchTracksRequ
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v1/collect") // CAMBIATO
+@RequestMapping("/api/v1/collect")
 public class TrackController {
     @Autowired
     BranoRep repository;
@@ -63,19 +62,11 @@ public class TrackController {
     }
     @GetMapping("/show-track")
     public List<Brano> showBrano_Sync() {
-        System.out.println("Get All tracks");
+        System.out.println("Get All customer");
         List<Brano> brani = new ArrayList<>();
         repository.findAll().forEach(brani::add);
         return brani;
     }
-
-    @GetMapping("/showTrackById/{id}")
-    public Optional<Brano> showBranoById_Sync(@PathVariable String id) {
-        System.out.println("Get track by id");
-
-        return repository.findById(id);
-    }
-
 
     @DeleteMapping("/delete-track/{nome_brano}")
     public  void delete_track(@PathVariable  String nome_brano){

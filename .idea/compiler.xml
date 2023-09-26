@@ -3,15 +3,14 @@
   <component name="CompilerConfiguration">
     <excludeFromCompile>
       <directory url="file://$PROJECT_DIR$/home-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
-      <directory url="file://$PROJECT_DIR$/matchmaking-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="matchmaking-service" />
         <module name="marketplace-service" />
+        <module name="carte_e_mazzi-service" />
         <module name="authentication-service" />
         <module name="collectdata-service" />
         <module name="carte-e-mazzi-service" />
@@ -22,7 +21,6 @@
       <module name="authentication-service (1)" target="18" />
       <module name="authentication-service (2)" target="18" />
       <module name="card-manage-service" target="17" />
-      <module name="carte_e_mazzi-service" target="17" />
       <module name="marketplace" target="17" />
       <module name="marketplace-sevice" target="17" />
     </bytecodeTargetLevel>
@@ -39,7 +37,6 @@
       <module name="marketplace" options="-parameters" />
       <module name="marketplace-service" options="-parameters" />
       <module name="marketplace-sevice" options="-parameters" />
-      <module name="matchmaking-service" options="-parameters" />
     </option>
   </component>
 </project>
