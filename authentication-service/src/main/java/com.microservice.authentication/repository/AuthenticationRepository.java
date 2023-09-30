@@ -6,7 +6,8 @@ import java.util.List;
 
 
 public interface AuthenticationRepository extends CrudRepository<User, Long> {
-    //List<User> findByAge(int age); //se lo metti siccome il tuo User non ha il campo age allora ti da errore..
+
+    List<User> findAll();
 
     // Questa funzione controlla se l'utente con i due parametri passati qui sotto è registrato nel db_utenti o meno.
     List<User> findByNickname(String nickname);

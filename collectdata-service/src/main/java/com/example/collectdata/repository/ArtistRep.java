@@ -10,11 +10,4 @@ public interface ArtistRep extends CrudRepository<Artista, String> {
 
     List<Artista> findByNome(String nome);
     Optional<Artista> findById(String id);
-
-
-//    Artista findByArtistId(String id);
-
-//    // Metodo di base save
-//    @Override
-//    <S extends Artista> S save(S entity);
 }

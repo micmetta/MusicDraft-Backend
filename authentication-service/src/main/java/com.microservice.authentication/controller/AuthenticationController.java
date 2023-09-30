@@ -87,8 +87,9 @@ public class AuthenticationController {
     }
 
 
+    // restituisce tutti gli utenti registrati
     @GetMapping("/getAllUsers")
-    public List<User> getAllUsers(){ //DEVI METTERE @RequestBody passandogli il Nickname e la Password... (DA FARE...)
+    public List<User> getAllUsers(){
 
         List<User> allUsers = new ArrayList<>();
         Iterable<User> users = repository.findAll();
@@ -140,6 +141,67 @@ public class AuthenticationController {
             return "nickname inesistente";
         }
     }
+
+    // - aggiunta dopo che PIETRO HA FATTO FUNZIONARE KUBERNETIS..
+    // questo endpoint permette di ottenere il numero totale di utenti che sono online in questo momento:
+    @GetMapping("/getNumberUsersOnline")
+    public int get_number_users_online(){
+        List<User> _users = repository.findAll();
+        int num_utenti_online = 0;
+
+        for (User utente: _users) {
+            if(utente.getisOnline()){
+                num_utenti_online++;
+            }
+        }
+
+        return num_utenti_online;
+    }
+
+
+
+    // - aggiunta dopo che PIETRO HA FATTO FUNZIONARE KUBERNETIS..
+    // questo endpoint permette ad un utente di poter modificare il proprio nickname:
+    @PutMapping("/updateNickname/{nicknameCurrent}/{nicknameNew}")
+    public String update_nickname(@PathVariable String nicknameCurrent, @PathVariable String nicknameNew){
+        List<User> _user = repository.findByNickname(nicknameCurrent); // in realtà si potrebbe mettere anche solo User invece di List<User>
+        if(!_user.isEmpty()){
+            // adesso verifico se il nuovo nickname che si vuole settare è già presente nel DB:
+            List<User> check_user = repository.findByNickname(nicknameNew);
+            if(check_user.isEmpty()){
+                // allora il nuovo nickname può essere settato
+                _user.get(0).setNickname(nicknameNew);
+                repository.save(_user.get(0));
+
+                return "Il nuovo nickname è stato settato correttamente.";
+            }
+            else{
+                return "Il nuovo nickname che si vuole registrare esiste già.";
+            }
+        }
+        else{
+            return "nickname corrente inesistente";
+        }
+    }
+
+    // - aggiunta dopo che PIETRO HA FATTO FUNZIONARE KUBERNETIS..
+    // questo endpoint permette ad un utente di poter modificare la propria password:
+    @PutMapping("/updatePassword/{nickname}/{passwordNew}")
+    public String update_password(@PathVariable String nickname, @PathVariable String passwordNew){
+        List<User> _user = repository.findByNickname(nickname); // in realtà si potrebbe mettere anche solo User invece di List<User>
+        if(!_user.isEmpty()){
+            _user.get(0).setPassword(passwordNew);
+            repository.save(_user.get(0));
+
+            return "La nuova password è stata settata correttamente";
+        }
+        else{
+            return "nickname corrente inesistente";
+        }
+    }
+
+
+
 
     // questo endpoint mi permette dato un certo nickname in input di ottenere la sua email:
     @GetMapping("/getEmail/{nickname}")
@@ -232,24 +294,43 @@ public class AuthenticationController {
     }
 
 
-    // DA FARE Nel fronted:
-    // - Nella pagina-home della dashboard devi mostrare i points dell'utente (tramite /getPoints/{nickname})
-    //   e collegare la possibilità di poterli modificare (tramite /updatePoints/{nickname}/{points}) nell'authService.
-    // - Dopodichè fai il push così Pietro continua la sua parte..
+    // - aggiunta dopo che PIETRO HA FATTO FUNZIONARE KUBERNETIS..
+    // Questo endpoint serve per ottenere tutto l'oggetto User che prendo tramite il suo nickname:
+    @GetMapping("/getUser/{nickname}")
+    public User get_user(@PathVariable String nickname){
+        List<User> _user = repository.findByNickname(nickname);
+        if(!_user.isEmpty()){
+            return _user.get(0); // restituisco l'oggetto user con tutti i dati dell'utente.
+        }
+        else{
+            return null; // vuol dire che il nickname inserito non esiste nel DB.
+        }
+    }
 
 
 
-
+    // - aggiunta dopo che PIETRO HA FATTO FUNZIONARE KUBERNETIS..
+    // Questo endpoint serve per specificare che un utente è andato offline:
+    @PutMapping("/setIsOnline/{nickname}")
+    public String set_Online(@PathVariable String nickname){
+        List<User> _user = repository.findByNickname(nickname);
+        if(!_user.isEmpty()){
+            _user.get(0).setisOnline(true); // setto il campo isOnline di questo utente a true per far capire che è loggato.
+            repository.save(_user.get(0)); // memorizzo in maniera persistente nel DB la modifica fatta allo stato dell'utente.
+            return "Settaggio true eseguito.";
+        }
+        else{
+            return "Il nickname inserito è errato.";
+        }
+    }
 
     // Questo endpoint serve per specificare che un utente è andato offline:
     @PutMapping("/setIsOffline/{nickname}")
     public String set_Offline(@PathVariable String nickname){
         List<User> _user = repository.findByNickname(nickname);
-
         if(!_user.isEmpty()){
             _user.get(0).setisOnline(false); // setto il campo isOnline di questo utente a false per far capire che andrà offline.
             repository.save(_user.get(0)); // memorizzo in maniera persistente nel DB la modifica fatta allo stato dell'utente.
-
             return "Settaggio false eseguito.";
         }
         else{

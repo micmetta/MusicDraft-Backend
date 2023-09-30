@@ -153,6 +153,69 @@ public class HomeController {
         }
     }
 
+
+    // Endpoint che permette ad un utente di rifiutare una certa richiesta di amicizia che ha ricevuto:
+
+    // - aggiunta dopo che PIETRO HA FATTO FUNZIONARE KUBERNETIS..
+    @DeleteMapping(value = "/richiestaRifiutata/{nicknameU1}/{nicknameU2}")
+    public String rifiuta_richiesta(@PathVariable String nicknameU1, @PathVariable String nicknameU2){
+
+        // aggiorno la tabella gestioneAmici in corrispondenza della riga d'interesse andandola a cancellare dalla tabella:
+        GestioneAmici amiciziaDaRifiutare = repository.findByNicknameU1AndNicknameU2(nicknameU1, nicknameU2);
+
+        if(amiciziaDaRifiutare != null){
+            if(amiciziaDaRifiutare.getStato().equals("in attesa")) {
+                repository.delete(amiciziaDaRifiutare);
+                return "richiesta rifiutata.";
+            }
+            else{
+                return "La richiesta di amicizia è già stata rifiutata.";
+            }
+        }
+        else{
+            return "si è verificato un errore durante l'accettazione della richiesta perchè - amiciziaDaRifiutare - è null.";
+        }
+    }
+
+
+    // Endpoint che permette ad un utente di cancellare una certa amicizia che aveva con un altro utente:
+
+    // - aggiunta dopo che PIETRO HA FATTO FUNZIONARE KUBERNETIS..
+    @DeleteMapping(value = "/cancellaAmicizia/{nicknameU1}/{nicknameU2}")
+    public String cancella_amicizia(@PathVariable String nicknameU1, @PathVariable String nicknameU2){
+
+        // aggiorno la tabella gestioneAmici in corrispondenza della riga d'interesse andandola a cancellare dalla tabella:
+        GestioneAmici amiciziaDaCancellare = repository.findByNicknameU1AndNicknameU2(nicknameU1, nicknameU2);
+        GestioneAmici amiciziaDaCancellare_contrario = repository.findByNicknameU1AndNicknameU2(nicknameU2, nicknameU1);
+
+        if(amiciziaDaCancellare != null){
+            if(amiciziaDaCancellare.getStato().equals("accettata")) {
+                repository.delete(amiciziaDaCancellare);
+                return "amicizia cancellata.";
+            }
+            else{
+                return "Tu e questo utente già non siete amici.";
+            }
+        }
+        else if(amiciziaDaCancellare_contrario != null){
+
+            if(amiciziaDaCancellare_contrario.getStato().equals("accettata")) {
+                repository.delete(amiciziaDaCancellare_contrario);
+                return "amicizia cancellata.";
+            }
+            else{
+                return "Tu e questo utente già non siete amici.";
+            }
+        }
+        else{
+            return "si è verificato un errore durante la cancellazione dell'amicizia perchè - amiciziaDaCancellare e amiciziaDaCancellare_contrario- sono null.";
+        }
+
+    }
+
+
+
+
     // Questo endpoint mi permette di poter prendere tutti gli amici di un certo utente il cui nickname viene dato in input.
     @GetMapping(value = "/getAllFriends/{nickname}")
     public List<String> get_allAmici(@PathVariable String nickname){
