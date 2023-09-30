@@ -4,6 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="Api-gateway">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/SpringCloudConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/SpringCloudConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/repository/AuthenticationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/repository/AuthenticationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/ArtistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/controller/TrackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
     <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="Push definitivo backend" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Dockerfile" />
         <option value="Interface" />
+        <option value="Dockerfile" />
         <option value="Class" />
       </list>
     </option>
@@ -61,21 +73,26 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/authentication-service/src/main/java/com.microservice.authentication&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Uni/TAAS/Spike/MusicDraft-Frontend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/matchmaking-service/src/main/java/com/microservice/matchmaking/Main.java&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/home-service/src/main/java/org/example/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;5fa80c7f1a218a93d5ca8b42217deccb&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;094024c50a9d11bf129845f2ffd55392&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -92,24 +109,49 @@
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\test" />
       <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service\src\main\resources" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.microservice.matchmaking.service" />
       <recent name="com.microservice.authentication.messages" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
-    <configuration name="MatchmakingApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.microservice.matchmaking.MatchmakingApplication" />
-      <module name="matchmaking-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.microservice.matchmaking.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.authentication.AuthenticationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarteEMazziApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="carte-e-mazzi-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.carte_e_mazzi.CarteEMazziApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GestioneAmiciApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="home-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.home.GestioneAmiciApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarketplaceSeviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="marketplace-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.marketplace.MarketplaceSeviceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpotifySpike2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="collectdata-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.collectdata.SpotifySpike2Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,6 +170,19 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.api-gateway: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="api-gateway" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml.home-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -141,12 +196,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.matchmaking-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.mysqldb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="matchmaking-service" />
+              <option value="mysqldb" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -170,10 +225,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.matchmaking-service: Compose Deployment" />
-        <item itemvalue="Application.MatchmakingApplication" />
+        <item itemvalue="Docker.docker-compose.yml.api-gateway: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.home-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.mysqldb: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -188,6 +243,17 @@
       <workItem from="1692864776352" duration="9348000" />
       <workItem from="1693037488095" duration="680000" />
       <workItem from="1693304942525" duration="933000" />
+      <workItem from="1695375653968" duration="2497000" />
+      <workItem from="1695654620651" duration="1832000" />
+      <workItem from="1695663689865" duration="726000" />
+      <workItem from="1695737722451" duration="4589000" />
+      <workItem from="1695802280172" duration="6906000" />
+      <workItem from="1695823707610" duration="1816000" />
+      <workItem from="1695888436923" duration="5327000" />
+      <workItem from="1695972747639" duration="2743000" />
+      <workItem from="1695995968707" duration="9000" />
+      <workItem from="1695999154493" duration="1183000" />
+      <workItem from="1696061041964" duration="710000" />
     </task>
     <task id="LOCAL-00001" summary="commit per &quot;Scritta solo per il commit&quot;">
       <created>1692008897937</created>
@@ -316,20 +382,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694173054864</updated>
     </task>
-    <task id="LOCAL-00019" summary="Push applicazione aggiornata">
-      <created>1695374412267</created>
+    <task id="LOCAL-00019" summary="Merge remote-tracking branch 'origin/branch_Michele' into branch_Michele&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1695377656464</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1695374412267</updated>
+      <updated>1695377656464</updated>
     </task>
-    <task id="LOCAL-00020" summary="Allineamento backend">
-      <created>1695378277360</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1695378277361</updated>
-    </task>
+    <option name="localTasksCounter" value="20" />
     <task id="LOCAL-00021" summary="Aggiunta matchmaking">
       <created>1695742802370</created>
       <option name="number" value="00021" />
@@ -416,6 +477,8 @@
     <MESSAGE value="push branch_Michele" />
     <MESSAGE value="push branch_Michele problema" />
     <MESSAGE value="push branch_Michele scambio_carte completo" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/branch_Michele' into branch_Michele&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/branch_Michele' into branch_Michele&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Push applicazione aggiornata" />
     <MESSAGE value="Allineamento backend" />
     <MESSAGE value="Aggiunta matchmaking" />
@@ -431,11 +494,6 @@
           <url>file://$PROJECT_DIR$/authentication-service/src/main/java/org/example/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/matchmaking-service/src/main/java/org/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

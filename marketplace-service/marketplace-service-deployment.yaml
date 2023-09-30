@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: marketplace-service
+spec:
+  replicas: 3 # Numero di repliche desiderate
+  selector:
+    matchLabels:
+      app: marketplace-service
+  template:
+    metadata:
+      labels:
+        app: marketplace-service
+    spec:
+      containers:
+        - name: marketplace-service
+          image: psanger/marketplace-service:latest
+          ports:
+            - containerPort: 9091
