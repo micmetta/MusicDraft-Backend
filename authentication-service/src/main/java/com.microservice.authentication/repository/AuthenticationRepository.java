@@ -7,7 +7,6 @@ import java.util.List;
 
 public interface AuthenticationRepository extends CrudRepository<User, Long> {
 
-    List<User> findAll();
 
     // Questa funzione controlla se l'utente con i due parametri passati qui sotto è registrato nel db_utenti o meno.
     List<User> findByNickname(String nickname);
