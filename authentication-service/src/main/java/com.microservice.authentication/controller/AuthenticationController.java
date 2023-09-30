@@ -255,7 +255,7 @@ public class AuthenticationController {
             return "Utente inserito inesistente.";
         }
     }
-
+    //
 
     // Questo endpoint per un utente il cui nickname viene dato in input prende il valore dei suoi points:
     @GetMapping("/getPoints/{nickname}")
