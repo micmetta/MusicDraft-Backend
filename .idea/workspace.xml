@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="Api-gateway" />
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="Push definitivo_2 backend">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/repository/AuthenticationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/repository/AuthenticationRepository.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -427,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696062989829</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Push definitivo_2 backend">
+      <created>1696064054472</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1696064054472</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +481,8 @@
     <MESSAGE value="Aggiunta matchmaking_2" />
     <MESSAGE value="Merge remote-tracking branch 'origin/branch_Michele' into branch_Michele&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Push definitivo backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Push definitivo backend" />
+    <MESSAGE value="Push definitivo_2 backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push definitivo_2 backend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
