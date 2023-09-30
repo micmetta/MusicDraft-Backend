@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/repository/AuthenticationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/repository/AuthenticationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/messages/RabbitMQReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/messages/RabbitMQReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/service/SostituzioneProprietariCarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/service/SostituzioneProprietariCarte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/repository/ArtistRep.java" beforeDir="false" afterPath="$PROJECT_DIR$/collectdata-service/src/main/java/com/example/collectdata/repository/ArtistRep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/security/SecurityConfig.java" afterDir="false" />
-    </list>
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="Push definitivo backend" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -382,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695743513505</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Push definitivo backend">
+      <created>1696062989829</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1696062989829</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +421,8 @@
     <MESSAGE value="Aggiunta matchmaking" />
     <MESSAGE value="Aggiunta matchmaking_2" />
     <MESSAGE value="Merge remote-tracking branch 'origin/branch_Michele' into branch_Michele&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/branch_Michele' into branch_Michele&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="Push definitivo backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push definitivo backend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
