@@ -30,6 +30,8 @@ public class SecurityConfig {
                             .requestMatchers(HttpMethod.GET, "/api/v1/homeService/getAllFriends/{nickname}").permitAll()
                             .requestMatchers(HttpMethod.GET, "/api/v1/homeService/getAllFriendsAreOnline/{nickname}").permitAll()
                             .requestMatchers(HttpMethod.PUT, "/api/v1/homeService/richiestaAccettata/{nicknameU1}/{nicknameU2}").permitAll()
+                            .requestMatchers(HttpMethod.DELETE, "/api/v1/homeService/richiestaRifiutata/{nicknameU1}/{nicknameU2}").permitAll()
+                            .requestMatchers(HttpMethod.DELETE, "/api/v1/homeService/cancellaAmicizia/{nicknameU1}/{nicknameU2}").permitAll()
 
                             // Endopoints di ScambiController:
                             .requestMatchers(HttpMethod.POST, "/api/v1/homeService/scambiController/inviaOfferta").permitAll()

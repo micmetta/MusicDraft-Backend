@@ -57,16 +57,13 @@ public class RabbitMQReceiver implements RabbitListenerConfigurer{
             String nicknameU1 = jsonNode.get("nicknameU1").asText();
             String nicknameU2 = jsonNode.get("nicknameU2").asText();
             String idCartaRichiesta = jsonNode.get("idCartaRichiesta").asText();
-            String tipoCartaRichiesta = jsonNode.get("tipoCartaRichiesta").asText();
+//            String tipoCartaRichiesta = jsonNode.get("tipoCartaRichiesta").asText();
             String stringaCarteOfferte = jsonNode.get("listaCarteOfferte").asText();
-            String stringaTipiCarteOfferte = jsonNode.get("listaTipiCarteOfferte").asText();
-
+//            String stringaTipiCarteOfferte = jsonNode.get("listaTipiCarteOfferte").asText();
 
             // Rimuovi i caratteri '[' e ']' iniziali e finali, quindi dividi la stringa in base alle virgole
             String[] carteArray = stringaCarteOfferte.replaceAll("\\[|\\]", "").split(",");
-            String[] tipicarteArray = stringaTipiCarteOfferte.replaceAll("\\[|\\]", "").split(",");
-
-
+//            String[] tipicarteArray = stringaTipiCarteOfferte.replaceAll("\\[|\\]", "").split(",");
 
             // Itero attraverso gli elementi dell'array carteArray e li aggiungo alla lista:
             for (String id_carta_offerta : carteArray) {
@@ -80,7 +77,6 @@ public class RabbitMQReceiver implements RabbitListenerConfigurer{
             System.out.println("listaCarteOfferte: " + listaCarteOfferte); // Ora listaCarteOfferte contiene la lista di stringhe
             System.out.println();
 
-
             // A questo punto, la listaCarteOfferte contiene gli ids delle carte che devono essere tolte a "nicknameU1"
             // e date a "nicknameU2" mentre "l'idCartaRichiesta", contiene l'id della carta che
             // deve essere tolta a "nicknameU2" e data a "nicknameU1", quindi:
@@ -89,29 +85,20 @@ public class RabbitMQReceiver implements RabbitListenerConfigurer{
             // E' DI TIPO ARTISTA O DI TIPO BRANO in modo tale da essere certo di quale metodo di "SostituzioneProprietariCarte"
             // devi chiamare perchè dipenderà da qual è la tabella a cui farai riferimento se "CarteArtistiN" o "CarteArtistiB" !!!!
 
-
-            // 1) invoco l'endpoint di Pietro per sostituire "nicknameU1" con "nicknameU2" tutte le carte di presenti in "listaCarteOfferte":
-
+            // 1) invoco l'endpoint di Pietro per sostituire "nicknameU1" con "nicknameU2" per tutte le carte presenti in "listaCarteOfferte":
             System.out.println("SONO PRIMA DI AVER AGGIORNATO il proprietario scorrendo listaCarteOfferte");
             // Per farlo uso la classe di servizio "SostituzioneProprietariCarte" e i suoi metodi.
-//            for (String id_carta: listaCarteOfferte) {
-//                sost_proprietario.aggiorna_proprietario(id_carta, nicknameU2);
-//            }
-            // listaCarteOfferte.size() ==
-            for (int i = 0; i < listaCarteOfferte.size(); i++){
 
+            // listaCarteOfferte contiene gli id delle carte offerte
+            for (String s : listaCarteOfferte) {
+                sost_proprietario.aggiorna_proprietario(s, nicknameU2);
             }
-
             System.out.println("SONO DOPO AVER AGGIORNATO il proprietario scorrendo listaCarteOfferte");
 
-
-
             // 2) invoco l'endpoint di Pietro per sostituire "nicknameU2" con "nicknameU1" alla carta con "idCartaRichiesta":
-
             System.out.println("SONO PRIMA DI AVER AGGIORNATO il proprietario di idCartaRichiesta");
-            //sost_proprietario.aggiorna_proprietario(idCartaRichiesta, nicknameU1);
+            sost_proprietario.aggiorna_proprietario(idCartaRichiesta, nicknameU1);
             System.out.println("SONO DOPO AVER AGGIORNATO il proprietario di idCartaRichiesta");
-
 
         } catch (Exception e) {
             e.printStackTrace();
