@@ -12,7 +12,7 @@
         <module name="matchmaking-service" />
         <module name="carte_e_mazzi-service" />
         <module name="authentication-service" />
-        <module name="carte-e-mazzi-service" />
+        <module name="collectdata-service" />
         <module name="home-service" />
         <module name="api-gateway" />
         <module name="marketplace-service" />

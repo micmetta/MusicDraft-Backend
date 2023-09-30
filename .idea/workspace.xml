@@ -228,6 +228,7 @@
         <item itemvalue="Docker.docker-compose.yml.home-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.mysqldb: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.carte_e_mazzi-service: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
