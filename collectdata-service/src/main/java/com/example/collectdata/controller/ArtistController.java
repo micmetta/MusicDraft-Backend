@@ -15,6 +15,7 @@ import se.michaelthelin.spotify.requests.data.search.simplified.SearchArtistsReq
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/collect")
@@ -94,7 +95,12 @@ public class ArtistController {
         }
 
     }
+    @GetMapping("/showArtistById/{id}")
+    public Optional<Artista> showArtistaById_Sync(@PathVariable String id) {
+        System.out.println("Get artist by id");
 
+        return repository.findById(id);
+    }
 
 
 

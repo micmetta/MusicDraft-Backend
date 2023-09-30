@@ -9,6 +9,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="matchmaking-service" />
         <module name="carte_e_mazzi-service" />
         <module name="authentication-service" />
         <module name="carte-e-mazzi-service" />
@@ -41,6 +42,7 @@
       <module name="marketplace" options="-parameters" />
       <module name="marketplace-service" options="-parameters" />
       <module name="marketplace-sevice" options="-parameters" />
+      <module name="matchmaking-service" options="-parameters" />
     </option>
   </component>
 </project>

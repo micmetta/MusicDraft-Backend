@@ -1,8 +1,26 @@
 version: "3.8"
 services:
+  api-gateway:
+    image: psanger/api-gateway:latest
+    restart: always
+    ports:
+      - 9095:9095
+    networks:
+      - opnet
+
+  matchmaking-service:
+    image: psanger/matchmaking-service:latest
+    restart: always
+    ports:
+      - 8083:8083
+    depends_on:
+      - mysqldb
+      - rabbitmq
+    networks:
+      - opnet
   authentication-service:
 #    image: authentication-service-server:latest
-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraftBackend\authentication-service
+    image: psanger/authentication-service
     restart: always
     ports:
       - 8081:8081
@@ -13,7 +31,7 @@ services:
       - opnet
 
   home-service:
-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraftBackend\home-service
+    image: psanger/home-service
     restart: always
     ports:
       - 8082:8082
@@ -26,7 +44,7 @@ services:
 
   collectdata-service:
 #    image: collectdata-service-server:latest
-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraftBackend\collectdata-service
+    image: psanger/collectdata-service
     restart: always
     ports:
       - 9090:9090
@@ -36,7 +54,7 @@ services:
       - opnet
 
   marketplace-service:
-    build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraftBackend\marketplace-service
+    image: psanger/marketplace-service
     restart: always
     ports:
       - 9091:9091
@@ -46,7 +64,7 @@ services:
       - opnet
 
   carte-e-mazzi-service:
-      build: C:\Users\pietr\Desktop\Uni\TAAS\Spike\MusicDraftBackend\carte_e_mazzi-service
+      image: psanger/carte-e-mazzi-service
       restart: always
       ports:
         - 9092:9092

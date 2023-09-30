@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carta-e-mazzi
+spec:
+  replicas: 3 # Numero di repliche desiderate
+  selector:
+    matchLabels:
+      app: carta-e-mazzi
+  template:
+    metadata:
+      labels:
+        app: carta-e-mazzi
+    spec:
+      containers:
+        - name: carta-e-mazzi
+          image: psanger/carte-e-mazzi-service:latest
+          ports:
+            - containerPort: 9092

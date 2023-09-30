@@ -14,5 +14,5 @@ public interface AuthenticationRepository extends CrudRepository<User, Long> {
     User findByNicknameAndPassword(String nickname, String password);
     User findByEmailAndPassword(String email, String password);
 
-
+    List<User> findAll();
 }

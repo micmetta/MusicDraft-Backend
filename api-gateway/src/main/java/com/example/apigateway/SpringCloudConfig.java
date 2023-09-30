@@ -14,7 +14,7 @@ public class SpringCloudConfig {
                         .uri("http://auyhentication-service:8081"))
 
                 .route(r -> r.path("/api/v1/cartemazzi/**")
-                        .uri("http://collectdata-service:9092"))
+                        .uri("http://carte-e-mazzi-service:9092"))
 
                 .route(r -> r.path("/api/v1/homeService/**")
                         .uri("http://home-service:8082"))
@@ -27,6 +27,12 @@ public class SpringCloudConfig {
 
                 .route(r -> r.path("/api/v1/marketplace/**")
                         .uri("http://marketplace-service:9091"))
+
+                .route(r -> r.path("/api/v1/matchmakingService/matchmakingController/**")
+                        .uri("http://matchmaking-service:8083"))
+
+                .route(r -> r.path("/api/v1/matchmakingService/riepilogoPartitaConclusaController/**")
+                        .uri("http://matchmaking-service:8083"))
 
                 .build();
     }

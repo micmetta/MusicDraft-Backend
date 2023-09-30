@@ -1,14 +1,12 @@
 package com.example.carte_e_mazzi.controller;
 
 import ch.qos.logback.core.net.SyslogOutputStream;
-import com.example.carte_e_mazzi.model.CarteArtistiN;
-import com.example.carte_e_mazzi.model.CarteBraniN;
-import com.example.carte_e_mazzi.model.CarteInVenditaArtista;
-import com.example.carte_e_mazzi.model.CarteInVenditaTrack;
+import com.example.carte_e_mazzi.model.*;
 import com.example.carte_e_mazzi.repo.UtenteRepoCarteArtisti;
 import com.example.carte_e_mazzi.repo.UtenteRepoCarteBrano;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -29,7 +27,32 @@ public class CarteController {
     @Autowired
     UtenteRepoCarteBrano repoT;
 
+    public static class user_rank{
 
+        String nick;
+        int rank;
+
+        public user_rank(String nick, int rank) {
+            this.nick = nick;
+            this.rank = rank;
+        }
+
+        public String getNick() {
+            return nick;
+        }
+
+        public void setNick(String nick) {
+            this.nick = nick;
+        }
+
+        public int getRank() {
+            return rank;
+        }
+
+        public void setRank(int rank) {
+            this.rank = rank;
+        }
+    }
     @GetMapping("/showCardArtistaUtente/{received}")
     public List<CarteArtistiN> crea_Card_artista(@PathVariable String received) {
 
@@ -90,6 +113,35 @@ public class CarteController {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessage);
             }
         }
+
+        @GetMapping("/getAllforAlluser")
+        public List<user_rank> getAll() {
+            List<user_rank> allCard = new ArrayList<>();
+            RestTemplate restTemplate1 = new RestTemplate();
+
+            ResponseEntity<List<User>> response = restTemplate1.exchange(
+                    "http://authentication-service:8081/api/v1/authenticationService/getAllUsers",
+                    HttpMethod.GET,
+                    null,
+                    new ParameterizedTypeReference<List<User>>() {});
+
+            List<User> users = response.getBody();
+
+            for (User u : users) {
+                int pop = 0;
+                List<CarteArtistiN> artisti = repoA.findByNickname(u.getNickname());
+                List<CarteBraniN> brani = repoT.findByNickname(u.getNickname());
+                for (CarteArtistiN a : artisti) {
+                    pop += a.getPopolarita();
+                }
+                for (CarteBraniN b : brani) {
+                    pop += b.getPopolarita();
+                }
+                allCard.add(new user_rank(u.getNickname(), pop));
+            }
+            return allCard;
+        }
+
         @PostMapping("/acquistaCartaBrano/{nickname}")
         public ResponseEntity<?> insert_cart_Artist(@PathVariable String nickname,@RequestBody CarteInVenditaTrack data){
 

@@ -14,6 +14,7 @@ import se.michaelthelin.spotify.requests.data.search.simplified.SearchTracksRequ
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/collect")
@@ -82,5 +83,11 @@ public class TrackController {
                 System.out.println( "Entity " + nome_brano + " not found");
         }
 
+    }
+    @GetMapping("/showTrackById/{id}")
+    public Optional<Brano> showBranoById_Sync(@PathVariable String id) {
+        System.out.println("Get track by id");
+
+        return repository.findById(id);
     }
 }
