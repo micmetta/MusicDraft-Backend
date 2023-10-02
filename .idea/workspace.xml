@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="Api-gateway">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/repository/AuthenticationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/repository/AuthenticationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/SpringCloudConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/SpringCloudConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerbuild.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dockerbuild.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +78,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/pietr/Desktop/Uni/TAAS/MusicDraftBackend",
+    "last_opened_file_path": "C:/Users/pietr/Desktop/Uni/TAAS/MusicDraft-Frontend",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -85,7 +87,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "com.intellij.kubernetes.view.ui.settings.KubernetesViewConfigurable",
     "spring.configuration.checksum": "f4b1181d83a378bdade8cd37637f236d",
     "vue.rearranger.settings.migration": "true"
   },
@@ -255,7 +257,8 @@
       <workItem from="1695995968707" duration="9000" />
       <workItem from="1695999154493" duration="1183000" />
       <workItem from="1696061041964" duration="710000" />
-      <workItem from="1696066359438" duration="327000" />
+      <workItem from="1696066359438" duration="3364000" />
+      <workItem from="1696233236891" duration="3336000" />
     </task>
     <task id="LOCAL-00001" summary="commit per &quot;Scritta solo per il commit&quot;">
       <created>1692008897937</created>
@@ -449,7 +452,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696064317278</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Api-gateway">
+      <option name="closed" value="true" />
+      <created>1696066859542</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1696066859542</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

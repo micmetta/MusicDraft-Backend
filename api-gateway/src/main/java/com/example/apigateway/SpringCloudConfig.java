@@ -11,7 +11,7 @@ public class SpringCloudConfig {
     public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(r -> r.path("/api/v1/authenticationService/**")
-                        .uri("http://auyhentication-service:8081"))
+                        .uri("http://authentication-service:8081"))
 
                 .route(r -> r.path("/api/v1/cartemazzi/**")
                         .uri("http://carte-e-mazzi-service:9092"))
