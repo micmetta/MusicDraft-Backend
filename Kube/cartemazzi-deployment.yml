@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: carte-e-mazzi-service
+  name: carte-e-mazzi-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: carte-e-mazzi-service
+  template:
+    metadata:
+      labels:
+        io.kompose.service: carte-e-mazzi-service
+    spec:
+      containers:
+        - env:
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: musicdraft
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://mysqldb:3306/db_musicdraft
+            - name: SPRING_DATASOURCE_USERNAME
+              value: musicdraft
+            - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+              value: update
+          image: psanger/carte-e-mazzi-service
+          name: carte-e-mazzi-service
+          ports:
+            - containerPort: 9092
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: authentication-service
+  name: carte-e-mazzi-service
+spec:
+  ports:
+    - port: 9092
+      targetPort: 9092
+  selector:
+    io.kompose.service: authentication-service
+  type: LoadBalancer

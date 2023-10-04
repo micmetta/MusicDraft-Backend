@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysqldb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysqldb
+  template:
+    metadata:
+      labels:
+        app: mysqldb
+    spec:
+      containers:
+        - name: mysqldb
+          image: "mysql:5.7"
+          ports:
+            - containerPort: 3306
+          env:
+            - name: MYSQL_DATABASE
+              value: db_musicdraft
+            - name: MYSQL_USER
+              value: musicdraft
+            - name: MYSQL_PASSWORD
+              value: musicdraft
+            - name: MYSQL_ROOT_PASSWORD
+              value: musicdraft
+          volumeMounts:
+            - name: mysql-storage
+              mountPath: /var/lib/mysql  # Percorso di montaggio nel container
+      volumes:
+        - name: mysql-storage
+          emptyDir: {}  # Usa un emptyDir per archiviare i dati temporanei. Personalizza se necessario.
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysqldb
+spec:
+  selector:
+    app: mysqldb
+  ports:
+    - protocol: TCP
+      port: 3307
+      targetPort: 3306
+  type: LoadBalancer
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-persistent-storage
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 256Mi  # Specifica la stessa quantità di spazio di archiviazione richiesta del PVC sopra

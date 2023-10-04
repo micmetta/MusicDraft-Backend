@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: collectdata-service
+  name: collectdata-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: collectdata-service
+  template:
+    metadata:
+      labels:
+        io.kompose.service: collectdata-service
+    spec:
+      containers:
+        - env:
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: musicdraft
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://mysqldb:3306/db_musicdraft
+            - name: SPRING_DATASOURCE_USERNAME
+              value: musicdraft
+            - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+              value: update
+          image: psanger/collectdata-service
+          name: collectdata-service
+          ports:
+            - containerPort: 9090
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: collectdata-service
+  name: collectdata-service
+spec:
+  ports:
+    - port: 9090
+      targetPort: 9090
+  selector:
+    io.kompose.service: collectdata-service
+  type: LoadBalancer
