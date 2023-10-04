@@ -21,6 +21,13 @@ public class AuthenticationController {
     @Autowired
     AuthenticationRepository repository;
 
+
+    @GetMapping("/stampa")
+    public String home() {
+        return "Hello  Gio, from SpringBoot app, using Docker  Kubernetes";
+    }
+
+
     @PostMapping(value = "/registration")
     public String postUser(@RequestBody User user){
 

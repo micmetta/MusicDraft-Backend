@@ -4,18 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="Push definitivo_3 backend">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]2/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" beforeDir="false" />
+    <list default="true" id="31884575-f160-4fcc-b28c-b4d63ad32d48" name="Changes" comment="Push definitivo_4 backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/authentication-service-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/authentication-service-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/authentication-service-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/authentication-service-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/apigateway-ingress.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/apigateway-ingress.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/authentication-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/authentication-service-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/cartemazzi-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/cartemazzi-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/collectdata-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/collectdata-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/home-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/home-service-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/marketplace-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/marketplace-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/matcmaking-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/matcmaking-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/rabbitmq-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/rabbitmq-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/AuthenticationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/AuthenticationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com.microservice.authentication/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dockerbuild.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dockerbuild.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/java/com/microservice/home/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,12 +188,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.home-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.authentication-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="home-service" />
+              <option value="authentication-service" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -196,12 +201,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.mysqldb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.home-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="mysqldb" />
+              <option value="home-service" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -225,10 +230,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.authentication-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.api-gateway: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.home-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.mysqldb: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -460,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696236797188</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Push definitivo_4 backend">
+      <created>1696410619781</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1696410619781</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +518,8 @@
     <MESSAGE value="Push definitivo backend" />
     <MESSAGE value="Push definitivo_2 backend" />
     <MESSAGE value="Push definitivo_3 backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Push definitivo_3 backend" />
+    <MESSAGE value="Push definitivo_4 backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push definitivo_4 backend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

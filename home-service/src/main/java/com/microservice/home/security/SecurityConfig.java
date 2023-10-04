@@ -46,7 +46,7 @@ public class SecurityConfig {
 
                     authorizationManagerRequestMatcherRegistry.anyRequest().authenticated(); // Richiede l'autenticazione per tutte le altre richieste (ci deve essere altrimenti se faccio la GET dopo che viene scelto l'account Google mi da errore 403).
                 })
-                .oauth2Login(Customizer.withDefaults()) // Abilita il login OAuth2 con impostazioni predefinite (andrà a vedere nell'application.proprieties il cliet-id e il client-secret per permettere l'autenticazione con GOOGLE)
+                .oauth2Login(Customizer.withDefaults()) // Abilita il login OAuth2 con impostazioni predefinite (andrà a vedere nell'application.properties il cliet-id e il client-secret per permettere l'autenticazione con GOOGLE)
                 .build(); // La catena di filtri di sicurezza viene costruita utilizzando il metodo build().
     }
 }

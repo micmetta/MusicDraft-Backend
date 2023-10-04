@@ -23,10 +23,9 @@ services:
       - opnet
 
   authentication-service:
-    #    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
-    #    build: C:Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
-    image: psanger/authentication:latest
-#    image: ziomike97/authenticatione:latest
+#    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
+#    image: psanger/authentication:latest
+    image: ziomike97/authentication-service:latest
     restart: always
     ports:
       - 8081:8081
