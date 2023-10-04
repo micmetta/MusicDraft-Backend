@@ -1,9 +1,14 @@
 #!/bin/bash
 
-cd C:/Users/pietr/Desktop/Uni/TAAS/MusicDraftBackend/api-gateway
-docker build -t api-gateway:latest .
-docker tag api-gateway:latest psanger/api-gateway:latest
-docker push psanger/api-gateway:latest
+#cd C:/Users/pietr/Desktop/Uni/TAAS/MusicDraftBackend/api-gateway
+#docker build -t api-gateway:latest .
+#docker tag api-gateway:latest psanger/api-gateway:latest
+#docker push psanger/api-gateway:latest
+
+cd C:/Users/pietr/Desktop/Uni/TAAS/MusicDraft-Frontend
+docker build -t musicdraft-frontend:latest .
+docker tag musicdraft-frontend:latest psanger/musicdraft-frontend:latest
+docker push psanger/musicdraft-frontend:latest
 
 #cd C:/Users/pietr/Desktop/Uni/TAAS/MusicDraftBackend/authentication-service
 #docker build -t authentication-service:latest .
