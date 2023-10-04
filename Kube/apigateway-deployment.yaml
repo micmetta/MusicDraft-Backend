@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: api-gateway
+  name: api-gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: api-gateway
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        io.kompose.service: api-gateway
+    spec:
+      containers:
+        - env:
+            - name: SERVICES_AUTHENTICATION
+              value: http://authentication-service:8081
+            - name: SERVICES_MATCHMAKING
+              value: http://matchmaking-service:8083
+            - name: SERVICES_HOME_EXCHANGE
+              value: http://home-service:8082
+            - name: SERVICES_COLLECTDATA
+              value: http://collectdata-service:9090
+            - name: SERVICES_MARKETPLACE
+              value: http://marketplace-service:9091
+            - name: SERVICES_CARD_AND_DECK
+              value: http://carte-e-mazzi-service:9092
+
+            - name: SPRING_RABBITMQ_HOST
+              value: rabbitmq
+          image: psanger/api-gateway
+          name: api-gateway
+          ports:
+            - containerPort: 9095
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: api-gateway
+  name: api-gateway
+spec:
+  ports:
+    - port: 9095
+      targetPort: 9095
+  selector:
+    io.kompose.service: api-gateway
+  type: LoadBalancer

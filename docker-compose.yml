@@ -20,7 +20,7 @@ services:
       - opnet
   authentication-service:
 #    image: authentication-service-server:latest
-    image: psanger/authentication-service
+    image: psanger/authentication-service:latest
     restart: always
     ports:
       - 8081:8081
@@ -31,7 +31,7 @@ services:
       - opnet
 
   home-service:
-    image: psanger/home-service
+    image: psanger/home-service:latest
     restart: always
     ports:
       - 8082:8082
@@ -44,7 +44,7 @@ services:
 
   collectdata-service:
 #    image: collectdata-service-server:latest
-    image: psanger/collectdata-service
+    image: psanger/collectdata-service:latest
     restart: always
     ports:
       - 9090:9090
@@ -54,7 +54,7 @@ services:
       - opnet
 
   marketplace-service:
-    image: psanger/marketplace-service
+    image: psanger/marketplace-service:latest
     restart: always
     ports:
       - 9091:9091
@@ -64,7 +64,7 @@ services:
       - opnet
 
   carte-e-mazzi-service:
-      image: psanger/carte-e-mazzi-service
+      image: psanger/carte-e-mazzi-service:latest
       restart: always
       ports:
         - 9092:9092
