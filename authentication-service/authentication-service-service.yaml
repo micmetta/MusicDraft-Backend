@@ -7,5 +7,5 @@ spec:
     app: authentication-service
   ports:
     - protocol: TCP
-      port: 8081
+      port: 8081 # porta sulla quale verrà offerto questo servizio
       targetPort: 8081

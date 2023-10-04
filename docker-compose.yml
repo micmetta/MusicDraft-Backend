@@ -1,7 +1,9 @@
 version: "3.8"
 services:
   api-gateway:
+#    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\api-gateway
     image: psanger/api-gateway:latest
+#    image: ziomike97/api-gateway:latest
     restart: always
     ports:
       - 9095:9095
@@ -10,6 +12,7 @@ services:
 
   matchmaking-service:
     image: psanger/matchmaking-service:latest
+#    image: ziomike97/matchmaking-service:latest
     restart: always
     ports:
       - 8083:8083
@@ -18,9 +21,12 @@ services:
       - rabbitmq
     networks:
       - opnet
+
   authentication-service:
-#    image: authentication-service-server:latest
-    image: psanger/authentication-service
+    #    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
+    #    build: C:Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
+    image: psanger/authentication:latest
+#    image: ziomike97/authenticatione:latest
     restart: always
     ports:
       - 8081:8081
@@ -32,6 +38,7 @@ services:
 
   home-service:
     image: psanger/home-service
+#    image: ziomike97/home-service
     restart: always
     ports:
       - 8082:8082
@@ -45,6 +52,7 @@ services:
   collectdata-service:
 #    image: collectdata-service-server:latest
     image: psanger/collectdata-service
+#    image: ziomike97/collectdata-service
     restart: always
     ports:
       - 9090:9090
@@ -55,6 +63,7 @@ services:
 
   marketplace-service:
     image: psanger/marketplace-service
+#    image: ziomike97/marketplace-service
     restart: always
     ports:
       - 9091:9091
@@ -64,15 +73,17 @@ services:
       - opnet
 
   carte-e-mazzi-service:
-      image: psanger/carte-e-mazzi-service
-      restart: always
-      ports:
-        - 9092:9092
-      depends_on:
-        - mysqldb
-        - rabbitmq
-      networks:
-        - opnet
+#    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\carte_e_mazzi-service
+    image: psanger/carte-e-mazzi-service
+#    image: ziomike97/carte-e-mazzi-service
+    restart: always
+    ports:
+      - 9092:9092
+    depends_on:
+      - mysqldb
+      - rabbitmq
+    networks:
+      - opnet
 
 
   mysqldb:

@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
+metadata: # qui sotto specifico le info su quello che girerà in questo nodo specificodi Kubernetis
   name: authentication-service
 spec:
   replicas: 3  # Numero di repliche desiderate
@@ -13,7 +13,7 @@ spec:
         app: authentication-service
     spec:
       containers:
-        - name: authentication-service
-          image: psanger/authentication-service:latest
+        - name: authentication-service # nome del container
+          image: psanger/authentication-service:latest # nome dell'immagine che voglio far girare in questo container (se essa non è presente in locale allora Kubernetis la scaricherà da Docker hub)
           ports:
-            - containerPort: 8081
+            - containerPort: 8081 # porta sulla quale risponderà questo container
