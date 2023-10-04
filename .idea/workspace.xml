@@ -4,31 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d3329da-2ffb-4eee-a779-bfa546196cd8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]2/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" beforeDir="false" />
+    <list default="true" id="6d3329da-2ffb-4eee-a779-bfa546196cd8" name="Changes" comment="Kubernetes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/ApiGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/SpringCloudConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/SpringCloudConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/authentication-service-deployment.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/authentication-service-service.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/carta-e-mazzi-deployment.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/carta-e-mazzi-service.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/collectdata-service/collectdata-service-deployment.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/collectdata-service/collectdata-service-service.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerbuild.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dockerbuild.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home-service/home-service-deployment.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home-service/home-service-service.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marketplace-service/marketplace-service-deployment.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marketplace-service/marketplace-service-service.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/matchmaking-service/matchmaking-service-deployment.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/matchmaking-service/matchmaking-service-service.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-ingress.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/apigateway-ingress.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/apigateway-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/apigateway-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/authentication-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/authentication-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/cartemazzi-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/cartemazzi-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/collectdata-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/collectdata-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/home-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/home-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/marketplace-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/marketplace-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/matcmaking-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/matcmaking-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/mysql-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/mysql-deployment.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,19 +38,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;f4b1181d83a378bdade8cd37637f236d&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/pietr/Desktop/Uni/TAAS/MusicDraft-Frontend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "f4b1181d83a378bdade8cd37637f236d",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pietr\Desktop\Uni\TAAS\MusicDraftBackend\Kube" />
@@ -101,8 +87,17 @@
       <option name="presentableId" value="Default" />
       <updated>1696345428700</updated>
       <workItem from="1696345430122" duration="6664000" />
-      <workItem from="1696406648417" duration="3781000" />
+      <workItem from="1696406648417" duration="17219000" />
     </task>
+    <task id="LOCAL-00001" summary="Kubernetes">
+      <option name="closed" value="true" />
+      <created>1696410538270</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696410538270</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,5 +113,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Kubernetes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kubernetes" />
   </component>
 </project>

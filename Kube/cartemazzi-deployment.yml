@@ -19,7 +19,7 @@ spec:
             - name: SPRING_DATASOURCE_PASSWORD
               value: musicdraft
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:mysql://mysqldb:3306/db_musicdraft
+              value: jdbc:mysql://mysqldb:3307/db_musicdraft
             - name: SPRING_DATASOURCE_USERNAME
               value: musicdraft
             - name: SPRING_JPA_HIBERNATE_DDL_AUTO
@@ -42,4 +42,4 @@ spec:
       targetPort: 9092
   selector:
     io.kompose.service: authentication-service
-  type: LoadBalancer
+  type: ClusterIP
