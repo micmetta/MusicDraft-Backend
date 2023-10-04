@@ -18,18 +18,17 @@ spec:
       containers:
         - env:
             - name: SERVICES_AUTHENTICATION
-              value: http://authentication-service:8081
+              value: http://authentication-service:8081/api/v1/authenticationService/
             - name: SERVICES_MATCHMAKING
-              value: http://matchmaking-service:8083
+              value: http://matchmaking-service:8083/api/v1/matchmakingService/
             - name: SERVICES_HOME_EXCHANGE
-              value: http://home-service:8082
+              value: http://home-service:8082/api/v1/homeService/
             - name: SERVICES_COLLECTDATA
-              value: http://collectdata-service:9090
+              value: http://collectdata-service:9090/api/v1/collect/
             - name: SERVICES_MARKETPLACE
-              value: http://marketplace-service:9091
+              value: http://marketplace-service:9091/api/v1/marketplace/
             - name: SERVICES_CARD_AND_DECK
-              value: http://carte-e-mazzi-service:9092
-
+              value: http://carte-e-mazzi-service:9092/api/v1/cartemazzi/
             - name: SPRING_RABBITMQ_HOST
               value: rabbitmq
           image: psanger/api-gateway
@@ -50,4 +49,4 @@ spec:
       targetPort: 9095
   selector:
     io.kompose.service: api-gateway
-  type: LoadBalancer
+  type: NodePort
