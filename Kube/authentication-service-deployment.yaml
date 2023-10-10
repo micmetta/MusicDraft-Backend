@@ -24,7 +24,7 @@ spec:
               value: authentication
             - name: SPRING_JPA_HIBERNATE_DDL_AUTO
               value: update
-          image: psanger/authentication-service
+          image: ziomike97/authentication-service:latest
           name: authentication-service
           ports:
             - containerPort: 8081

@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6d3329da-2ffb-4eee-a779-bfa546196cd8" name="Changes" comment="Kubernetes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kube/authentication-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/authentication-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerbuild.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dockerbuild.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +62,40 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="authentication-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="authentication-service/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="authentication-service.authdb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="authdb" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="authentication-service/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="authentication-service.server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="server" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="authentication-service/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -66,12 +104,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.musicdraft-frontend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.authdb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="musicdraft-frontend" />
+              <option value="authdb" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -82,7 +120,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.musicdraft-frontend: Compose Deployment" />
+        <item itemvalue="Docker.authentication-service: Compose Deployment" />
+        <item itemvalue="Docker.authentication-service.server: Compose Deployment" />
+        <item itemvalue="Docker.authentication-service.authdb: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.authdb: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -95,10 +136,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696345428700</updated>
       <workItem from="1696345430122" duration="6664000" />
-      <workItem from="1696406648417" duration="19168000" />
-      <workItem from="1696492440431" duration="5512000" />
-      <workItem from="1696520219594" duration="1232000" />
-      <workItem from="1696925910729" duration="304000" />
+      <workItem from="1696406648417" duration="19054000" />
     </task>
     <task id="LOCAL-00001" summary="Kubernetes">
       <option name="closed" value="true" />
@@ -116,15 +154,7 @@
       <option name="project" value="LOCAL" />
       <updated>1696431485110</updated>
     </task>
-    <task id="LOCAL-00003" summary="Kubernetes">
-      <option name="closed" value="true" />
-      <created>1696433302576</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1696433302576</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

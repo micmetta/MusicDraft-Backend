@@ -6,19 +6,30 @@ services:
     ports:
       - 8081:8081
     depends_on:
-      - mysqldb
+      - authdb
 
-
-  mysqldb:
+  authdb:
     image: "mysql:5.7"
     restart: always
     ports:
-      - 3307:3306
+      - 3308:3306
     environment:
-      MYSQL_DATABASE: db_musicdraft
-      MYSQL_USER: musicdraft
-      MYSQL_PASSWORD: musicdraft
-      MYSQL_ROOT_PASSWORD: musicdraft
+      MYSQL_DATABASE: db_authentication
+      MYSQL_USER: authentication
+      MYSQL_PASSWORD: authentication
+      MYSQL_ROOT_PASSWORD: authentication
+
+
+#  mysqldb:
+#    image: "mysql:5.7"
+#    restart: always
+#    ports:
+#      - 3307:3306
+#    environment:
+#      MYSQL_DATABASE: db_musicdraft
+#      MYSQL_USER: musicdraft
+#      MYSQL_PASSWORD: musicdraft
+#      MYSQL_ROOT_PASSWORD: musicdraft
 
 #  mysqldb:
 #    image: "mysql:5.7"
