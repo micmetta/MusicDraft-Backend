@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6d3329da-2ffb-4eee-a779-bfa546196cd8" name="Changes" comment="Kubernetes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kube/authdb_deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kube/authdb_deployment.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dockerbuild.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dockerbuild.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/home-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -10,10 +10,10 @@
 #docker tag musicdraft-frontend:latest psanger/musicdraft-frontend:latest
 #docker push psanger/musicdraft-frontend:latest
 
-cd C:/Users/miky9/IdeaProjects/spikes/MusicDraftBackend/authentication-service
+cd C:/Users/pietr/Desktop/Uni/TAAS/MusicDraftBackend/authentication-service
 docker build -t authentication-service:latest .
-docker tag authentication-service:latest ziomike97/authentication-service:latest
-docker push ziomike97/authentication-service:latest
+docker tag authentication-service:latest psanger/authentication-service:latest
+docker push psanger/authentication-service:latest
 
 #
 #cd C:/Users/pietr/Desktop/Uni/TAAS/MusicDraftBackend/carte_e_mazzi-service

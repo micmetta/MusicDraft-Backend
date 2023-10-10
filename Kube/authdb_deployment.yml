@@ -30,7 +30,7 @@ spec:
             - name: mysql-storage-auth
               mountPath: /var/lib/mysql  # Percorso di montaggio nel container
       volumes:
-        - name: mysql-storage
+        - name: mysql-storage-auth
           emptyDir: {}  # Usa un emptyDir per archiviare i dati temporanei. Personalizza se necessario.
 
 ---
