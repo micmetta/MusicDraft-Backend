@@ -34,12 +34,12 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    io.kompose.service: authentication-service
+    io.kompose.service: carte-e-mazzi-service
   name: carte-e-mazzi-service
 spec:
   ports:
     - port: 9092
       targetPort: 9092
   selector:
-    io.kompose.service: authentication-service
+    io.kompose.service: carte-e-mazzi-service
   type: ClusterIP
