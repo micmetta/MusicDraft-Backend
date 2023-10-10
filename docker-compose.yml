@@ -8,9 +8,6 @@ services:
     networks:
       - opnet
 
-
-
-
   matchmaking-service:
     image: psanger/matchmaking-service:latest
     restart: always
@@ -21,6 +18,8 @@ services:
       - rabbitmq
     networks:
       - opnet
+
+
   authentication-service:
 #    image: authentication-service-server:latest
     image: psanger/authentication-service:latest

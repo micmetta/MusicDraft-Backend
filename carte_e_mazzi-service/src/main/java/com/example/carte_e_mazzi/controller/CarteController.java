@@ -70,7 +70,7 @@ public class CarteController {
         return carteT;
     }
         @PostMapping("/acquistaCartaArtista/{nickname}")
-        public ResponseEntity<?> insert_cart_Artist(@PathVariable String nickname,@RequestBody Object data1){
+        public ResponseEntity<?> insert_cart_Artist(@PathVariable String nickname, @RequestBody Object data1){
             System.out.println(data1);
             CarteInVenditaArtista data = new ObjectMapper().convertValue(data1, CarteInVenditaArtista.class);
             String nicknameAcquirente = nickname;
