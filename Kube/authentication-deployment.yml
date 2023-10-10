@@ -17,11 +17,11 @@ spec:
       containers:
         - env:
             - name: SPRING_DATASOURCE_PASSWORD
-              value: musicdraft
+              value: authentication
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:mysql://mysqldb:3307/db_musicdraft
+              value: jdbc:mysql://authdb:3308/db_authentication
             - name: SPRING_DATASOURCE_USERNAME
-              value: musicdraft
+              value: authentication
             - name: SPRING_JPA_HIBERNATE_DDL_AUTO
               value: update
           image: psanger/authentication-service

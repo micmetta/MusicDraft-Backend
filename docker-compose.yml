@@ -8,19 +8,19 @@ services:
     networks:
       - opnet
 
-  musicdraft-frontend:
-    image: psanger/musicdraft-frontend:latest
-    restart: always
-    ports:
-      - 4200:4200
-    depends_on:
-      - api-gateway
-      - marketplace-service
-      - matchmaking-service
-      - carte-e-mazzi-service
-      - home-service
-      - authentication-service
-      - collectdata-service
+#  musicdraft-frontend:
+#    image: psanger/musicdraft-frontend:latest
+#    restart: always
+#    ports:
+#      - 4200:4200
+#    depends_on:
+#      - api-gateway
+#      - marketplace-service
+#      - matchmaking-service
+#      - carte-e-mazzi-service
+#      - home-service
+#      - authentication-service
+#      - collectdata-service
 
     networks:
       - opnet
