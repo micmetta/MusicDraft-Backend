@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authdb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: authdb
+  template:
+    metadata:
+      labels:
+        app: authdb
+    spec:
+      containers:
+        - name: authdb
+          image: "mysql:5.7"
+          ports:
+            - containerPort: 3306
+          env:
+            - name: MYSQL_DATABASE
+              value: db_authentication
+            - name: MYSQL_USER
+              value: authentication
+            - name: MYSQL_PASSWORD
+              value: authentication
+            - name: MYSQL_ROOT_PASSWORD
+              value: authentication
+          volumeMounts:
+            - name: mysql-storage-auth
+              mountPath: /var/lib/mysql  # Percorso di montaggio nel container
+      volumes:
+        - name: mysql-storage-auth
+          emptyDir: {}  # Usa un emptyDir per archiviare i dati temporanei. Personalizza se necessario.
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: authdb
+spec:
+  selector:
+    app: authdb
+  ports:
+    - protocol: TCP
+      port: 3308
+      targetPort: 3306
+  type: ClusterIP
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-persistent-storage
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 256Mi  # Specifica la stessa quantità di spazio di archiviazione richiesta del PVC sopra

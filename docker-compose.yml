@@ -1,9 +1,7 @@
 version: "3.8"
 services:
   api-gateway:
-#    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\api-gateway
     image: psanger/api-gateway:latest
-#    image: ziomike97/api-gateway:latest
     restart: always
     ports:
       - 9095:9095
@@ -11,20 +9,10 @@ services:
       - opnet
 
 
-#  musicdraft-frontend:
-##    image: musicdraft-app:v1
-#    build: C:\Users\miky9\OneDrive\Desktop\Progetti Angular\frontend
-##    command: npm start
-##    restart: always
-#    ports:
-#      - 4200:80
-#    networks:
-#      - opnet
 
 
   matchmaking-service:
     image: psanger/matchmaking-service:latest
-#    image: ziomike97/matchmaking-service:latest
     restart: always
     ports:
       - 8083:8083
@@ -33,11 +21,9 @@ services:
       - rabbitmq
     networks:
       - opnet
-
   authentication-service:
-    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
-#    image: psanger/authentication:latest
-#    image: ziomike97/authentication-service:latest
+#    image: authentication-service-server:latest
+    image: psanger/authentication-service:latest
     restart: always
     ports:
       - 8081:8081
@@ -48,8 +34,7 @@ services:
       - opnet
 
   home-service:
-    image: psanger/home-service
-#    image: ziomike97/home-service
+    image: psanger/home-service:latest
     restart: always
     ports:
       - 8082:8082
@@ -62,8 +47,7 @@ services:
 
   collectdata-service:
 #    image: collectdata-service-server:latest
-    image: psanger/collectdata-service
-#    image: ziomike97/collectdata-service
+    image: psanger/collectdata-service:latest
     restart: always
     ports:
       - 9090:9090
@@ -73,8 +57,7 @@ services:
       - opnet
 
   marketplace-service:
-    image: psanger/marketplace-service
-#    image: ziomike97/marketplace-service
+    image: psanger/marketplace-service:latest
     restart: always
     ports:
       - 9091:9091
@@ -108,6 +91,7 @@ services:
       MYSQL_ROOT_PASSWORD: authentication
     networks:
       - opnet
+
 
   mysqldb:
     image: "mysql:5.7"
