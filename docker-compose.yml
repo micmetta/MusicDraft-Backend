@@ -10,22 +10,17 @@ services:
     networks:
       - opnet
 
-  musicdraft-frontend:
-    image: psanger/musicdraft-frontend:latest
-    restart: always
-    ports:
-      - 4200:4200
-    depends_on:
-      - api-gateway
-      - marketplace-service
-      - matchmaking-service
-      - carte-e-mazzi-service
-      - home-service
-      - authentication-service
-      - collectdata-service
 
-    networks:
-      - opnet
+#  musicdraft-frontend:
+##    image: musicdraft-app:v1
+#    build: C:\Users\miky9\OneDrive\Desktop\Progetti Angular\frontend
+##    command: npm start
+##    restart: always
+#    ports:
+#      - 4200:80
+#    networks:
+#      - opnet
+
 
   matchmaking-service:
     image: psanger/matchmaking-service:latest
@@ -40,14 +35,14 @@ services:
       - opnet
 
   authentication-service:
-#    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
+    build: C:\Users\miky9\IdeaProjects\spikes\MusicDraftBackend\authentication-service
 #    image: psanger/authentication:latest
-    image: ziomike97/authentication-service:latest
+#    image: ziomike97/authentication-service:latest
     restart: always
     ports:
       - 8081:8081
     depends_on:
-      - mysqldb
+      - authdb
       - rabbitmq
     networks:
       - opnet
@@ -59,6 +54,7 @@ services:
     ports:
       - 8082:8082
     depends_on:
+      - authdb
       - mysqldb
       - authentication-service
       - rabbitmq
@@ -73,6 +69,7 @@ services:
     ports:
       - 9090:9090
     depends_on:
+      - authdb
       - mysqldb
     networks:
       - opnet
@@ -84,6 +81,7 @@ services:
     ports:
       - 9091:9091
     depends_on:
+      - authdb
       - mysqldb
     networks:
       - opnet
@@ -96,11 +94,24 @@ services:
     ports:
       - 9092:9092
     depends_on:
+      - authdb
       - mysqldb
       - rabbitmq
     networks:
       - opnet
 
+  authdb:
+    image: "mysql:5.7"
+    restart: always
+    ports:
+      - 3308:3306
+    environment:
+      MYSQL_DATABASE: db_authentication
+      MYSQL_USER: authentication
+      MYSQL_PASSWORD: authentication
+      MYSQL_ROOT_PASSWORD: authentication
+    networks:
+      - opnet
 
   mysqldb:
     image: "mysql:5.7"
