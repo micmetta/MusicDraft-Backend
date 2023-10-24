@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6d3329da-2ffb-4eee-a779-bfa546196cd8" name="Changes" comment="ADD autdb per authentication-service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carte_e_mazzi-service/src/main/java/com/example/carte_e_mazzi/controller/CarteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerbuild.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dockerbuild.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +14,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="793b9745-6b9b-46a9-a3bc-bf7a78552bd2" />
+        <option name="url" value="https://github.com/micmetta/MusicDraft-Backend.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="KubernetesApiPersistence">
     <option name="allNamespaces" value="true" />
@@ -165,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696927605563</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ADD autdb per authentication-service">
+      <created>1696953121291</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696953121291</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
