@@ -47,7 +47,7 @@ public class RabbitMQConfig {
     private String routingUpdatePointsKey;
 
     @Value("${rabbitmq.routing.updateCards.key}")
-    private String routingUpdateCardssKey;
+    private String routingUpdateCardssKey; //
 
 
     // spring bean for rabbitmq queue
